@@ -224,10 +224,11 @@ train_model() {
     
     cd "${PROJECT_DIR}/codes"
     
-    # Train interactive keypoint model (if script exists)
+    # Train interactive keypoint model (using poetry run)
     if [ -f "train_interactive_keypoint_model.sh" ]; then
         print_info "Training interactive keypoint model..."
-        bash train_interactive_keypoint_model.sh
+        # Run with poetry environment
+        CUDA_VISIBLE_DEVICES="0" poetry run python -u main.py --seed 42 --config config_AASCE --save_test_prediction --subpixel_inference 15 --use_prev_heatmap_only_for_hint_index
     fi
     
     # Train AASCE model
