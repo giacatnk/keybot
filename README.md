@@ -32,6 +32,7 @@ This code was developed using Python 3.8 on an Ubuntu 18.04 system.
    - **Run preprocessing**: Navigate to the preprocessing code directory and execute the preprocessing script:
      ```bash
      cd codes/preprocess_data/
+     python data_split.py
      python preprocess_data.py
      cd ..
      ```
