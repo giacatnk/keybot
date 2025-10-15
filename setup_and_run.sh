@@ -18,7 +18,15 @@ NC='\033[0m' # No Color
 # Configuration
 GITHUB_REPO_URL="${GITHUB_REPO_URL:-https://github.com/YOUR_USERNAME/keybot.git}"
 PROJECT_NAME="keybot_project"
-PROJECT_DIR="${HOME}/${PROJECT_NAME}"
+
+# Determine project directory
+# If we're already in a keybot directory (has pyproject.toml), use current dir
+# Otherwise use ~/keybot_project for cloning
+if [ -f "pyproject.toml" ] && [ -f "setup_and_run.sh" ]; then
+    PROJECT_DIR="$(pwd)"
+else
+    PROJECT_DIR="${HOME}/${PROJECT_NAME}"
+fi
 
 # Function to print colored messages
 print_success() {
