@@ -75,12 +75,14 @@ clone_repository() {
 setup_environment() {
     print_section "2. Setting Up Environment"
     
+    # Add Poetry to PATH if it exists
+    export PATH="$HOME/.local/bin:$PATH"
+    
     # Check for Poetry
     if ! command_exists poetry; then
         print_error "Poetry is not installed"
         print_info "Installing Poetry..."
         curl -sSL https://install.python-poetry.org | python3 -
-        export PATH="$HOME/.local/bin:$PATH"
     else
         print_success "Poetry is installed: $(poetry --version)"
     fi
