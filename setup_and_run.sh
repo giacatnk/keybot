@@ -5,6 +5,9 @@
 
 set -e  # Exit on error
 
+# Add Poetry to PATH
+export PATH="$HOME/.local/bin:$PATH"
+
 # Color codes for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -114,6 +117,7 @@ setup_environment() {
 verify_installation() {
     print_section "3. Verifying Installation"
     
+    cd "$PROJECT_DIR"
     poetry run python -c "
 import torch
 import cv2
