@@ -227,7 +227,7 @@ train_model() {
     # Train interactive keypoint model (using poetry run)
     if [ -f "train_interactive_keypoint_model.sh" ]; then
         print_info "Training interactive keypoint model..."
-        # Run with poetry environment
+        # Run with poetry environment (device auto-detected in code)
         CUDA_VISIBLE_DEVICES="0" poetry run python -u main.py --seed 42 --config config_AASCE --save_test_prediction --subpixel_inference 15 --use_prev_heatmap_only_for_hint_index
     fi
     

@@ -38,7 +38,13 @@ class SaveManager(object):
 
 
 
-        self.config.MISC.device = torch.device('mps')
+        # Auto-detect available device
+        if torch.cuda.is_available():
+            self.config.MISC.device = torch.device('cuda')
+        elif hasattr(torch.backends, 'mps') and torch.backends.mps.is_available():
+            self.config.MISC.device = torch.device('mps')
+        else:
+            self.config.MISC.device = torch.device('cpu')
         self.config_name2value()
 
     def config_name2value(self):
