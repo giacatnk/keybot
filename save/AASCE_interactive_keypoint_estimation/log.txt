@@ -1,0 +1,4 @@
+ Process Start ::: 2025-10-15 20:11:02.604211+09:00 
+ Process Start ::: 2025-10-15 20:34:39.434086+09:00 
+ Process Start ::: 2025-10-15 20:36:07.225779+09:00 
+ Number of model parameters : 32942889 

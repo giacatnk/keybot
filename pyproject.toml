@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "keybot"
+version = "0.1.0"
+description = ""
+authors = ["giacatnk <giacatnk@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12,<3.14"
+opencv-python = "^4.12.0.88"
+pandas = "^2.3.3"
+pillow = "^11.3.0"
+albumentations = "^2.0.8"
+munch = "^4.0.0"
+torch = "^2.8.0"
+heatmap-provider = "^0.1.0"
+tqdm = "^4.67.1"
+torchvision = "^0.23.0"
+matplotlib = "^3.10.6"
+pyyaml = "^6.0.3"
+tensorboard = "^2.20.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
