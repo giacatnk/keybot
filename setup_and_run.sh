@@ -390,7 +390,7 @@ show_menu() {
     echo "7. Show results"
     echo "8. Commit models to GitHub"
     echo "9. Start TensorBoard"
-    echo "10. Run all (1-6)"
+    echo "10. Run all (1-8)"
     echo "0. Exit"
     echo
 }
@@ -403,6 +403,7 @@ run_all() {
     train_model
     run_evaluation
     show_results
+    save_and_commit_models
 }
 
 # ========================================
