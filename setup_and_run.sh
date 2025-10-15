@@ -205,6 +205,12 @@ prepare_data() {
 train_model() {
     print_section "5. Training Model"
     
+    # Check if dependencies are installed
+    if ! poetry run python -c "import munch" 2>/dev/null; then
+        print_warning "Dependencies not installed. Running setup first..."
+        setup_environment
+    fi
+    
     if [ "$NON_INTERACTIVE" = false ]; then
         read -p "Start training? This will take a long time (y/n): " -n 1 -r
         echo
@@ -237,6 +243,12 @@ train_model() {
 # ========================================
 run_evaluation() {
     print_section "6. Running Evaluation"
+    
+    # Check if dependencies are installed
+    if ! poetry run python -c "import munch" 2>/dev/null; then
+        print_warning "Dependencies not installed. Running setup first..."
+        setup_environment
+    fi
     
     if [ "$NON_INTERACTIVE" = false ]; then
         read -p "Run evaluation? (y/n): " -n 1 -r
