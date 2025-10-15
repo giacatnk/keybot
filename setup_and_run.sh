@@ -294,10 +294,64 @@ show_results() {
 }
 
 # ========================================
-# 8. Start TensorBoard
+# 8. Commit Models to GitHub
+# ========================================
+save_and_commit_models() {
+    print_section "8. Committing Models to GitHub"
+    
+    SAVE_DIR="${PROJECT_DIR}/save/AASCE_interactive_keypoint_estimation"
+    
+    if [ ! -d "$SAVE_DIR" ]; then
+        print_error "No trained models found at $SAVE_DIR"
+        return 1
+    fi
+    
+    # Show model files
+    print_info "Model files to commit:"
+    ls -lh "$SAVE_DIR" | tail -n +2 | awk '{printf "  - %s (%s)\n", $9, $5}'
+    
+    # Git operations
+    print_info "Committing models to git..."
+    
+    # Add save directory and git attributes
+    git add save/
+    git add .gitattributes 2>/dev/null || true
+    
+    # Create commit with timestamp
+    TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
+    COMMIT_MSG="Add trained model checkpoint
+
+Trained on: $(date '+%Y-%m-%d %H:%M:%S')
+Timestamp: ${TIMESTAMP}
+Location: save/AASCE_interactive_keypoint_estimation/"
+    
+    git commit -m "$COMMIT_MSG" || print_warning "No changes to commit"
+    
+    print_success "Models committed locally"
+    
+    # Ask to push to GitHub
+    if [ "$NON_INTERACTIVE" = false ]; then
+        read -p "Push models to GitHub? (y/n): " -n 1 -r
+        echo
+        if [[ $REPLY =~ ^[Yy]$ ]]; then
+            print_info "Pushing to GitHub..."
+            git push origin main
+            print_success "Models pushed to GitHub!"
+        else
+            print_info "Skipped push. Run 'git push origin main' manually when ready."
+        fi
+    else
+        print_info "Pushing to GitHub in non-interactive mode..."
+        git push origin main
+        print_success "Models pushed to GitHub!"
+    fi
+}
+
+# ========================================
+# 9. Start TensorBoard
 # ========================================
 start_tensorboard() {
-    print_section "8. TensorBoard"
+    print_section "9. TensorBoard"
     
     if [ "$NON_INTERACTIVE" = false ]; then
         read -p "Start TensorBoard? (y/n): " -n 1 -r
@@ -334,8 +388,9 @@ show_menu() {
     echo "5. Train model"
     echo "6. Run evaluation"
     echo "7. Show results"
-    echo "8. Start TensorBoard"
-    echo "9. Run all (1-6)"
+    echo "8. Commit models to GitHub"
+    echo "9. Start TensorBoard"
+    echo "10. Run all (1-6)"
     echo "0. Exit"
     echo
 }
@@ -382,8 +437,9 @@ EOF
                 5) train_model ;;
                 6) run_evaluation ;;
                 7) show_results ;;
-                8) start_tensorboard ;;
-                9) run_all ;;
+                8) save_and_commit_models ;;
+                9) start_tensorboard ;;
+                10) run_all ;;
                 0) print_info "Exiting..."; exit 0 ;;
                 *) print_error "Invalid option" ;;
             esac
@@ -399,10 +455,11 @@ EOF
             train) train_model ;;
             eval) run_evaluation ;;
             results) show_results ;;
+            save) save_and_commit_models ;;
             tensorboard) start_tensorboard ;;
             all) run_all ;;
             *)
-                echo "Usage: $0 [clone|setup|verify|data|train|eval|results|tensorboard|all]"
+                echo "Usage: $0 [clone|setup|verify|data|train|eval|results|save|tensorboard|all]"
                 echo "Or run without arguments for interactive menu"
                 exit 1
                 ;;
