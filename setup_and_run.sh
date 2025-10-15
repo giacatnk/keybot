@@ -8,6 +8,12 @@ set -e  # Exit on error
 # Add Poetry to PATH
 export PATH="$HOME/.local/bin:$PATH"
 
+# Non-interactive mode flag
+NON_INTERACTIVE=false
+if [[ "$*" == *"-y"* ]] || [[ "$*" == *"--yes"* ]]; then
+    NON_INTERACTIVE=true
+fi
+
 # Color codes for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -64,12 +70,18 @@ clone_repository() {
     
     if [ -d "$PROJECT_DIR" ]; then
         print_warning "Repository already exists at $PROJECT_DIR"
-        read -p "Do you want to pull latest changes? (y/n): " -n 1 -r
-        echo
-        if [[ $REPLY =~ ^[Yy]$ ]]; then
+        if [ "$NON_INTERACTIVE" = true ]; then
             cd "$PROJECT_DIR"
             git pull
             print_success "Repository updated"
+        else
+            read -p "Do you want to pull latest changes? (y/n): " -n 1 -r
+            echo
+            if [[ $REPLY =~ ^[Yy]$ ]]; then
+                cd "$PROJECT_DIR"
+                git pull
+                print_success "Repository updated"
+            fi
         fi
     else
         print_info "Cloning from: $GITHUB_REPO_URL"
@@ -164,10 +176,15 @@ prepare_data() {
         print_info "http://spineweb.digitalimaginggroup.ca/Index.php?n=Main.Datasets#Dataset_16.3A_609_spinal_anterior-posterior_x-ray_images"
         print_info "Extract and place the data in: $RAW_DATA_DIR"
         
-        read -p "Press Enter after you have downloaded and extracted the dataset, or 's' to skip: " -n 1 -r
-        echo
-        if [[ $REPLY =~ ^[Ss]$ ]]; then
-            print_warning "Skipping data preparation"
+        if [ "$NON_INTERACTIVE" = false ]; then
+            read -p "Press Enter after you have downloaded and extracted the dataset, or 's' to skip: " -n 1 -r
+            echo
+            if [[ $REPLY =~ ^[Ss]$ ]]; then
+                print_warning "Skipping data preparation"
+                return
+            fi
+        else
+            print_warning "Skipping data preparation in non-interactive mode"
             return
         fi
     else
@@ -188,11 +205,15 @@ prepare_data() {
 train_model() {
     print_section "5. Training Model"
     
-    read -p "Start training? This will take a long time (y/n): " -n 1 -r
-    echo
-    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-        print_warning "Skipping training"
-        return
+    if [ "$NON_INTERACTIVE" = false ]; then
+        read -p "Start training? This will take a long time (y/n): " -n 1 -r
+        echo
+        if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+            print_warning "Skipping training"
+            return
+        fi
+    else
+        print_info "Starting training in non-interactive mode..."
     fi
     
     cd "${PROJECT_DIR}/codes"
@@ -217,11 +238,15 @@ train_model() {
 run_evaluation() {
     print_section "6. Running Evaluation"
     
-    read -p "Run evaluation? (y/n): " -n 1 -r
-    echo
-    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-        print_warning "Skipping evaluation"
-        return
+    if [ "$NON_INTERACTIVE" = false ]; then
+        read -p "Run evaluation? (y/n): " -n 1 -r
+        echo
+        if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+            print_warning "Skipping evaluation"
+            return
+        fi
+    else
+        print_info "Running evaluation in non-interactive mode..."
     fi
     
     cd "${PROJECT_DIR}/codes"
@@ -261,10 +286,14 @@ show_results() {
 start_tensorboard() {
     print_section "8. TensorBoard"
     
-    read -p "Start TensorBoard? (y/n): " -n 1 -r
-    echo
-    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-        return
+    if [ "$NON_INTERACTIVE" = false ]; then
+        read -p "Start TensorBoard? (y/n): " -n 1 -r
+        echo
+        if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+            return
+        fi
+    else
+        print_info "Starting TensorBoard in non-interactive mode..."
     fi
     
     SAVE_DIR="${PROJECT_DIR}/save/AASCE_interactive_keypoint_estimation"

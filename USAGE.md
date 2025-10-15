@@ -21,6 +21,10 @@
 ./setup_and_run.sh eval         # Run evaluation
 ./setup_and_run.sh results      # Show results
 ./setup_and_run.sh tensorboard  # Start TensorBoard
+
+# Non-interactive mode (for Google Colab or automation)
+./setup_and_run.sh train -y     # Train without prompts
+./setup_and_run.sh all --yes    # Run everything without prompts
 ```
 
 ## Configuration
