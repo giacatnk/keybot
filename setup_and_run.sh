@@ -318,6 +318,16 @@ save_and_commit_models() {
         return 1
     fi
     
+    # Configure git authentication if token is available
+    if [ ! -z "$GITHUB_TOKEN" ]; then
+        print_info "Configuring GitHub authentication with token..."
+        git config --global credential.helper store
+        
+        # Update remote URL to use token
+        git remote set-url origin "https://${GITHUB_TOKEN}@github.com/giacatnk/keybot.git"
+        print_success "Authentication configured"
+    fi
+    
     # Show model files
     print_info "Model files to commit:"
     ls -lh "$SAVE_DIR" | tail -n +2 | awk '{printf "  - %s (%s)\n", $9, $5}'
