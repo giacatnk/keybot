@@ -176,7 +176,8 @@ class SaveManager(object):
         return
 
     def load_model(self):
-        best_save = torch.load(self.config.PATH.MODEL_PATH, map_location=torch.device('cpu'))
+        # PyTorch 2.6+ requires weights_only=False for models with custom objects (e.g., Munch)
+        best_save = torch.load(self.config.PATH.MODEL_PATH, map_location=torch.device('cpu'), weights_only=False)
         best_param = best_save['model']
         best_epoch = best_save['epoch']
         return best_param, best_epoch, None
