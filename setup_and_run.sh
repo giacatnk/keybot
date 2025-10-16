@@ -22,8 +22,14 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 # Configuration
-GITHUB_REPO_URL="${GITHUB_REPO_URL:-https://github.com/YOUR_USERNAME/keybot.git}"
+GITHUB_REPO_URL="${GITHUB_REPO_URL:-https://github.com/giacatnk/keybot.git}"
 PROJECT_NAME="keybot_project"
+
+# Use token for authentication if available
+if [ ! -z "$GITHUB_TOKEN" ]; then
+    # Replace https:// with https://token@
+    GITHUB_REPO_URL="${GITHUB_REPO_URL/https:\/\//https:\/\/${GITHUB_TOKEN}@}"
+fi
 
 # Determine project directory
 # If we're already in a keybot directory (has pyproject.toml), use current dir
@@ -68,6 +74,12 @@ command_exists() {
 clone_repository() {
     print_section "1. Cloning Repository"
     
+    # Configure git if token is available
+    if [ ! -z "$GITHUB_TOKEN" ]; then
+        git config --global credential.helper store
+        print_info "Using GitHub token for authentication"
+    fi
+    
     if [ -d "$PROJECT_DIR" ]; then
         print_warning "Repository already exists at $PROJECT_DIR"
         if [ "$NON_INTERACTIVE" = true ]; then
@@ -84,7 +96,7 @@ clone_repository() {
             fi
         fi
     else
-        print_info "Cloning from: $GITHUB_REPO_URL"
+        print_info "Cloning from: https://github.com/giacatnk/keybot.git"
         git clone "$GITHUB_REPO_URL" "$PROJECT_DIR"
         print_success "Repository cloned to $PROJECT_DIR"
     fi
@@ -390,7 +402,7 @@ show_menu() {
     echo "7. Show results"
     echo "8. Commit models to GitHub"
     echo "9. Start TensorBoard"
-    echo "10. Run all (1-8)"
+    echo "10. Run all (1-6)"
     echo "0. Exit"
     echo
 }
@@ -403,7 +415,6 @@ run_all() {
     train_model
     run_evaluation
     show_results
-    save_and_commit_models
 }
 
 # ========================================

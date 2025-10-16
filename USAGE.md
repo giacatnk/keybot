@@ -30,9 +30,11 @@
 
 ## Configuration
 
-Edit repository URL in `setup_and_run.sh` (line 13):
+The script is pre-configured for: `https://github.com/giacatnk/keybot.git`
+
+For authentication, set your GitHub token as environment variable:
 ```bash
-GITHUB_REPO_URL="https://github.com/YOUR_USERNAME/keybot.git"
+export GITHUB_TOKEN="ghp_YOUR_TOKEN_HERE"
 ```
 
 ## Requirements
