@@ -1,5 +1,10 @@
 import torch
 import os
+
+# Fix matplotlib backend for headless environments (Google Colab, servers)
+import matplotlib
+matplotlib.use('Agg')  # Non-interactive backend
+
 from AnomalySuggestion_get_model import get_test_data_loader
 
 from suggest_codes.get_suggest_dataset import SuggestionDataset
