@@ -1,8 +1,11 @@
+import os
 import copy
 
 # Fix matplotlib backend for headless environments (Google Colab, servers)
-import matplotlib
-matplotlib.use('Agg')
+# Must unset MPLBACKEND env var BEFORE importing matplotlib
+os.environ.pop('MPLBACKEND', None)
+os.environ['MPLBACKEND'] = 'Agg'
+
 import matplotlib.pyplot as plt
 
 import torch

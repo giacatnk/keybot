@@ -1,9 +1,10 @@
-import torch
 import os
+import torch
 
 # Fix matplotlib backend for headless environments (Google Colab, servers)
-import matplotlib
-matplotlib.use('Agg')  # Non-interactive backend
+# Must unset MPLBACKEND env var BEFORE importing matplotlib
+os.environ.pop('MPLBACKEND', None)
+os.environ['MPLBACKEND'] = 'Agg'
 
 from AnomalySuggestion_get_model import get_test_data_loader
 

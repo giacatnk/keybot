@@ -3,6 +3,11 @@ import time
 import argparse
 import datetime
 
+# Fix matplotlib backend for headless environments (Google Colab, servers)
+# Must unset MPLBACKEND env var BEFORE importing matplotlib
+os.environ.pop('MPLBACKEND', None)
+os.environ['MPLBACKEND'] = 'Agg'
+
 import numpy as np
 import random
 from munch import Munch
@@ -12,9 +17,6 @@ import torch.nn as nn
 from PIL import Image, ImageEnhance
 import copy
 
-# Fix matplotlib backend for headless environments (Google Colab, servers)
-import matplotlib
-matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import pickle
 from PIL import Image
