@@ -2,3 +2,788 @@
  Process Start ::: 2025-10-15 20:34:39.434086+09:00 
  Process Start ::: 2025-10-15 20:36:07.225779+09:00 
  Number of model parameters : 32942889 
+ Process Start ::: 2025-10-20 12:18:05.815684+09:00 
+ Number of model parameters : 32942889 
+==== Start Training... ====
+ iter [0/56] loss [1.425851] 
+ iter [50/56] loss [0.051232] 
+ Epoch [1/1000] train loss [0.265739] train hargmax_mm_MRE [986.356750] val loss [0.057008] val hargmax_mm_MRE [1073.383608] Epoch time [0.7min] 
+==== Model saved after Epoch 1 ====
+ iter [0/56] loss [0.046993] 
+ iter [50/56] loss [0.046989] 
+ Epoch [2/1000] train loss [0.045499] train hargmax_mm_MRE [1037.306977] val loss [0.048877] val hargmax_mm_MRE [888.151138] Epoch time [0.7min] 
+==== Model saved after Epoch 2 ====
+ iter [0/56] loss [0.038202] 
+ iter [50/56] loss [0.036319] 
+ Epoch [3/1000] train loss [0.041807] train hargmax_mm_MRE [713.163696] val loss [0.043367] val hargmax_mm_MRE [601.226418] Epoch time [0.7min] 
+==== Model saved after Epoch 3 ====
+ iter [0/56] loss [0.045260] 
+ iter [50/56] loss [0.040383] 
+ Epoch [4/1000] train loss [0.038075] train hargmax_mm_MRE [644.562657] val loss [0.040628] val hargmax_mm_MRE [659.201750] Epoch time [0.7min] 
+ iter [0/56] loss [0.035921] 
+ iter [50/56] loss [0.034715] 
+ Epoch [5/1000] train loss [0.037192] train hargmax_mm_MRE [658.691331] val loss [0.039424] val hargmax_mm_MRE [686.607662] Epoch time [0.7min] 
+ iter [0/56] loss [0.038792] 
+ iter [50/56] loss [0.033716] 
+ Epoch [6/1000] train loss [0.036393] train hargmax_mm_MRE [602.823730] val loss [0.035846] val hargmax_mm_MRE [597.577213] Epoch time [0.7min] 
+==== Model saved after Epoch 6 ====
+ iter [0/56] loss [0.033735] 
+ iter [50/56] loss [0.035669] 
+ Epoch [7/1000] train loss [0.036576] train hargmax_mm_MRE [601.212631] val loss [0.037634] val hargmax_mm_MRE [576.077442] Epoch time [0.7min] 
+==== Model saved after Epoch 7 ====
+ iter [0/56] loss [0.037540] 
+ iter [50/56] loss [0.033672] 
+ Epoch [8/1000] train loss [0.035255] train hargmax_mm_MRE [569.242293] val loss [0.036376] val hargmax_mm_MRE [554.227505] Epoch time [0.6min] 
+==== Model saved after Epoch 8 ====
+ iter [0/56] loss [0.034047] 
+ iter [50/56] loss [0.032656] 
+ Epoch [9/1000] train loss [0.034828] train hargmax_mm_MRE [581.843555] val loss [0.035778] val hargmax_mm_MRE [599.282500] Epoch time [0.7min] 
+ iter [0/56] loss [0.031941] 
+ iter [50/56] loss [0.034926] 
+ Epoch [10/1000] train loss [0.032765] train hargmax_mm_MRE [573.872993] val loss [0.034522] val hargmax_mm_MRE [554.396998] Epoch time [0.7min] 
+ iter [0/56] loss [0.031439] 
+ iter [50/56] loss [0.035289] 
+ Epoch [11/1000] train loss [0.033177] train hargmax_mm_MRE [556.883816] val loss [0.033342] val hargmax_mm_MRE [515.317121] Epoch time [0.7min] 
+==== Model saved after Epoch 11 ====
+ iter [0/56] loss [0.031424] 
+ iter [50/56] loss [0.029867] 
+ Epoch [12/1000] train loss [0.030972] train hargmax_mm_MRE [514.808780] val loss [0.030514] val hargmax_mm_MRE [454.764501] Epoch time [0.7min] 
+==== Model saved after Epoch 12 ====
+ iter [0/56] loss [0.030095] 
+ iter [50/56] loss [0.029540] 
+ Epoch [13/1000] train loss [0.029453] train hargmax_mm_MRE [423.302321] val loss [0.029249] val hargmax_mm_MRE [420.424933] Epoch time [0.7min] 
+==== Model saved after Epoch 13 ====
+ iter [0/56] loss [0.027303] 
+ iter [50/56] loss [0.027582] 
+ Epoch [14/1000] train loss [0.028149] train hargmax_mm_MRE [339.869804] val loss [0.027895] val hargmax_mm_MRE [253.232104] Epoch time [0.7min] 
+==== Model saved after Epoch 14 ====
+ iter [0/56] loss [0.026919] 
+ iter [50/56] loss [0.027250] 
+ Epoch [15/1000] train loss [0.026944] train hargmax_mm_MRE [227.435847] val loss [0.026892] val hargmax_mm_MRE [191.948028] Epoch time [0.7min] 
+==== Model saved after Epoch 15 ====
+ iter [0/56] loss [0.027051] 
+ iter [50/56] loss [0.026415] 
+ Epoch [16/1000] train loss [0.026043] train hargmax_mm_MRE [171.042983] val loss [0.025764] val hargmax_mm_MRE [142.852793] Epoch time [0.7min] 
+==== Model saved after Epoch 16 ====
+ iter [0/56] loss [0.024576] 
+ iter [50/56] loss [0.025218] 
+ Epoch [17/1000] train loss [0.024967] train hargmax_mm_MRE [140.224720] val loss [0.024692] val hargmax_mm_MRE [132.481045] Epoch time [0.7min] 
+==== Model saved after Epoch 17 ====
+ iter [0/56] loss [0.025563] 
+ iter [50/56] loss [0.023617] 
+ Epoch [18/1000] train loss [0.024168] train hargmax_mm_MRE [125.473528] val loss [0.024298] val hargmax_mm_MRE [129.140218] Epoch time [0.7min] 
+==== Model saved after Epoch 18 ====
+ iter [0/56] loss [0.023051] 
+ iter [50/56] loss [0.022346] 
+ Epoch [19/1000] train loss [0.023471] train hargmax_mm_MRE [118.345982] val loss [0.023257] val hargmax_mm_MRE [110.669868] Epoch time [0.7min] 
+==== Model saved after Epoch 19 ====
+ iter [0/56] loss [0.022761] 
+ iter [50/56] loss [0.021888] 
+ Epoch [20/1000] train loss [0.022881] train hargmax_mm_MRE [112.663958] val loss [0.022802] val hargmax_mm_MRE [112.397746] Epoch time [0.7min] 
+ iter [0/56] loss [0.023264] 
+ iter [50/56] loss [0.020702] 
+ Epoch [21/1000] train loss [0.022270] train hargmax_mm_MRE [109.308695] val loss [0.022165] val hargmax_mm_MRE [104.644134] Epoch time [0.7min] 
+==== Model saved after Epoch 21 ====
+ iter [0/56] loss [0.021132] 
+ iter [50/56] loss [0.020948] 
+ Epoch [22/1000] train loss [0.021893] train hargmax_mm_MRE [108.585517] val loss [0.022050] val hargmax_mm_MRE [106.415738] Epoch time [0.7min] 
+ iter [0/56] loss [0.022029] 
+ iter [50/56] loss [0.020335] 
+ Epoch [23/1000] train loss [0.021386] train hargmax_mm_MRE [105.131991] val loss [0.021591] val hargmax_mm_MRE [105.733833] Epoch time [0.7min] 
+ iter [0/56] loss [0.021549] 
+ iter [50/56] loss [0.022680] 
+ Epoch [24/1000] train loss [0.021311] train hargmax_mm_MRE [107.159516] val loss [0.021019] val hargmax_mm_MRE [98.696377] Epoch time [0.7min] 
+==== Model saved after Epoch 24 ====
+ iter [0/56] loss [0.019361] 
+ iter [50/56] loss [0.020530] 
+ Epoch [25/1000] train loss [0.020865] train hargmax_mm_MRE [104.159674] val loss [0.021337] val hargmax_mm_MRE [108.038635] Epoch time [0.7min] 
+ iter [0/56] loss [0.021513] 
+ iter [50/56] loss [0.022890] 
+ Epoch [26/1000] train loss [0.020480] train hargmax_mm_MRE [100.452083] val loss [0.020562] val hargmax_mm_MRE [98.829301] Epoch time [0.7min] 
+ iter [0/56] loss [0.018996] 
+ iter [50/56] loss [0.022207] 
+ Epoch [27/1000] train loss [0.020219] train hargmax_mm_MRE [97.771158] val loss [0.020256] val hargmax_mm_MRE [95.283036] Epoch time [0.7min] 
+==== Model saved after Epoch 27 ====
+ iter [0/56] loss [0.019302] 
+ iter [50/56] loss [0.019342] 
+ Epoch [28/1000] train loss [0.020002] train hargmax_mm_MRE [93.274266] val loss [0.020199] val hargmax_mm_MRE [93.619075] Epoch time [0.7min] 
+==== Model saved after Epoch 28 ====
+ iter [0/56] loss [0.020023] 
+ iter [50/56] loss [0.019984] 
+ Epoch [29/1000] train loss [0.019678] train hargmax_mm_MRE [91.684005] val loss [0.019842] val hargmax_mm_MRE [85.988512] Epoch time [0.7min] 
+==== Model saved after Epoch 29 ====
+ iter [0/56] loss [0.019546] 
+ iter [50/56] loss [0.018092] 
+ Epoch [30/1000] train loss [0.019483] train hargmax_mm_MRE [88.585867] val loss [0.019624] val hargmax_mm_MRE [88.961625] Epoch time [0.7min] 
+ iter [0/56] loss [0.018136] 
+ iter [50/56] loss [0.018567] 
+ Epoch [31/1000] train loss [0.019172] train hargmax_mm_MRE [85.870632] val loss [0.019025] val hargmax_mm_MRE [77.891477] Epoch time [0.7min] 
+==== Model saved after Epoch 31 ====
+ iter [0/56] loss [0.015952] 
+ iter [50/56] loss [0.019286] 
+ Epoch [32/1000] train loss [0.018757] train hargmax_mm_MRE [79.325386] val loss [0.019295] val hargmax_mm_MRE [82.515208] Epoch time [0.7min] 
+ iter [0/56] loss [0.017873] 
+ iter [50/56] loss [0.019017] 
+ Epoch [33/1000] train loss [0.018783] train hargmax_mm_MRE [79.587017] val loss [0.018671] val hargmax_mm_MRE [74.026231] Epoch time [0.7min] 
+==== Model saved after Epoch 33 ====
+ iter [0/56] loss [0.017438] 
+ iter [50/56] loss [0.016968] 
+ Epoch [34/1000] train loss [0.018500] train hargmax_mm_MRE [77.983295] val loss [0.018647] val hargmax_mm_MRE [73.856387] Epoch time [0.7min] 
+==== Model saved after Epoch 34 ====
+ iter [0/56] loss [0.017470] 
+ iter [50/56] loss [0.019280] 
+ Epoch [35/1000] train loss [0.018224] train hargmax_mm_MRE [75.521261] val loss [0.018453] val hargmax_mm_MRE [72.551584] Epoch time [0.7min] 
+==== Model saved after Epoch 35 ====
+ iter [0/56] loss [0.016643] 
+ iter [50/56] loss [0.017282] 
+ Epoch [36/1000] train loss [0.017832] train hargmax_mm_MRE [70.387663] val loss [0.018160] val hargmax_mm_MRE [68.818811] Epoch time [0.7min] 
+==== Model saved after Epoch 36 ====
+ iter [0/56] loss [0.017332] 
+ iter [50/56] loss [0.017471] 
+ Epoch [37/1000] train loss [0.017638] train hargmax_mm_MRE [70.288232] val loss [0.018519] val hargmax_mm_MRE [74.265714] Epoch time [0.7min] 
+ iter [0/56] loss [0.016968] 
+ iter [50/56] loss [0.020014] 
+ Epoch [38/1000] train loss [0.017676] train hargmax_mm_MRE [71.041502] val loss [0.020742] val hargmax_mm_MRE [92.320877] Epoch time [0.7min] 
+ iter [0/56] loss [0.021953] 
+ iter [50/56] loss [0.017342] 
+ Epoch [39/1000] train loss [0.017851] train hargmax_mm_MRE [71.811192] val loss [0.018075] val hargmax_mm_MRE [72.983149] Epoch time [0.7min] 
+ iter [0/56] loss [0.018560] 
+ iter [50/56] loss [0.018184] 
+ Epoch [40/1000] train loss [0.017217] train hargmax_mm_MRE [66.644200] val loss [0.016964] val hargmax_mm_MRE [60.470712] Epoch time [0.7min] 
+==== Model saved after Epoch 40 ====
+ iter [0/56] loss [0.015027] 
+ iter [50/56] loss [0.018134] 
+ Epoch [41/1000] train loss [0.017036] train hargmax_mm_MRE [65.772384] val loss [0.017477] val hargmax_mm_MRE [64.601052] Epoch time [0.7min] 
+ iter [0/56] loss [0.014643] 
+ iter [50/56] loss [0.017780] 
+ Epoch [42/1000] train loss [0.016725] train hargmax_mm_MRE [63.785390] val loss [0.016970] val hargmax_mm_MRE [63.566776] Epoch time [0.7min] 
+ iter [0/56] loss [0.015498] 
+ iter [50/56] loss [0.016343] 
+ Epoch [43/1000] train loss [0.016828] train hargmax_mm_MRE [64.611864] val loss [0.016862] val hargmax_mm_MRE [61.148422] Epoch time [0.7min] 
+ iter [0/56] loss [0.014496] 
+ iter [50/56] loss [0.016662] 
+ Epoch [44/1000] train loss [0.016519] train hargmax_mm_MRE [62.341156] val loss [0.017224] val hargmax_mm_MRE [65.081734] Epoch time [0.7min] 
+ iter [0/56] loss [0.017711] 
+ iter [50/56] loss [0.018707] 
+ Epoch [45/1000] train loss [0.016824] train hargmax_mm_MRE [64.638605] val loss [0.016793] val hargmax_mm_MRE [61.731736] Epoch time [0.7min] 
+ iter [0/56] loss [0.016307] 
+ iter [50/56] loss [0.016020] 
+ Epoch [46/1000] train loss [0.016629] train hargmax_mm_MRE [63.794817] val loss [0.016785] val hargmax_mm_MRE [60.295336] Epoch time [0.7min] 
+==== Model saved after Epoch 46 ====
+ iter [0/56] loss [0.015552] 
+ iter [50/56] loss [0.015388] 
+ Epoch [47/1000] train loss [0.016340] train hargmax_mm_MRE [59.970577] val loss [0.018190] val hargmax_mm_MRE [72.658080] Epoch time [0.7min] 
+ iter [0/56] loss [0.016524] 
+ iter [50/56] loss [0.017919] 
+ Epoch [48/1000] train loss [0.016243] train hargmax_mm_MRE [60.277091] val loss [0.017483] val hargmax_mm_MRE [67.174480] Epoch time [0.7min] 
+ iter [0/56] loss [0.016091] 
+ iter [50/56] loss [0.018486] 
+ Epoch [49/1000] train loss [0.016025] train hargmax_mm_MRE [58.223151] val loss [0.016309] val hargmax_mm_MRE [56.973621] Epoch time [0.7min] 
+==== Model saved after Epoch 49 ====
+ iter [0/56] loss [0.015287] 
+ iter [50/56] loss [0.015837] 
+ Epoch [50/1000] train loss [0.016113] train hargmax_mm_MRE [58.121599] val loss [0.017314] val hargmax_mm_MRE [62.340842] Epoch time [0.7min] 
+ iter [0/56] loss [0.016636] 
+ iter [50/56] loss [0.014315] 
+ Epoch [51/1000] train loss [0.016011] train hargmax_mm_MRE [59.126910] val loss [0.016841] val hargmax_mm_MRE [61.146301] Epoch time [0.7min] 
+ iter [0/56] loss [0.014027] 
+ iter [50/56] loss [0.016682] 
+ Epoch [52/1000] train loss [0.015889] train hargmax_mm_MRE [57.112566] val loss [0.016111] val hargmax_mm_MRE [56.018962] Epoch time [0.7min] 
+==== Model saved after Epoch 52 ====
+ iter [0/56] loss [0.015550] 
+ iter [50/56] loss [0.015350] 
+ Epoch [53/1000] train loss [0.015663] train hargmax_mm_MRE [55.794578] val loss [0.016021] val hargmax_mm_MRE [54.530885] Epoch time [0.7min] 
+==== Model saved after Epoch 53 ====
+ iter [0/56] loss [0.015628] 
+ iter [50/56] loss [0.014971] 
+ Epoch [54/1000] train loss [0.015556] train hargmax_mm_MRE [55.444521] val loss [0.016291] val hargmax_mm_MRE [58.051875] Epoch time [0.7min] 
+ iter [0/56] loss [0.017496] 
+ iter [50/56] loss [0.017221] 
+ Epoch [55/1000] train loss [0.015398] train hargmax_mm_MRE [51.899418] val loss [0.016429] val hargmax_mm_MRE [58.474662] Epoch time [0.7min] 
+ iter [0/56] loss [0.017955] 
+ iter [50/56] loss [0.016109] 
+ Epoch [56/1000] train loss [0.016019] train hargmax_mm_MRE [58.467847] val loss [0.017155] val hargmax_mm_MRE [61.646450] Epoch time [0.7min] 
+ iter [0/56] loss [0.015313] 
+ iter [50/56] loss [0.015345] 
+ Epoch [57/1000] train loss [0.015598] train hargmax_mm_MRE [56.062762] val loss [0.016979] val hargmax_mm_MRE [60.819041] Epoch time [0.7min] 
+ iter [0/56] loss [0.013732] 
+ iter [50/56] loss [0.019334] 
+ Epoch [58/1000] train loss [0.015325] train hargmax_mm_MRE [53.100718] val loss [0.016059] val hargmax_mm_MRE [55.859713] Epoch time [0.7min] 
+ iter [0/56] loss [0.014298] 
+ iter [50/56] loss [0.014467] 
+ Epoch [59/1000] train loss [0.015027] train hargmax_mm_MRE [48.314144] val loss [0.016910] val hargmax_mm_MRE [57.661423] Epoch time [0.7min] 
+ iter [0/56] loss [0.015919] 
+ iter [50/56] loss [0.013799] 
+ Epoch [60/1000] train loss [0.015237] train hargmax_mm_MRE [51.928092] val loss [0.016445] val hargmax_mm_MRE [55.050425] Epoch time [0.7min] 
+ iter [0/56] loss [0.018128] 
+ iter [50/56] loss [0.016699] 
+ Epoch [61/1000] train loss [0.015244] train hargmax_mm_MRE [52.888053] val loss [0.016096] val hargmax_mm_MRE [53.327829] Epoch time [0.7min] 
+==== Model saved after Epoch 61 ====
+ iter [0/56] loss [0.014779] 
+ iter [50/56] loss [0.013186] 
+ Epoch [62/1000] train loss [0.014519] train hargmax_mm_MRE [45.289028] val loss [0.016181] val hargmax_mm_MRE [53.285356] Epoch time [0.7min] 
+==== Model saved after Epoch 62 ====
+ iter [0/56] loss [0.012836] 
+ iter [50/56] loss [0.014074] 
+ Epoch [63/1000] train loss [0.014798] train hargmax_mm_MRE [46.184020] val loss [0.018901] val hargmax_mm_MRE [69.331262] Epoch time [0.7min] 
+ iter [0/56] loss [0.013633] 
+ iter [50/56] loss [0.016708] 
+ Epoch [64/1000] train loss [0.015973] train hargmax_mm_MRE [56.104593] val loss [0.016383] val hargmax_mm_MRE [57.063914] Epoch time [0.7min] 
+ iter [0/56] loss [0.018147] 
+ iter [50/56] loss [0.013566] 
+ Epoch [65/1000] train loss [0.015358] train hargmax_mm_MRE [53.887073] val loss [0.015837] val hargmax_mm_MRE [54.567566] Epoch time [0.7min] 
+ iter [0/56] loss [0.014711] 
+ iter [50/56] loss [0.013763] 
+ Epoch [66/1000] train loss [0.014538] train hargmax_mm_MRE [46.406349] val loss [0.015779] val hargmax_mm_MRE [53.208997] Epoch time [0.7min] 
+==== Model saved after Epoch 66 ====
+ iter [0/56] loss [0.013179] 
+ iter [50/56] loss [0.014473] 
+ Epoch [67/1000] train loss [0.014490] train hargmax_mm_MRE [45.602443] val loss [0.015478] val hargmax_mm_MRE [49.309435] Epoch time [0.7min] 
+==== Model saved after Epoch 67 ====
+ iter [0/56] loss [0.016286] 
+ iter [50/56] loss [0.014130] 
+ Epoch [68/1000] train loss [0.014535] train hargmax_mm_MRE [45.218163] val loss [0.015625] val hargmax_mm_MRE [51.773145] Epoch time [0.7min] 
+ iter [0/56] loss [0.013131] 
+ iter [50/56] loss [0.013453] 
+ Epoch [69/1000] train loss [0.014649] train hargmax_mm_MRE [47.527604] val loss [0.015667] val hargmax_mm_MRE [52.272521] Epoch time [0.7min] 
+ iter [0/56] loss [0.017082] 
+ iter [50/56] loss [0.016370] 
+ Epoch [70/1000] train loss [0.014579] train hargmax_mm_MRE [47.087836] val loss [0.015717] val hargmax_mm_MRE [52.887387] Epoch time [0.7min] 
+ iter [0/56] loss [0.014809] 
+ iter [50/56] loss [0.015209] 
+ Epoch [71/1000] train loss [0.014496] train hargmax_mm_MRE [45.670027] val loss [0.016075] val hargmax_mm_MRE [52.329185] Epoch time [0.7min] 
+ iter [0/56] loss [0.015185] 
+ iter [50/56] loss [0.014551] 
+ Epoch [72/1000] train loss [0.014032] train hargmax_mm_MRE [40.396091] val loss [0.016513] val hargmax_mm_MRE [54.605320] Epoch time [0.7min] 
+ iter [0/56] loss [0.014347] 
+ iter [50/56] loss [0.012523] 
+ Epoch [73/1000] train loss [0.014357] train hargmax_mm_MRE [44.227492] val loss [0.015920] val hargmax_mm_MRE [51.855124] Epoch time [0.7min] 
+ iter [0/56] loss [0.012358] 
+ iter [50/56] loss [0.014807] 
+ Epoch [74/1000] train loss [0.014024] train hargmax_mm_MRE [41.029132] val loss [0.015642] val hargmax_mm_MRE [48.846775] Epoch time [0.7min] 
+==== Model saved after Epoch 74 ====
+ iter [0/56] loss [0.014205] 
+ iter [50/56] loss [0.013865] 
+ Epoch [75/1000] train loss [0.014141] train hargmax_mm_MRE [44.204369] val loss [0.015906] val hargmax_mm_MRE [54.027760] Epoch time [0.7min] 
+ iter [0/56] loss [0.014158] 
+ iter [50/56] loss [0.016993] 
+ Epoch [76/1000] train loss [0.014151] train hargmax_mm_MRE [41.876366] val loss [0.016357] val hargmax_mm_MRE [55.175688] Epoch time [0.7min] 
+ iter [0/56] loss [0.012776] 
+ iter [50/56] loss [0.012857] 
+ Epoch [77/1000] train loss [0.013772] train hargmax_mm_MRE [38.424631] val loss [0.015266] val hargmax_mm_MRE [47.387408] Epoch time [0.7min] 
+==== Model saved after Epoch 77 ====
+ iter [0/56] loss [0.017341] 
+ iter [50/56] loss [0.014298] 
+ Epoch [78/1000] train loss [0.014542] train hargmax_mm_MRE [46.786584] val loss [0.016088] val hargmax_mm_MRE [52.425236] Epoch time [0.7min] 
+ iter [0/56] loss [0.015032] 
+ iter [50/56] loss [0.013266] 
+ Epoch [79/1000] train loss [0.014225] train hargmax_mm_MRE [45.208986] val loss [0.016183] val hargmax_mm_MRE [54.957566] Epoch time [0.7min] 
+ iter [0/56] loss [0.014852] 
+ iter [50/56] loss [0.013060] 
+ Epoch [80/1000] train loss [0.013623] train hargmax_mm_MRE [37.756280] val loss [0.016180] val hargmax_mm_MRE [55.251444] Epoch time [0.7min] 
+ iter [0/56] loss [0.013822] 
+ iter [50/56] loss [0.012434] 
+ Epoch [81/1000] train loss [0.013926] train hargmax_mm_MRE [41.064586] val loss [0.015848] val hargmax_mm_MRE [51.827349] Epoch time [0.7min] 
+ iter [0/56] loss [0.012343] 
+ iter [50/56] loss [0.013449] 
+ Epoch [82/1000] train loss [0.013427] train hargmax_mm_MRE [37.689024] val loss [0.015763] val hargmax_mm_MRE [50.529404] Epoch time [0.7min] 
+ iter [0/56] loss [0.012526] 
+ iter [50/56] loss [0.015185] 
+ Epoch [83/1000] train loss [0.013345] train hargmax_mm_MRE [36.653832] val loss [0.016087] val hargmax_mm_MRE [52.481186] Epoch time [0.7min] 
+ iter [0/56] loss [0.012253] 
+ iter [50/56] loss [0.011674] 
+ Epoch [84/1000] train loss [0.013506] train hargmax_mm_MRE [38.426131] val loss [0.016998] val hargmax_mm_MRE [60.097421] Epoch time [0.7min] 
+ iter [0/56] loss [0.012654] 
+ iter [50/56] loss [0.012829] 
+ Epoch [85/1000] train loss [0.013393] train hargmax_mm_MRE [39.538571] val loss [0.015803] val hargmax_mm_MRE [54.487352] Epoch time [0.7min] 
+ iter [0/56] loss [0.012663] 
+ iter [50/56] loss [0.014982] 
+ Epoch [86/1000] train loss [0.013741] train hargmax_mm_MRE [38.711764] val loss [0.015410] val hargmax_mm_MRE [47.479297] Epoch time [0.7min] 
+ iter [0/56] loss [0.013333] 
+ iter [50/56] loss [0.012879] 
+ Epoch [87/1000] train loss [0.013616] train hargmax_mm_MRE [39.991266] val loss [0.015461] val hargmax_mm_MRE [48.180771] Epoch time [0.7min] 
+ iter [0/56] loss [0.012995] 
+ iter [50/56] loss [0.015008] 
+ Epoch [88/1000] train loss [0.013910] train hargmax_mm_MRE [41.798220] val loss [0.015914] val hargmax_mm_MRE [52.140855] Epoch time [0.7min] 
+ iter [0/56] loss [0.012330] 
+ iter [50/56] loss [0.014165] 
+ Epoch [89/1000] train loss [0.012996] train hargmax_mm_MRE [34.589155] val loss [0.015529] val hargmax_mm_MRE [49.117735] Epoch time [0.7min] 
+ iter [0/56] loss [0.014373] 
+ iter [50/56] loss [0.013475] 
+ Epoch [90/1000] train loss [0.012999] train hargmax_mm_MRE [34.202040] val loss [0.016091] val hargmax_mm_MRE [50.157344] Epoch time [0.7min] 
+ iter [0/56] loss [0.012321] 
+ iter [50/56] loss [0.012390] 
+ Epoch [91/1000] train loss [0.013077] train hargmax_mm_MRE [34.758992] val loss [0.016824] val hargmax_mm_MRE [55.058290] Epoch time [0.7min] 
+ iter [0/56] loss [0.013409] 
+ iter [50/56] loss [0.011511] 
+ Epoch [92/1000] train loss [0.013260] train hargmax_mm_MRE [38.561873] val loss [0.016658] val hargmax_mm_MRE [56.840449] Epoch time [0.7min] 
+ iter [0/56] loss [0.013840] 
+ iter [50/56] loss [0.013059] 
+ Epoch [93/1000] train loss [0.013333] train hargmax_mm_MRE [39.231493] val loss [0.015422] val hargmax_mm_MRE [46.703520] Epoch time [0.7min] 
+==== Model saved after Epoch 93 ====
+ iter [0/56] loss [0.011451] 
+ iter [50/56] loss [0.013435] 
+ Epoch [94/1000] train loss [0.014005] train hargmax_mm_MRE [43.208400] val loss [0.016148] val hargmax_mm_MRE [58.170887] Epoch time [0.7min] 
+ iter [0/56] loss [0.011590] 
+ iter [50/56] loss [0.013196] 
+ Epoch [95/1000] train loss [0.013008] train hargmax_mm_MRE [33.735536] val loss [0.015717] val hargmax_mm_MRE [51.327850] Epoch time [0.7min] 
+ iter [0/56] loss [0.013240] 
+ iter [50/56] loss [0.012656] 
+ Epoch [96/1000] train loss [0.013136] train hargmax_mm_MRE [35.086355] val loss [0.015602] val hargmax_mm_MRE [47.208781] Epoch time [0.7min] 
+ iter [0/56] loss [0.011529] 
+ iter [50/56] loss [0.013091] 
+ Epoch [97/1000] train loss [0.012634] train hargmax_mm_MRE [30.986299] val loss [0.016139] val hargmax_mm_MRE [53.018127] Epoch time [0.7min] 
+ iter [0/56] loss [0.014387] 
+ iter [50/56] loss [0.013208] 
+ Epoch [98/1000] train loss [0.012916] train hargmax_mm_MRE [34.183628] val loss [0.015968] val hargmax_mm_MRE [48.838090] Epoch time [0.7min] 
+ iter [0/56] loss [0.011916] 
+ iter [50/56] loss [0.013530] 
+ Epoch [99/1000] train loss [0.012500] train hargmax_mm_MRE [29.997359] val loss [0.015550] val hargmax_mm_MRE [46.897642] Epoch time [0.7min] 
+ iter [0/56] loss [0.012133] 
+ iter [50/56] loss [0.013040] 
+ Epoch [100/1000] train loss [0.013050] train hargmax_mm_MRE [34.870156] val loss [0.017033] val hargmax_mm_MRE [60.934224] Epoch time [0.7min] 
+ iter [0/56] loss [0.012681] 
+ iter [50/56] loss [0.011724] 
+ Epoch [101/1000] train loss [0.012782] train hargmax_mm_MRE [33.294532] val loss [0.015177] val hargmax_mm_MRE [45.311879] Epoch time [0.7min] 
+==== Model saved after Epoch 101 ====
+ iter [0/56] loss [0.012312] 
+ iter [50/56] loss [0.012220] 
+ Epoch [102/1000] train loss [0.012716] train hargmax_mm_MRE [32.049412] val loss [0.015200] val hargmax_mm_MRE [44.647947] Epoch time [0.7min] 
+==== Model saved after Epoch 102 ====
+ iter [0/56] loss [0.011959] 
+ iter [50/56] loss [0.012247] 
+ Epoch [103/1000] train loss [0.012522] train hargmax_mm_MRE [33.681198] val loss [0.015763] val hargmax_mm_MRE [48.913626] Epoch time [0.7min] 
+ iter [0/56] loss [0.012832] 
+ iter [50/56] loss [0.011749] 
+ Epoch [104/1000] train loss [0.012183] train hargmax_mm_MRE [28.962339] val loss [0.015648] val hargmax_mm_MRE [48.636332] Epoch time [0.7min] 
+ iter [0/56] loss [0.012096] 
+ iter [50/56] loss [0.013443] 
+ Epoch [105/1000] train loss [0.012223] train hargmax_mm_MRE [26.978358] val loss [0.015622] val hargmax_mm_MRE [50.339597] Epoch time [0.7min] 
+ iter [0/56] loss [0.011206] 
+ iter [50/56] loss [0.011635] 
+ Epoch [106/1000] train loss [0.011840] train hargmax_mm_MRE [25.925136] val loss [0.016212] val hargmax_mm_MRE [48.019526] Epoch time [0.7min] 
+ iter [0/56] loss [0.016680] 
+ iter [50/56] loss [0.011511] 
+ Epoch [107/1000] train loss [0.011976] train hargmax_mm_MRE [26.516335] val loss [0.015691] val hargmax_mm_MRE [45.194432] Epoch time [0.7min] 
+ iter [0/56] loss [0.012271] 
+ iter [50/56] loss [0.014106] 
+ Epoch [108/1000] train loss [0.012155] train hargmax_mm_MRE [28.616488] val loss [0.015245] val hargmax_mm_MRE [44.229497] Epoch time [0.7min] 
+==== Model saved after Epoch 108 ====
+ iter [0/56] loss [0.011188] 
+ iter [50/56] loss [0.012178] 
+ Epoch [109/1000] train loss [0.011954] train hargmax_mm_MRE [26.700405] val loss [0.015825] val hargmax_mm_MRE [50.134617] Epoch time [0.7min] 
+ iter [0/56] loss [0.011501] 
+ iter [50/56] loss [0.015254] 
+ Epoch [110/1000] train loss [0.012201] train hargmax_mm_MRE [28.987464] val loss [0.015302] val hargmax_mm_MRE [46.594359] Epoch time [0.7min] 
+ iter [0/56] loss [0.011809] 
+ iter [50/56] loss [0.012175] 
+ Epoch [111/1000] train loss [0.012263] train hargmax_mm_MRE [28.981997] val loss [0.016675] val hargmax_mm_MRE [52.565260] Epoch time [0.7min] 
+ iter [0/56] loss [0.011693] 
+ iter [50/56] loss [0.011186] 
+ Epoch [112/1000] train loss [0.012106] train hargmax_mm_MRE [27.839277] val loss [0.015578] val hargmax_mm_MRE [45.425715] Epoch time [0.7min] 
+ iter [0/56] loss [0.011933] 
+ iter [50/56] loss [0.012795] 
+ Epoch [113/1000] train loss [0.012390] train hargmax_mm_MRE [28.665230] val loss [0.015158] val hargmax_mm_MRE [46.387380] Epoch time [0.7min] 
+ iter [0/56] loss [0.012358] 
+ iter [50/56] loss [0.011659] 
+ Epoch [114/1000] train loss [0.012023] train hargmax_mm_MRE [26.572329] val loss [0.016639] val hargmax_mm_MRE [52.382479] Epoch time [0.7min] 
+ iter [0/56] loss [0.011822] 
+ iter [50/56] loss [0.011071] 
+ Epoch [115/1000] train loss [0.011918] train hargmax_mm_MRE [27.133640] val loss [0.015671] val hargmax_mm_MRE [46.357990] Epoch time [0.7min] 
+ iter [0/56] loss [0.012176] 
+ iter [50/56] loss [0.011457] 
+ Epoch [116/1000] train loss [0.011737] train hargmax_mm_MRE [24.224768] val loss [0.015942] val hargmax_mm_MRE [46.727730] Epoch time [0.7min] 
+ iter [0/56] loss [0.012010] 
+ iter [50/56] loss [0.011510] 
+ Epoch [117/1000] train loss [0.011783] train hargmax_mm_MRE [25.801844] val loss [0.015343] val hargmax_mm_MRE [46.213397] Epoch time [0.7min] 
+ iter [0/56] loss [0.010794] 
+ iter [50/56] loss [0.011748] 
+ Epoch [118/1000] train loss [0.011541] train hargmax_mm_MRE [23.267111] val loss [0.015981] val hargmax_mm_MRE [50.262582] Epoch time [0.7min] 
+ iter [0/56] loss [0.010956] 
+ iter [50/56] loss [0.010680] 
+ Epoch [119/1000] train loss [0.011341] train hargmax_mm_MRE [22.765742] val loss [0.016218] val hargmax_mm_MRE [49.066093] Epoch time [0.7min] 
+ iter [0/56] loss [0.011237] 
+ iter [50/56] loss [0.013850] 
+ Epoch [120/1000] train loss [0.011471] train hargmax_mm_MRE [22.499681] val loss [0.016819] val hargmax_mm_MRE [54.162674] Epoch time [0.7min] 
+ iter [0/56] loss [0.010956] 
+ iter [50/56] loss [0.010828] 
+ Epoch [121/1000] train loss [0.011340] train hargmax_mm_MRE [21.484280] val loss [0.015540] val hargmax_mm_MRE [45.786809] Epoch time [0.7min] 
+ iter [0/56] loss [0.011638] 
+ iter [50/56] loss [0.010759] 
+ Epoch [122/1000] train loss [0.011488] train hargmax_mm_MRE [23.626065] val loss [0.015660] val hargmax_mm_MRE [48.249913] Epoch time [0.7min] 
+ iter [0/56] loss [0.011835] 
+ iter [50/56] loss [0.011130] 
+ Epoch [123/1000] train loss [0.011643] train hargmax_mm_MRE [25.112494] val loss [0.016341] val hargmax_mm_MRE [47.591081] Epoch time [0.7min] 
+ iter [0/56] loss [0.010940] 
+ iter [50/56] loss [0.010993] 
+ Epoch [124/1000] train loss [0.011395] train hargmax_mm_MRE [22.293705] val loss [0.015462] val hargmax_mm_MRE [46.105036] Epoch time [0.7min] 
+ iter [0/56] loss [0.010782] 
+ iter [50/56] loss [0.011007] 
+ Epoch [125/1000] train loss [0.011131] train hargmax_mm_MRE [22.297733] val loss [0.014971] val hargmax_mm_MRE [41.107460] Epoch time [0.7min] 
+==== Model saved after Epoch 125 ====
+ iter [0/56] loss [0.010585] 
+ iter [50/56] loss [0.010778] 
+ Epoch [126/1000] train loss [0.011008] train hargmax_mm_MRE [20.906506] val loss [0.015569] val hargmax_mm_MRE [43.441534] Epoch time [0.7min] 
+ iter [0/56] loss [0.011255] 
+ iter [50/56] loss [0.010409] 
+ Epoch [127/1000] train loss [0.010967] train hargmax_mm_MRE [20.763488] val loss [0.016043] val hargmax_mm_MRE [49.741293] Epoch time [0.7min] 
+ iter [0/56] loss [0.010751] 
+ iter [50/56] loss [0.010137] 
+ Epoch [128/1000] train loss [0.011216] train hargmax_mm_MRE [21.303504] val loss [0.015178] val hargmax_mm_MRE [43.887614] Epoch time [0.7min] 
+ iter [0/56] loss [0.011242] 
+ iter [50/56] loss [0.013294] 
+ Epoch [129/1000] train loss [0.011458] train hargmax_mm_MRE [23.455461] val loss [0.016314] val hargmax_mm_MRE [48.223821] Epoch time [0.7min] 
+ iter [0/56] loss [0.011230] 
+ iter [50/56] loss [0.012258] 
+ Epoch [130/1000] train loss [0.011395] train hargmax_mm_MRE [21.389793] val loss [0.015740] val hargmax_mm_MRE [46.491122] Epoch time [0.7min] 
+ iter [0/56] loss [0.010624] 
+ iter [50/56] loss [0.011121] 
+ Epoch [131/1000] train loss [0.011268] train hargmax_mm_MRE [21.503002] val loss [0.015555] val hargmax_mm_MRE [42.660510] Epoch time [0.7min] 
+ iter [0/56] loss [0.012196] 
+ iter [50/56] loss [0.011932] 
+ Epoch [132/1000] train loss [0.011278] train hargmax_mm_MRE [22.098500] val loss [0.015202] val hargmax_mm_MRE [43.378011] Epoch time [0.7min] 
+ iter [0/56] loss [0.010304] 
+ iter [50/56] loss [0.011022] 
+ Epoch [133/1000] train loss [0.011093] train hargmax_mm_MRE [21.081138] val loss [0.015627] val hargmax_mm_MRE [46.301473] Epoch time [0.7min] 
+ iter [0/56] loss [0.011245] 
+ iter [50/56] loss [0.010767] 
+ Epoch [134/1000] train loss [0.010878] train hargmax_mm_MRE [19.126224] val loss [0.016098] val hargmax_mm_MRE [47.162410] Epoch time [0.7min] 
+ iter [0/56] loss [0.010061] 
+ iter [50/56] loss [0.011024] 
+ Epoch [135/1000] train loss [0.010974] train hargmax_mm_MRE [21.240951] val loss [0.016372] val hargmax_mm_MRE [47.969583] Epoch time [0.7min] 
+ iter [0/56] loss [0.010869] 
+ iter [50/56] loss [0.010779] 
+ Epoch [136/1000] train loss [0.010873] train hargmax_mm_MRE [19.130810] val loss [0.015936] val hargmax_mm_MRE [45.812878] Epoch time [0.7min] 
+ iter [0/56] loss [0.010634] 
+ iter [50/56] loss [0.011135] 
+ Epoch [137/1000] train loss [0.011237] train hargmax_mm_MRE [22.928465] val loss [0.015707] val hargmax_mm_MRE [46.564166] Epoch time [0.7min] 
+ iter [0/56] loss [0.010580] 
+ iter [50/56] loss [0.010655] 
+ Epoch [138/1000] train loss [0.010903] train hargmax_mm_MRE [18.771410] val loss [0.015806] val hargmax_mm_MRE [43.688759] Epoch time [0.7min] 
+ iter [0/56] loss [0.010836] 
+ iter [50/56] loss [0.010540] 
+ Epoch [139/1000] train loss [0.010862] train hargmax_mm_MRE [18.581806] val loss [0.015833] val hargmax_mm_MRE [45.318164] Epoch time [0.7min] 
+ iter [0/56] loss [0.011081] 
+ iter [50/56] loss [0.012564] 
+ Epoch [140/1000] train loss [0.011085] train hargmax_mm_MRE [21.767855] val loss [0.016555] val hargmax_mm_MRE [49.831515] Epoch time [0.7min] 
+ iter [0/56] loss [0.010838] 
+ iter [50/56] loss [0.011280] 
+ Epoch [141/1000] train loss [0.011529] train hargmax_mm_MRE [24.044969] val loss [0.018687] val hargmax_mm_MRE [63.920720] Epoch time [0.7min] 
+ iter [0/56] loss [0.011358] 
+ iter [50/56] loss [0.011949] 
+ Epoch [142/1000] train loss [0.011301] train hargmax_mm_MRE [22.666675] val loss [0.016444] val hargmax_mm_MRE [47.484255] Epoch time [0.7min] 
+ iter [0/56] loss [0.014201] 
+ iter [50/56] loss [0.010285] 
+ Epoch [143/1000] train loss [0.011505] train hargmax_mm_MRE [22.857473] val loss [0.015515] val hargmax_mm_MRE [44.201478] Epoch time [0.7min] 
+ iter [0/56] loss [0.011470] 
+ iter [50/56] loss [0.012399] 
+ Epoch [144/1000] train loss [0.011491] train hargmax_mm_MRE [23.524646] val loss [0.017309] val hargmax_mm_MRE [54.307895] Epoch time [0.7min] 
+ iter [0/56] loss [0.011257] 
+ iter [50/56] loss [0.011165] 
+ Epoch [145/1000] train loss [0.011504] train hargmax_mm_MRE [22.352665] val loss [0.015334] val hargmax_mm_MRE [43.239810] Epoch time [0.7min] 
+ iter [0/56] loss [0.011330] 
+ iter [50/56] loss [0.011636] 
+ Epoch [146/1000] train loss [0.010867] train hargmax_mm_MRE [18.544029] val loss [0.015603] val hargmax_mm_MRE [45.279154] Epoch time [0.7min] 
+ iter [0/56] loss [0.011735] 
+ iter [50/56] loss [0.012129] 
+ Epoch [147/1000] train loss [0.010902] train hargmax_mm_MRE [20.590170] val loss [0.015940] val hargmax_mm_MRE [48.613513] Epoch time [0.7min] 
+ iter [0/56] loss [0.011504] 
+ iter [50/56] loss [0.010493] 
+ Epoch [148/1000] train loss [0.011005] train hargmax_mm_MRE [19.958173] val loss [0.015016] val hargmax_mm_MRE [38.897439] Epoch time [0.7min] 
+==== Model saved after Epoch 148 ====
+ iter [0/56] loss [0.010642] 
+ iter [50/56] loss [0.010973] 
+ Epoch [149/1000] train loss [0.010653] train hargmax_mm_MRE [17.094331] val loss [0.015598] val hargmax_mm_MRE [44.085960] Epoch time [0.7min] 
+ iter [0/56] loss [0.010437] 
+ iter [50/56] loss [0.010096] 
+ Epoch [150/1000] train loss [0.010570] train hargmax_mm_MRE [17.195070] val loss [0.015056] val hargmax_mm_MRE [39.797737] Epoch time [0.7min] 
+ iter [0/56] loss [0.011124] 
+ iter [50/56] loss [0.010643] 
+ Epoch [151/1000] train loss [0.010517] train hargmax_mm_MRE [16.248438] val loss [0.015431] val hargmax_mm_MRE [43.841191] Epoch time [0.7min] 
+ iter [0/56] loss [0.009743] 
+ iter [50/56] loss [0.010406] 
+ Epoch [152/1000] train loss [0.010701] train hargmax_mm_MRE [18.225083] val loss [0.015629] val hargmax_mm_MRE [43.100649] Epoch time [0.7min] 
+ iter [0/56] loss [0.010219] 
+ iter [50/56] loss [0.010032] 
+ Epoch [153/1000] train loss [0.010544] train hargmax_mm_MRE [17.341178] val loss [0.015856] val hargmax_mm_MRE [44.275205] Epoch time [0.7min] 
+ iter [0/56] loss [0.010999] 
+ iter [50/56] loss [0.010102] 
+ Epoch [154/1000] train loss [0.010559] train hargmax_mm_MRE [16.719440] val loss [0.016068] val hargmax_mm_MRE [44.000801] Epoch time [0.7min] 
+ iter [0/56] loss [0.010098] 
+ iter [50/56] loss [0.010441] 
+ Epoch [155/1000] train loss [0.010602] train hargmax_mm_MRE [17.547290] val loss [0.016921] val hargmax_mm_MRE [48.080306] Epoch time [0.7min] 
+ iter [0/56] loss [0.011075] 
+ iter [50/56] loss [0.011484] 
+ Epoch [156/1000] train loss [0.011258] train hargmax_mm_MRE [22.203914] val loss [0.015587] val hargmax_mm_MRE [42.210646] Epoch time [0.7min] 
+ iter [0/56] loss [0.010213] 
+ iter [50/56] loss [0.010222] 
+ Epoch [157/1000] train loss [0.010795] train hargmax_mm_MRE [19.509176] val loss [0.015535] val hargmax_mm_MRE [44.060820] Epoch time [0.7min] 
+ iter [0/56] loss [0.011132] 
+ iter [50/56] loss [0.010192] 
+ Epoch [158/1000] train loss [0.010717] train hargmax_mm_MRE [19.594113] val loss [0.016472] val hargmax_mm_MRE [49.094213] Epoch time [0.7min] 
+ iter [0/56] loss [0.010059] 
+ iter [50/56] loss [0.010720] 
+ Epoch [159/1000] train loss [0.010671] train hargmax_mm_MRE [17.662972] val loss [0.016128] val hargmax_mm_MRE [46.548648] Epoch time [0.7min] 
+ iter [0/56] loss [0.010267] 
+ iter [50/56] loss [0.011703] 
+ Epoch [160/1000] train loss [0.010943] train hargmax_mm_MRE [19.785177] val loss [0.015466] val hargmax_mm_MRE [42.284713] Epoch time [0.7min] 
+ iter [0/56] loss [0.010848] 
+ iter [50/56] loss [0.010128] 
+ Epoch [161/1000] train loss [0.010525] train hargmax_mm_MRE [16.720818] val loss [0.015252] val hargmax_mm_MRE [42.381446] Epoch time [0.7min] 
+ iter [0/56] loss [0.010774] 
+ iter [50/56] loss [0.010182] 
+ Epoch [162/1000] train loss [0.010512] train hargmax_mm_MRE [16.141814] val loss [0.015822] val hargmax_mm_MRE [43.713208] Epoch time [0.7min] 
+ iter [0/56] loss [0.010392] 
+ iter [50/56] loss [0.010595] 
+ Epoch [163/1000] train loss [0.010682] train hargmax_mm_MRE [18.017611] val loss [0.015313] val hargmax_mm_MRE [41.394811] Epoch time [0.7min] 
+ iter [0/56] loss [0.010120] 
+ iter [50/56] loss [0.010373] 
+ Epoch [164/1000] train loss [0.010576] train hargmax_mm_MRE [16.650607] val loss [0.016441] val hargmax_mm_MRE [47.779793] Epoch time [0.7min] 
+ iter [0/56] loss [0.011060] 
+ iter [50/56] loss [0.011357] 
+ Epoch [165/1000] train loss [0.010570] train hargmax_mm_MRE [16.942500] val loss [0.016487] val hargmax_mm_MRE [45.779014] Epoch time [0.7min] 
+ iter [0/56] loss [0.009953] 
+ iter [50/56] loss [0.009936] 
+ Epoch [166/1000] train loss [0.010679] train hargmax_mm_MRE [18.832432] val loss [0.016486] val hargmax_mm_MRE [47.898551] Epoch time [0.7min] 
+ iter [0/56] loss [0.010671] 
+ iter [50/56] loss [0.009897] 
+ Epoch [167/1000] train loss [0.010629] train hargmax_mm_MRE [17.119403] val loss [0.015480] val hargmax_mm_MRE [40.612358] Epoch time [0.7min] 
+ iter [0/56] loss [0.011147] 
+ iter [50/56] loss [0.010393] 
+ Epoch [168/1000] train loss [0.010319] train hargmax_mm_MRE [16.062732] val loss [0.016097] val hargmax_mm_MRE [48.520172] Epoch time [0.7min] 
+ iter [0/56] loss [0.010325] 
+ iter [50/56] loss [0.010252] 
+ Epoch [169/1000] train loss [0.010230] train hargmax_mm_MRE [14.629796] val loss [0.015725] val hargmax_mm_MRE [42.169357] Epoch time [0.7min] 
+ iter [0/56] loss [0.010097] 
+ iter [50/56] loss [0.010220] 
+ Epoch [170/1000] train loss [0.010151] train hargmax_mm_MRE [14.580620] val loss [0.015849] val hargmax_mm_MRE [42.420961] Epoch time [0.7min] 
+ iter [0/56] loss [0.009881] 
+ iter [50/56] loss [0.009859] 
+ Epoch [171/1000] train loss [0.010127] train hargmax_mm_MRE [14.119050] val loss [0.016208] val hargmax_mm_MRE [45.830683] Epoch time [0.7min] 
+ iter [0/56] loss [0.009800] 
+ iter [50/56] loss [0.009900] 
+ Epoch [172/1000] train loss [0.010082] train hargmax_mm_MRE [13.930633] val loss [0.016183] val hargmax_mm_MRE [44.527532] Epoch time [0.7min] 
+ iter [0/56] loss [0.010106] 
+ iter [50/56] loss [0.009904] 
+ Epoch [173/1000] train loss [0.010048] train hargmax_mm_MRE [14.516815] val loss [0.015949] val hargmax_mm_MRE [42.587749] Epoch time [0.7min] 
+ iter [0/56] loss [0.010507] 
+ iter [50/56] loss [0.010179] 
+ Epoch [174/1000] train loss [0.009990] train hargmax_mm_MRE [12.986876] val loss [0.016114] val hargmax_mm_MRE [43.504512] Epoch time [0.7min] 
+ iter [0/56] loss [0.009519] 
+ iter [50/56] loss [0.009629] 
+ Epoch [175/1000] train loss [0.010096] train hargmax_mm_MRE [13.624423] val loss [0.016559] val hargmax_mm_MRE [46.936671] Epoch time [0.7min] 
+ iter [0/56] loss [0.010466] 
+ iter [50/56] loss [0.009983] 
+ Epoch [176/1000] train loss [0.010389] train hargmax_mm_MRE [16.536927] val loss [0.016844] val hargmax_mm_MRE [48.547302] Epoch time [0.7min] 
+ iter [0/56] loss [0.010311] 
+ iter [50/56] loss [0.010352] 
+ Epoch [177/1000] train loss [0.010535] train hargmax_mm_MRE [16.874391] val loss [0.016552] val hargmax_mm_MRE [45.759179] Epoch time [0.7min] 
+ iter [0/56] loss [0.010201] 
+ iter [50/56] loss [0.009912] 
+ Epoch [178/1000] train loss [0.010454] train hargmax_mm_MRE [16.014849] val loss [0.016856] val hargmax_mm_MRE [48.611232] Epoch time [0.7min] 
+ iter [0/56] loss [0.009927] 
+ iter [50/56] loss [0.011420] 
+ Epoch [179/1000] train loss [0.011167] train hargmax_mm_MRE [21.761321] val loss [0.017043] val hargmax_mm_MRE [53.586023] Epoch time [0.7min] 
+ iter [0/56] loss [0.010539] 
+ iter [50/56] loss [0.010236] 
+ Epoch [180/1000] train loss [0.010759] train hargmax_mm_MRE [17.807967] val loss [0.015755] val hargmax_mm_MRE [42.681096] Epoch time [0.7min] 
+ iter [0/56] loss [0.010031] 
+ iter [50/56] loss [0.009821] 
+ Epoch [181/1000] train loss [0.010345] train hargmax_mm_MRE [15.530861] val loss [0.015956] val hargmax_mm_MRE [43.664070] Epoch time [0.7min] 
+ iter [0/56] loss [0.009896] 
+ iter [50/56] loss [0.010329] 
+ Epoch [182/1000] train loss [0.010232] train hargmax_mm_MRE [14.953575] val loss [0.016227] val hargmax_mm_MRE [47.177401] Epoch time [0.7min] 
+ iter [0/56] loss [0.009941] 
+ iter [50/56] loss [0.010448] 
+ Epoch [183/1000] train loss [0.010288] train hargmax_mm_MRE [15.660753] val loss [0.016395] val hargmax_mm_MRE [44.254883] Epoch time [0.7min] 
+ iter [0/56] loss [0.013769] 
+ iter [50/56] loss [0.010292] 
+ Epoch [184/1000] train loss [0.010538] train hargmax_mm_MRE [17.254245] val loss [0.015725] val hargmax_mm_MRE [43.526038] Epoch time [0.7min] 
+ iter [0/56] loss [0.010054] 
+ iter [50/56] loss [0.010563] 
+ Epoch [185/1000] train loss [0.010192] train hargmax_mm_MRE [14.620100] val loss [0.016567] val hargmax_mm_MRE [43.386658] Epoch time [0.7min] 
+ iter [0/56] loss [0.010599] 
+ iter [50/56] loss [0.009914] 
+ Epoch [186/1000] train loss [0.010047] train hargmax_mm_MRE [13.730373] val loss [0.016341] val hargmax_mm_MRE [42.699356] Epoch time [0.7min] 
+ iter [0/56] loss [0.009914] 
+ iter [50/56] loss [0.010482] 
+ Epoch [187/1000] train loss [0.010018] train hargmax_mm_MRE [13.367062] val loss [0.016138] val hargmax_mm_MRE [43.380808] Epoch time [0.7min] 
+ iter [0/56] loss [0.009698] 
+ iter [50/56] loss [0.009681] 
+ Epoch [188/1000] train loss [0.010009] train hargmax_mm_MRE [13.027612] val loss [0.015916] val hargmax_mm_MRE [41.212727] Epoch time [0.7min] 
+ iter [0/56] loss [0.009798] 
+ iter [50/56] loss [0.009942] 
+ Epoch [189/1000] train loss [0.009992] train hargmax_mm_MRE [13.876540] val loss [0.015753] val hargmax_mm_MRE [41.753215] Epoch time [0.7min] 
+ iter [0/56] loss [0.010516] 
+ iter [50/56] loss [0.010317] 
+ Epoch [190/1000] train loss [0.010344] train hargmax_mm_MRE [16.293844] val loss [0.015470] val hargmax_mm_MRE [42.407800] Epoch time [0.7min] 
+ iter [0/56] loss [0.009974] 
+ iter [50/56] loss [0.010806] 
+ Epoch [191/1000] train loss [0.010162] train hargmax_mm_MRE [14.161009] val loss [0.016387] val hargmax_mm_MRE [42.990477] Epoch time [0.7min] 
+ iter [0/56] loss [0.009772] 
+ iter [50/56] loss [0.009859] 
+ Epoch [192/1000] train loss [0.010148] train hargmax_mm_MRE [14.300459] val loss [0.016104] val hargmax_mm_MRE [42.536987] Epoch time [0.7min] 
+ iter [0/56] loss [0.010804] 
+ iter [50/56] loss [0.010534] 
+ Epoch [193/1000] train loss [0.010086] train hargmax_mm_MRE [13.760164] val loss [0.017168] val hargmax_mm_MRE [47.483588] Epoch time [0.7min] 
+ iter [0/56] loss [0.009941] 
+ iter [50/56] loss [0.010546] 
+ Epoch [194/1000] train loss [0.010132] train hargmax_mm_MRE [14.134609] val loss [0.016663] val hargmax_mm_MRE [43.715114] Epoch time [0.7min] 
+ iter [0/56] loss [0.009678] 
+ iter [50/56] loss [0.011023] 
+ Epoch [195/1000] train loss [0.010315] train hargmax_mm_MRE [15.122794] val loss [0.015817] val hargmax_mm_MRE [44.542925] Epoch time [0.7min] 
+ iter [0/56] loss [0.011479] 
+ iter [50/56] loss [0.010932] 
+ Epoch [196/1000] train loss [0.011378] train hargmax_mm_MRE [22.756894] val loss [0.016601] val hargmax_mm_MRE [46.789289] Epoch time [0.7min] 
+ iter [0/56] loss [0.012098] 
+ iter [50/56] loss [0.010341] 
+ Epoch [197/1000] train loss [0.010848] train hargmax_mm_MRE [19.145518] val loss [0.017008] val hargmax_mm_MRE [49.591006] Epoch time [0.7min] 
+ iter [0/56] loss [0.010809] 
+ iter [50/56] loss [0.010558] 
+ Epoch [198/1000] train loss [0.010576] train hargmax_mm_MRE [17.263605] val loss [0.016361] val hargmax_mm_MRE [42.800357] Epoch time [0.7min] 
+ iter [0/56] loss [0.009887] 
+ iter [50/56] loss [0.010439] 
+ Epoch [199/1000] train loss [0.010143] train hargmax_mm_MRE [14.132305] val loss [0.016342] val hargmax_mm_MRE [43.996253] Epoch time [0.7min] 
+================ Training Early Stopped after Epoch 199 ================
+==== Start Test Evaluation... ====
+ Best model at epoch 148 loaded 
+ (model ) Hint 0 ::: Munch({'hargmax_pixel_MAE': np.float32(7.810635), 'hargmax_pixel_RMSE': np.float64(14.749749228358269), 'hargmax_pixel_MRE': np.float32(12.802553), 'hargmax_mm_MAE': np.float32(30.99503), 'hargmax_mm_RMSE': np.float64(60.21549937129021), 'hargmax_mm_MRE': np.float32(51.45359), 'sargmax_pixel_MAE': np.float32(7.706387), 'sargmax_pixel_RMSE': np.float64(14.680829264223576), 'sargmax_pixel_MRE': np.float32(12.646375), 'sargmax_mm_MAE': np.float32(30.571417), 'sargmax_mm_RMSE': np.float64(59.92580792307854), 'sargmax_mm_MRE': np.float32(50.806564)}) 
+ (manual) Hint 0 ::: Munch({'hargmax_pixel_MAE': np.float32(7.810635), 'hargmax_pixel_RMSE': np.float64(14.749749228358269), 'hargmax_pixel_MRE': np.float32(12.802553), 'hargmax_mm_MAE': np.float32(30.99503), 'hargmax_mm_RMSE': np.float64(60.21549937129021), 'hargmax_mm_MRE': np.float32(51.45359), 'sargmax_pixel_MAE': np.float32(7.706387), 'sargmax_pixel_RMSE': np.float64(14.680829264223576), 'sargmax_pixel_MRE': np.float32(12.646375), 'sargmax_mm_MAE': np.float32(30.571417), 'sargmax_mm_RMSE': np.float64(59.92580792307854), 'sargmax_mm_MRE': np.float32(50.806564)}) 
+ (model ) Hint 1 ::: Munch({'hargmax_pixel_MAE': np.float32(6.996378), 'hargmax_pixel_RMSE': np.float64(12.18074245750904), 'hargmax_pixel_MRE': np.float32(11.389424), 'hargmax_mm_MAE': np.float32(27.37542), 'hargmax_mm_RMSE': np.float64(48.259549766778946), 'hargmax_mm_MRE': np.float32(45.057022), 'sargmax_pixel_MAE': np.float32(6.883802), 'sargmax_pixel_RMSE': np.float64(12.103320948779583), 'sargmax_pixel_MRE': np.float32(11.220722), 'sargmax_mm_MAE': np.float32(26.921047), 'sargmax_mm_RMSE': np.float64(47.93756029009819), 'sargmax_mm_MRE': np.float32(44.365864)}) 
+ (manual) Hint 1 ::: Munch({'hargmax_pixel_MAE': np.float32(7.45257), 'hargmax_pixel_RMSE': np.float64(13.8421875461936), 'hargmax_pixel_MRE': np.float32(12.188836), 'hargmax_mm_MAE': np.float32(29.54095), 'hargmax_mm_RMSE': np.float64(56.38772878050804), 'hargmax_mm_MRE': np.float32(48.93763), 'sargmax_pixel_MAE': np.float32(7.348757), 'sargmax_pixel_RMSE': np.float64(13.77917055040598), 'sargmax_pixel_MRE': np.float32(12.03407), 'sargmax_mm_MAE': np.float32(29.119576), 'sargmax_mm_RMSE': np.float64(56.124027490615845), 'sargmax_mm_MRE': np.float32(48.297676)}) 
+ (model ) Hint 2 ::: Munch({'hargmax_pixel_MAE': np.float32(6.650938), 'hargmax_pixel_RMSE': np.float64(11.456846415996552), 'hargmax_pixel_MRE': np.float32(10.8204975), 'hargmax_mm_MAE': np.float32(25.88004), 'hargmax_mm_RMSE': np.float64(44.772547870874405), 'hargmax_mm_MRE': np.float32(42.527344), 'sargmax_pixel_MAE': np.float32(6.5355015), 'sargmax_pixel_RMSE': np.float64(11.377370215952396), 'sargmax_pixel_MRE': np.float32(10.647381), 'sargmax_mm_MAE': np.float32(25.416447), 'sargmax_mm_RMSE': np.float64(44.438270300626755), 'sargmax_mm_MRE': np.float32(41.819374)}) 
+ (manual) Hint 2 ::: Munch({'hargmax_pixel_MAE': np.float32(7.1203113), 'hargmax_pixel_RMSE': np.float64(12.936146341264248), 'hargmax_pixel_MRE': np.float32(11.618222), 'hargmax_mm_MAE': np.float32(28.192568), 'hargmax_mm_RMSE': np.float64(52.4848193526268), 'hargmax_mm_MRE': np.float32(46.597454), 'sargmax_pixel_MAE': np.float32(7.016381), 'sargmax_pixel_RMSE': np.float64(12.873845517635345), 'sargmax_pixel_MRE': np.float32(11.463581), 'sargmax_mm_MAE': np.float32(27.770868), 'sargmax_mm_RMSE': np.float64(52.223792254924774), 'sargmax_mm_MRE': np.float32(45.95875)}) 
+ (model ) Hint 3 ::: Munch({'hargmax_pixel_MAE': np.float32(6.3192263), 'hargmax_pixel_RMSE': np.float64(10.697353392839432), 'hargmax_pixel_MRE': np.float32(10.2844), 'hargmax_mm_MAE': np.float32(24.575863), 'hargmax_mm_RMSE': np.float64(41.59917852282524), 'hargmax_mm_MRE': np.float32(40.397636), 'sargmax_pixel_MAE': np.float32(6.2004538), 'sargmax_pixel_RMSE': np.float64(10.618143528699875), 'sargmax_pixel_MRE': np.float32(10.106439), 'sargmax_mm_MAE': np.float32(24.096405), 'sargmax_mm_RMSE': np.float64(41.26216843724251), 'sargmax_mm_MRE': np.float32(39.665054)}) 
+ (manual) Hint 3 ::: Munch({'hargmax_pixel_MAE': np.float32(6.8059683), 'hargmax_pixel_RMSE': np.float64(11.948030203580856), 'hargmax_pixel_MRE': np.float32(11.074522), 'hargmax_mm_MAE': np.float32(26.91228), 'hargmax_mm_RMSE': np.float64(48.194125801324844), 'hargmax_mm_MRE': np.float32(44.359474), 'sargmax_pixel_MAE': np.float32(6.7007127), 'sargmax_pixel_RMSE': np.float64(11.885680697858334), 'sargmax_pixel_MRE': np.float32(10.917871), 'sargmax_mm_MAE': np.float32(26.484905), 'sargmax_mm_RMSE': np.float64(47.928574830293655), 'sargmax_mm_MRE': np.float32(43.712128)}) 
+ (model ) Hint 4 ::: Munch({'hargmax_pixel_MAE': np.float32(5.869092), 'hargmax_pixel_RMSE': np.float64(9.975703716278076), 'hargmax_pixel_MRE': np.float32(9.551285), 'hargmax_mm_MAE': np.float32(22.75886), 'hargmax_mm_RMSE': np.float64(38.88570216298103), 'hargmax_mm_MRE': np.float32(37.458572), 'sargmax_pixel_MAE': np.float32(5.747945), 'sargmax_pixel_RMSE': np.float64(9.89280229061842), 'sargmax_pixel_MRE': np.float32(9.369123), 'sargmax_mm_MAE': np.float32(22.266201), 'sargmax_mm_RMSE': np.float64(38.5305717587471), 'sargmax_mm_MRE': np.float32(36.70145)}) 
+ (manual) Hint 4 ::: Munch({'hargmax_pixel_MAE': np.float32(6.5008907), 'hargmax_pixel_RMSE': np.float64(10.706604726612568), 'hargmax_pixel_MRE': np.float32(10.550702), 'hargmax_mm_MAE': np.float32(25.676945), 'hargmax_mm_RMSE': np.float64(42.77760085463524), 'hargmax_mm_MRE': np.float32(42.22003), 'sargmax_pixel_MAE': np.float32(6.395343), 'sargmax_pixel_RMSE': np.float64(10.644896395504475), 'sargmax_pixel_MRE': np.float32(10.393414), 'sargmax_mm_MAE': np.float32(25.248493), 'sargmax_mm_RMSE': np.float64(42.51277294754982), 'sargmax_mm_MRE': np.float32(41.570053)}) 
+ (model ) Hint 5 ::: Munch({'hargmax_pixel_MAE': np.float32(5.549802), 'hargmax_pixel_RMSE': np.float64(9.55428521335125), 'hargmax_pixel_MRE': np.float32(9.026495), 'hargmax_mm_MAE': np.float32(21.416037), 'hargmax_mm_RMSE': np.float64(37.05244866013527), 'hargmax_mm_MRE': np.float32(35.193024), 'sargmax_pixel_MAE': np.float32(5.423694), 'sargmax_pixel_RMSE': np.float64(9.473440781235695), 'sargmax_pixel_MRE': np.float32(8.837267), 'sargmax_mm_MAE': np.float32(20.903675), 'sargmax_mm_RMSE': np.float64(36.7013538479805), 'sargmax_mm_MRE': np.float32(34.408623)}) 
+ (manual) Hint 5 ::: Munch({'hargmax_pixel_MAE': np.float32(6.2760587), 'hargmax_pixel_RMSE': np.float64(10.360410802066326), 'hargmax_pixel_MRE': np.float32(10.179457), 'hargmax_mm_MAE': np.float32(24.807676), 'hargmax_mm_RMSE': np.float64(41.500493198633194), 'hargmax_mm_MRE': np.float32(40.779305), 'sargmax_pixel_MAE': np.float32(6.1693335), 'sargmax_pixel_RMSE': np.float64(10.298900611698627), 'sargmax_pixel_MRE': np.float32(10.020407), 'sargmax_mm_MAE': np.float32(24.375809), 'sargmax_mm_RMSE': np.float64(41.23792463541031), 'sargmax_mm_MRE': np.float32(40.12448)}) 
+ (model ) Hint 6 ::: Munch({'hargmax_pixel_MAE': np.float32(5.1538563), 'hargmax_pixel_RMSE': np.float64(8.875798143446445), 'hargmax_pixel_MRE': np.float32(8.3588295), 'hargmax_mm_MAE': np.float32(19.858406), 'hargmax_mm_RMSE': np.float64(34.22066184878349), 'hargmax_mm_MRE': np.float32(32.512257), 'sargmax_pixel_MAE': np.float32(5.0295067), 'sargmax_pixel_RMSE': np.float64(8.797746963799), 'sargmax_pixel_MRE': np.float32(8.170765), 'sargmax_mm_MAE': np.float32(19.353168), 'sargmax_mm_RMSE': np.float64(33.87664347887039), 'sargmax_mm_MRE': np.float32(31.736248)}) 
+ (manual) Hint 6 ::: Munch({'hargmax_pixel_MAE': np.float32(6.0642376), 'hargmax_pixel_RMSE': np.float64(10.046175226569176), 'hargmax_pixel_MRE': np.float32(9.82875), 'hargmax_mm_MAE': np.float32(23.98122), 'hargmax_mm_RMSE': np.float64(40.28807431459427), 'hargmax_mm_MRE': np.float32(39.40113), 'sargmax_pixel_MAE': np.float32(5.9569016), 'sargmax_pixel_RMSE': np.float64(9.986533023416996), 'sargmax_pixel_MRE': np.float32(9.669493), 'sargmax_mm_MAE': np.float32(23.547523), 'sargmax_mm_RMSE': np.float64(40.03408259153366), 'sargmax_mm_MRE': np.float32(38.74695)}) 
+ (model ) Hint 7 ::: Munch({'hargmax_pixel_MAE': np.float32(4.8226976), 'hargmax_pixel_RMSE': np.float64(8.347509421408176), 'hargmax_pixel_MRE': np.float32(7.8108406), 'hargmax_mm_MAE': np.float32(18.603638), 'hargmax_mm_RMSE': np.float64(32.371041655540466), 'hargmax_mm_MRE': np.float32(30.402813), 'sargmax_pixel_MAE': np.float32(4.6957717), 'sargmax_pixel_RMSE': np.float64(8.258481413125992), 'sargmax_pixel_MRE': np.float32(7.617282), 'sargmax_mm_MAE': np.float32(18.087942), 'sargmax_mm_RMSE': np.float64(31.981153964996338), 'sargmax_mm_MRE': np.float32(29.604965)}) 
+ (manual) Hint 7 ::: Munch({'hargmax_pixel_MAE': np.float32(5.859243), 'hargmax_pixel_RMSE': np.float64(9.740858621895313), 'hargmax_pixel_MRE': np.float32(9.490152), 'hargmax_mm_MAE': np.float32(23.184473), 'hargmax_mm_RMSE': np.float64(39.12584909796715), 'hargmax_mm_MRE': np.float32(38.077065), 'sargmax_pixel_MAE': np.float32(5.7517066), 'sargmax_pixel_RMSE': np.float64(9.686370022594929), 'sargmax_pixel_MRE': np.float32(9.330648), 'sargmax_mm_MAE': np.float32(22.750166), 'sargmax_mm_RMSE': np.float64(38.89458557963371), 'sargmax_mm_MRE': np.float32(37.422592)}) 
+ (model ) Hint 8 ::: Munch({'hargmax_pixel_MAE': np.float32(4.5325174), 'hargmax_pixel_RMSE': np.float64(7.8338939025998116), 'hargmax_pixel_MRE': np.float32(7.3238153), 'hargmax_mm_MAE': np.float32(17.472767), 'hargmax_mm_RMSE': np.float64(30.362167865037918), 'hargmax_mm_MRE': np.float32(28.480125), 'sargmax_pixel_MAE': np.float32(4.4031916), 'sargmax_pixel_RMSE': np.float64(7.743295229971409), 'sargmax_pixel_MRE': np.float32(7.1268606), 'sargmax_mm_MAE': np.float32(16.948544), 'sargmax_mm_RMSE': np.float64(29.971642047166824), 'sargmax_mm_MRE': np.float32(27.669682)}) 
+ (manual) Hint 8 ::: Munch({'hargmax_pixel_MAE': np.float32(5.660415), 'hargmax_pixel_RMSE': np.float64(9.44589477777481), 'hargmax_pixel_MRE': np.float32(9.164436), 'hargmax_mm_MAE': np.float32(22.414679), 'hargmax_mm_RMSE': np.float64(38.012704253196716), 'hargmax_mm_MRE': np.float32(36.806046), 'sargmax_pixel_MAE': np.float32(5.55226), 'sargmax_pixel_RMSE': np.float64(9.392285242676735), 'sargmax_pixel_MRE': np.float32(9.003614), 'sargmax_mm_MAE': np.float32(21.978329), 'sargmax_mm_RMSE': np.float64(37.785682052373886), 'sargmax_mm_MRE': np.float32(36.147274)}) 
+ (model ) Hint 9 ::: Munch({'hargmax_pixel_MAE': np.float32(4.251911), 'hargmax_pixel_RMSE': np.float64(7.349649712443352), 'hargmax_pixel_MRE': np.float32(6.8496714), 'hargmax_mm_MAE': np.float32(16.362215), 'hargmax_mm_RMSE': np.float64(28.531360656023026), 'hargmax_mm_MRE': np.float32(26.601078), 'sargmax_pixel_MAE': np.float32(4.123585), 'sargmax_pixel_RMSE': np.float64(7.263593472540379), 'sargmax_pixel_MRE': np.float32(6.652529), 'sargmax_mm_MAE': np.float32(15.84396), 'sargmax_mm_RMSE': np.float64(28.162260234355927), 'sargmax_mm_MRE': np.float32(25.794594)}) 
+ (manual) Hint 9 ::: Munch({'hargmax_pixel_MAE': np.float32(5.4691577), 'hargmax_pixel_RMSE': np.float64(9.174540176987648), 'hargmax_pixel_MRE': np.float32(8.855141), 'hargmax_mm_MAE': np.float32(21.66909), 'hargmax_mm_RMSE': np.float64(36.97512486577034), 'hargmax_mm_MRE': np.float32(35.587135), 'sargmax_pixel_MAE': np.float32(5.359371), 'sargmax_pixel_RMSE': np.float64(9.121521182358265), 'sargmax_pixel_MRE': np.float32(8.691793), 'sargmax_mm_MAE': np.float32(21.226494), 'sargmax_mm_RMSE': np.float64(36.75035864114761), 'sargmax_mm_MRE': np.float32(34.917915)}) 
+ (model ) Hint 10 ::: Munch({'hargmax_pixel_MAE': np.float32(4.0608997), 'hargmax_pixel_RMSE': np.float64(7.0303772911429405), 'hargmax_pixel_MRE': np.float32(6.531006), 'hargmax_mm_MAE': np.float32(15.635521), 'hargmax_mm_RMSE': np.float64(27.369688004255295), 'hargmax_mm_MRE': np.float32(25.369465), 'sargmax_pixel_MAE': np.float32(3.9284215), 'sargmax_pixel_RMSE': np.float64(6.938113190233707), 'sargmax_pixel_MRE': np.float32(6.3256025), 'sargmax_mm_MAE': np.float32(15.100516), 'sargmax_mm_RMSE': np.float64(26.971297919750214), 'sargmax_mm_MRE': np.float32(24.528801)}) 
+ (manual) Hint 10 ::: Munch({'hargmax_pixel_MAE': np.float32(5.2846336), 'hargmax_pixel_RMSE': np.float64(8.901233173906803), 'hargmax_pixel_MRE': np.float32(8.552746), 'hargmax_mm_MAE': np.float32(20.953339), 'hargmax_mm_RMSE': np.float64(35.960911720991135), 'hargmax_mm_MRE': np.float32(34.408962), 'sargmax_pixel_MAE': np.float32(5.173927), 'sargmax_pixel_RMSE': np.float64(8.848430141806602), 'sargmax_pixel_MRE': np.float32(8.387854), 'sargmax_mm_MAE': np.float32(20.50764), 'sargmax_mm_RMSE': np.float64(35.73475493490696), 'sargmax_mm_MRE': np.float32(33.734077)}) 
+ (model ) Hint 11 ::: Munch({'hargmax_pixel_MAE': np.float32(3.899717), 'hargmax_pixel_RMSE': np.float64(6.785971023142338), 'hargmax_pixel_MRE': np.float32(6.267165), 'hargmax_mm_MAE': np.float32(15.004145), 'hargmax_mm_RMSE': np.float64(26.36156588792801), 'hargmax_mm_MRE': np.float32(24.32132), 'sargmax_pixel_MAE': np.float32(3.7681892), 'sargmax_pixel_RMSE': np.float64(6.699271030724049), 'sargmax_pixel_MRE': np.float32(6.063973), 'sargmax_mm_MAE': np.float32(14.472843), 'sargmax_mm_RMSE': np.float64(25.991106554865837), 'sargmax_mm_MRE': np.float32(23.488663)}) 
+ (manual) Hint 11 ::: Munch({'hargmax_pixel_MAE': np.float32(5.1036644), 'hargmax_pixel_RMSE': np.float64(8.62794441729784), 'hargmax_pixel_MRE': np.float32(8.256491), 'hargmax_mm_MAE': np.float32(20.255411), 'hargmax_mm_RMSE': np.float64(34.96779519319534), 'hargmax_mm_MRE': np.float32(33.261208), 'sargmax_pixel_MAE': np.float32(4.992417), 'sargmax_pixel_RMSE': np.float64(8.578090414404869), 'sargmax_pixel_MRE': np.float32(8.090734), 'sargmax_mm_MAE': np.float32(19.807297), 'sargmax_mm_RMSE': np.float64(34.75116841495037), 'sargmax_mm_MRE': np.float32(32.582905)}) 
+ (model ) Hint 12 ::: Munch({'hargmax_pixel_MAE': np.float32(3.7151728), 'hargmax_pixel_RMSE': np.float64(6.776557013392448), 'hargmax_pixel_MRE': np.float32(5.9710965), 'hargmax_mm_MAE': np.float32(14.290924), 'hargmax_mm_RMSE': np.float64(26.562731832265854), 'hargmax_mm_MRE': np.float32(23.164066), 'sargmax_pixel_MAE': np.float32(3.5818), 'sargmax_pixel_RMSE': np.float64(6.689136408269405), 'sargmax_pixel_MRE': np.float32(5.765394), 'sargmax_mm_MAE': np.float32(13.753864), 'sargmax_mm_RMSE': np.float64(26.193119525909424), 'sargmax_mm_MRE': np.float32(22.32307)}) 
+ (manual) Hint 12 ::: Munch({'hargmax_pixel_MAE': np.float32(4.930029), 'hargmax_pixel_RMSE': np.float64(8.377497233450413), 'hargmax_pixel_MRE': np.float32(7.974468), 'hargmax_mm_MAE': np.float32(19.579506), 'hargmax_mm_RMSE': np.float64(34.01503482460976), 'hargmax_mm_MRE': np.float32(32.153267), 'sargmax_pixel_MAE': np.float32(4.8184166), 'sargmax_pixel_RMSE': np.float64(8.330634750425816), 'sargmax_pixel_MRE': np.float32(7.808443), 'sargmax_mm_MAE': np.float32(19.130604), 'sargmax_mm_RMSE': np.float64(33.81278699636459), 'sargmax_mm_MRE': np.float32(31.474817)}) 
+ (model ) Hint 13 ::: Munch({'hargmax_pixel_MAE': np.float32(3.5240412), 'hargmax_pixel_RMSE': np.float64(6.1383106634020805), 'hargmax_pixel_MRE': np.float32(5.654629), 'hargmax_mm_MAE': np.float32(13.5175495), 'hargmax_mm_RMSE': np.float64(23.79831124842167), 'hargmax_mm_MRE': np.float32(21.864635), 'sargmax_pixel_MAE': np.float32(3.3882952), 'sargmax_pixel_RMSE': np.float64(6.046919662505388), 'sargmax_pixel_MRE': np.float32(5.4460926), 'sargmax_mm_MAE': np.float32(12.970115), 'sargmax_mm_RMSE': np.float64(23.41224691271782), 'sargmax_mm_MRE': np.float32(21.00669)}) 
+ (manual) Hint 13 ::: Munch({'hargmax_pixel_MAE': np.float32(4.763831), 'hargmax_pixel_RMSE': np.float64(8.144751362502575), 'hargmax_pixel_MRE': np.float32(7.703324), 'hargmax_mm_MAE': np.float32(18.92931), 'hargmax_mm_RMSE': np.float64(33.10908558964729), 'hargmax_mm_MRE': np.float32(31.079807), 'sargmax_pixel_MAE': np.float32(4.650295), 'sargmax_pixel_RMSE': np.float64(8.096984028816223), 'sargmax_pixel_MRE': np.float32(7.534745), 'sargmax_mm_MAE': np.float32(18.473516), 'sargmax_mm_RMSE': np.float64(32.90157237648964), 'sargmax_mm_MRE': np.float32(30.391981)}) 
+ (model ) Hint 14 ::: Munch({'hargmax_pixel_MAE': np.float32(3.4066286), 'hargmax_pixel_RMSE': np.float64(6.012804232537746), 'hargmax_pixel_MRE': np.float32(5.468016), 'hargmax_mm_MAE': np.float32(13.044121), 'hargmax_mm_RMSE': np.float64(23.25218367576599), 'hargmax_mm_MRE': np.float32(21.097466), 'sargmax_pixel_MAE': np.float32(3.2682807), 'sargmax_pixel_RMSE': np.float64(5.919001333415508), 'sargmax_pixel_MRE': np.float32(5.254999), 'sargmax_mm_MAE': np.float32(12.485896), 'sargmax_mm_RMSE': np.float64(22.851406559348106), 'sargmax_mm_MRE': np.float32(20.219906)}) 
+ (manual) Hint 14 ::: Munch({'hargmax_pixel_MAE': np.float32(4.601639), 'hargmax_pixel_RMSE': np.float64(7.913578271865845), 'hargmax_pixel_MRE': np.float32(7.439716), 'hargmax_mm_MAE': np.float32(18.292097), 'hargmax_mm_RMSE': np.float64(32.21132482588291), 'hargmax_mm_MRE': np.float32(30.03232), 'sargmax_pixel_MAE': np.float32(4.4872026), 'sargmax_pixel_RMSE': np.float64(7.867308150976896), 'sargmax_pixel_MRE': np.float32(7.269962), 'sargmax_mm_MAE': np.float32(17.834122), 'sargmax_mm_RMSE': np.float64(32.011165142059326), 'sargmax_mm_MRE': np.float32(29.342382)}) 
+ (model ) Hint 15 ::: Munch({'hargmax_pixel_MAE': np.float32(3.2371898), 'hargmax_pixel_RMSE': np.float64(5.759292468428612), 'hargmax_pixel_MRE': np.float32(5.189217), 'hargmax_mm_MAE': np.float32(12.371957), 'hargmax_mm_RMSE': np.float64(22.19681017100811), 'hargmax_mm_MRE': np.float32(19.970516), 'sargmax_pixel_MAE': np.float32(3.0983996), 'sargmax_pixel_RMSE': np.float64(5.672177225351334), 'sargmax_pixel_MRE': np.float32(4.9741726), 'sargmax_mm_MAE': np.float32(11.812103), 'sargmax_mm_RMSE': np.float64(21.824185475707054), 'sargmax_mm_MRE': np.float32(19.089043)}) 
+ (manual) Hint 15 ::: Munch({'hargmax_pixel_MAE': np.float32(4.4444838), 'hargmax_pixel_RMSE': np.float64(7.696151591837406), 'hargmax_pixel_MRE': np.float32(7.1851234), 'hargmax_mm_MAE': np.float32(17.675865), 'hargmax_mm_RMSE': np.float64(31.36707854270935), 'hargmax_mm_MRE': np.float32(29.021788), 'sargmax_pixel_MAE': np.float32(4.3297987), 'sargmax_pixel_RMSE': np.float64(7.65275814011693), 'sargmax_pixel_MRE': np.float32(7.0150623), 'sargmax_mm_MAE': np.float32(17.217276), 'sargmax_mm_RMSE': np.float64(31.180754393339157), 'sargmax_mm_MRE': np.float32(28.331032)}) 
+ (model ) Hint 16 ::: Munch({'hargmax_pixel_MAE': np.float32(3.068647), 'hargmax_pixel_RMSE': np.float64(5.525274574756622), 'hargmax_pixel_MRE': np.float32(4.9117823), 'hargmax_mm_MAE': np.float32(11.683096), 'hargmax_mm_RMSE': np.float64(21.167054146528244), 'hargmax_mm_MRE': np.float32(18.822193), 'sargmax_pixel_MAE': np.float32(2.9280632), 'sargmax_pixel_RMSE': np.float64(5.439089838415384), 'sargmax_pixel_MRE': np.float32(4.6951303), 'sargmax_mm_MAE': np.float32(11.121014), 'sargmax_mm_RMSE': np.float64(20.813223779201508), 'sargmax_mm_MRE': np.float32(17.940992)}) 
+ (manual) Hint 16 ::: Munch({'hargmax_pixel_MAE': np.float32(4.293536), 'hargmax_pixel_RMSE': np.float64(7.494796484708786), 'hargmax_pixel_MRE': np.float32(6.941925), 'hargmax_mm_MAE': np.float32(17.077465), 'hargmax_mm_RMSE': np.float64(30.551803931593895), 'hargmax_mm_MRE': np.float32(28.041817), 'sargmax_pixel_MAE': np.float32(4.178056), 'sargmax_pixel_RMSE': np.float64(7.453667998313904), 'sargmax_pixel_MRE': np.float32(6.770566), 'sargmax_mm_MAE': np.float32(16.616007), 'sargmax_mm_RMSE': np.float64(30.37942737340927), 'sargmax_mm_MRE': np.float32(27.347057)}) 
+ (model ) Hint 17 ::: Munch({'hargmax_pixel_MAE': np.float32(2.829573), 'hargmax_pixel_RMSE': np.float64(5.048749636858702), 'hargmax_pixel_MRE': np.float32(4.514805), 'hargmax_mm_MAE': np.float32(10.809759), 'hargmax_mm_RMSE': np.float64(19.46372413635254), 'hargmax_mm_MRE': np.float32(17.3689), 'sargmax_pixel_MAE': np.float32(2.687184), 'sargmax_pixel_RMSE': np.float64(4.962057691067457), 'sargmax_pixel_MRE': np.float32(4.2932854), 'sargmax_mm_MAE': np.float32(10.238972), 'sargmax_mm_RMSE': np.float64(19.10502728819847), 'sargmax_mm_MRE': np.float32(16.467705)}) 
+ (manual) Hint 17 ::: Munch({'hargmax_pixel_MAE': np.float32(4.146982), 'hargmax_pixel_RMSE': np.float64(7.2993428483605385), 'hargmax_pixel_MRE': np.float32(6.7052903), 'hargmax_mm_MAE': np.float32(16.497189), 'hargmax_mm_RMSE': np.float64(29.75480531156063), 'hargmax_mm_MRE': np.float32(27.087704), 'sargmax_pixel_MAE': np.float32(4.028951), 'sargmax_pixel_RMSE': np.float64(7.256906598806381), 'sargmax_pixel_MRE': np.float32(6.5303864), 'sargmax_mm_MAE': np.float32(16.02644), 'sargmax_mm_RMSE': np.float64(29.57937118411064), 'sargmax_mm_MRE': np.float32(26.380272)}) 
+ (model ) Hint 18 ::: Munch({'hargmax_pixel_MAE': np.float32(2.6942258), 'hargmax_pixel_RMSE': np.float64(4.83298908919096), 'hargmax_pixel_MRE': np.float32(4.293703), 'hargmax_mm_MAE': np.float32(10.328178), 'hargmax_mm_RMSE': np.float64(18.721278131008148), 'hargmax_mm_MRE': np.float32(16.579657), 'sargmax_pixel_MAE': np.float32(2.5549593), 'sargmax_pixel_RMSE': np.float64(4.751156605780125), 'sargmax_pixel_MRE': np.float32(4.078669), 'sargmax_mm_MAE': np.float32(9.768454), 'sargmax_mm_RMSE': np.float64(18.381025463342667), 'sargmax_mm_MRE': np.float32(15.703075)}) 
+ (manual) Hint 18 ::: Munch({'hargmax_pixel_MAE': np.float32(4.004324), 'hargmax_pixel_RMSE': np.float64(7.104764066636562), 'hargmax_pixel_MRE': np.float32(6.4738073), 'hargmax_mm_MAE': np.float32(15.934125), 'hargmax_mm_RMSE': np.float64(28.97890219092369), 'hargmax_mm_MRE': np.float32(26.159977), 'sargmax_pixel_MAE': np.float32(3.886119), 'sargmax_pixel_RMSE': np.float64(7.064222160726786), 'sargmax_pixel_MRE': np.float32(6.297961), 'sargmax_mm_MAE': np.float32(15.4631195), 'sargmax_mm_RMSE': np.float64(28.810904428362846), 'sargmax_mm_MRE': np.float32(25.449478)}) 
+ (model ) Hint 19 ::: Munch({'hargmax_pixel_MAE': np.float32(2.5490808), 'hargmax_pixel_RMSE': np.float64(4.5898711904883385), 'hargmax_pixel_MRE': np.float32(4.05748), 'hargmax_mm_MAE': np.float32(9.729511), 'hargmax_mm_RMSE': np.float64(17.57158114016056), 'hargmax_mm_MRE': np.float32(15.575567), 'sargmax_pixel_MAE': np.float32(2.4076948), 'sargmax_pixel_RMSE': np.float64(4.508374184370041), 'sargmax_pixel_MRE': np.float32(3.836383), 'sargmax_mm_MAE': np.float32(9.161657), 'sargmax_mm_RMSE': np.float64(17.233826741576195), 'sargmax_mm_MRE': np.float32(14.67555)}) 
+ (manual) Hint 19 ::: Munch({'hargmax_pixel_MAE': np.float32(3.8663685), 'hargmax_pixel_RMSE': np.float64(6.91086883097887), 'hargmax_pixel_MRE': np.float32(6.247305), 'hargmax_mm_MAE': np.float32(15.389603), 'hargmax_mm_RMSE': np.float64(28.204800382256508), 'hargmax_mm_MRE': np.float32(25.249634), 'sargmax_pixel_MAE': np.float32(3.7455657), 'sargmax_pixel_RMSE': np.float64(6.870963372290134), 'sargmax_pixel_MRE': np.float32(6.0680037), 'sargmax_mm_MAE': np.float32(14.908419), 'sargmax_mm_RMSE': np.float64(28.039374500513077), 'sargmax_mm_MRE': np.float32(24.525368)}) 
+ (model ) Hint 20 ::: Munch({'hargmax_pixel_MAE': np.float32(2.3916636), 'hargmax_pixel_RMSE': np.float64(4.284545622766018), 'hargmax_pixel_MRE': np.float32(3.8076153), 'hargmax_mm_MAE': np.float32(9.1568775), 'hargmax_mm_RMSE': np.float64(16.527890041470528), 'hargmax_mm_MRE': np.float32(14.661121), 'sargmax_pixel_MAE': np.float32(2.2454202), 'sargmax_pixel_RMSE': np.float64(4.200673662126064), 'sargmax_pixel_MRE': np.float32(3.581653), 'sargmax_mm_MAE': np.float32(8.571214), 'sargmax_mm_RMSE': np.float64(16.1845925450325), 'sargmax_mm_MRE': np.float32(13.742279)}) 
+ (manual) Hint 20 ::: Munch({'hargmax_pixel_MAE': np.float32(3.730845), 'hargmax_pixel_RMSE': np.float64(6.720297571271658), 'hargmax_pixel_MRE': np.float32(6.026284), 'hargmax_mm_MAE': np.float32(14.852655), 'hargmax_mm_RMSE': np.float64(27.44061218202114), 'hargmax_mm_MRE': np.float32(24.358532), 'sargmax_pixel_MAE': np.float32(3.6090002), 'sargmax_pixel_RMSE': np.float64(6.6812980100512505), 'sargmax_pixel_MRE': np.float32(5.845329), 'sargmax_mm_MAE': np.float32(14.368502), 'sargmax_mm_RMSE': np.float64(27.27993929386139), 'sargmax_mm_MRE': np.float32(23.629173)}) 
+ (model ) Hint 21 ::: Munch({'hargmax_pixel_MAE': np.float32(2.2742667), 'hargmax_pixel_RMSE': np.float64(4.0967001542449), 'hargmax_pixel_MRE': np.float32(3.6162262), 'hargmax_mm_MAE': np.float32(8.685736), 'hargmax_mm_RMSE': np.float64(15.706280797719955), 'hargmax_mm_MRE': np.float32(13.874878), 'sargmax_pixel_MAE': np.float32(2.1257403), 'sargmax_pixel_RMSE': np.float64(4.015366889536381), 'sargmax_pixel_MRE': np.float32(3.3875732), 'sargmax_mm_MAE': np.float32(8.093208), 'sargmax_mm_RMSE': np.float64(15.373636707663536), 'sargmax_mm_MRE': np.float32(12.948876)}) 
+ (manual) Hint 21 ::: Munch({'hargmax_pixel_MAE': np.float32(3.5963423), 'hargmax_pixel_RMSE': np.float64(6.531080536544323), 'hargmax_pixel_MRE': np.float32(5.8094687), 'hargmax_mm_MAE': np.float32(14.321351), 'hargmax_mm_RMSE': np.float64(26.687045842409134), 'hargmax_mm_MRE': np.float32(23.489016), 'sargmax_pixel_MAE': np.float32(3.4722972), 'sargmax_pixel_RMSE': np.float64(6.492229338735342), 'sargmax_pixel_MRE': np.float32(5.6255865), 'sargmax_mm_MAE': np.float32(13.828583), 'sargmax_mm_RMSE': np.float64(26.526275515556335), 'sargmax_mm_MRE': np.float32(22.747524)}) 
+ (model ) Hint 22 ::: Munch({'hargmax_pixel_MAE': np.float32(2.1292), 'hargmax_pixel_RMSE': np.float64(3.83276579529047), 'hargmax_pixel_MRE': np.float32(3.3806124), 'hargmax_mm_MAE': np.float32(8.148908), 'hargmax_mm_RMSE': np.float64(14.727014496922493), 'hargmax_mm_MRE': np.float32(12.973045), 'sargmax_pixel_MAE': np.float32(1.9782821), 'sargmax_pixel_RMSE': np.float64(3.750428631901741), 'sargmax_pixel_MRE': np.float32(3.1472585), 'sargmax_mm_MAE': np.float32(7.545355), 'sargmax_mm_RMSE': np.float64(14.38785269856453), 'sargmax_mm_MRE': np.float32(12.026592)}) 
+ (manual) Hint 22 ::: Munch({'hargmax_pixel_MAE': np.float32(3.4709048), 'hargmax_pixel_RMSE': np.float64(6.354404848068953), 'hargmax_pixel_MRE': np.float32(5.603771), 'hargmax_mm_MAE': np.float32(13.816001), 'hargmax_mm_RMSE': np.float64(25.95771163702011), 'hargmax_mm_MRE': np.float32(22.645325), 'sargmax_pixel_MAE': np.float32(3.3452358), 'sargmax_pixel_RMSE': np.float64(6.314913209527731), 'sargmax_pixel_MRE': np.float32(5.4169273), 'sargmax_mm_MAE': np.float32(13.317701), 'sargmax_mm_RMSE': np.float64(25.797514259815216), 'sargmax_mm_MRE': np.float32(21.893843)}) 
+ (model ) Hint 23 ::: Munch({'hargmax_pixel_MAE': np.float32(2.0478413), 'hargmax_pixel_RMSE': np.float64(3.660001590847969), 'hargmax_pixel_MRE': np.float32(3.247193), 'hargmax_mm_MAE': np.float32(7.762605), 'hargmax_mm_RMSE': np.float64(13.789449200034142), 'hargmax_mm_MRE': np.float32(12.325115), 'sargmax_pixel_MAE': np.float32(1.893995), 'sargmax_pixel_RMSE': np.float64(3.5752257853746414), 'sargmax_pixel_MRE': np.float32(3.0089903), 'sargmax_mm_MAE': np.float32(7.1461267), 'sargmax_mm_RMSE': np.float64(13.43834139406681), 'sargmax_mm_MRE': np.float32(11.35833)}) 
+ (manual) Hint 23 ::: Munch({'hargmax_pixel_MAE': np.float32(3.3425457), 'hargmax_pixel_RMSE': np.float64(6.178936280310154), 'hargmax_pixel_MRE': np.float32(5.4000783), 'hargmax_mm_MAE': np.float32(13.310332), 'hargmax_mm_RMSE': np.float64(25.249002665281296), 'hargmax_mm_MRE': np.float32(21.825886), 'sargmax_pixel_MAE': np.float32(3.2157989), 'sargmax_pixel_RMSE': np.float64(6.142424240708351), 'sargmax_pixel_MRE': np.float32(5.21101), 'sargmax_mm_MAE': np.float32(12.808679), 'sargmax_mm_RMSE': np.float64(25.100034445524216), 'sargmax_mm_MRE': np.float32(21.067955)}) 
+ (model ) Hint 24 ::: Munch({'hargmax_pixel_MAE': np.float32(1.9529953), 'hargmax_pixel_RMSE': np.float64(3.561607241630554), 'hargmax_pixel_MRE': np.float32(3.0919747), 'hargmax_mm_MAE': np.float32(7.4170156), 'hargmax_mm_RMSE': np.float64(13.448668032884598), 'hargmax_mm_MRE': np.float32(11.752969), 'sargmax_pixel_MAE': np.float32(1.8008133), 'sargmax_pixel_RMSE': np.float64(3.48340118303895), 'sargmax_pixel_MRE': np.float32(2.8558383), 'sargmax_mm_MAE': np.float32(6.806863), 'sargmax_mm_RMSE': np.float64(13.1185811907053), 'sargmax_mm_MRE': np.float32(10.792793)}) 
+ (manual) Hint 24 ::: Munch({'hargmax_pixel_MAE': np.float32(3.2201755), 'hargmax_pixel_RMSE': np.float64(6.010337445884943), 'hargmax_pixel_MRE': np.float32(5.2058067), 'hargmax_mm_MAE': np.float32(12.8234215), 'hargmax_mm_RMSE': np.float64(24.56198500096798), 'hargmax_mm_MRE': np.float32(21.035685), 'sargmax_pixel_MAE': np.float32(3.0922556), 'sargmax_pixel_RMSE': np.float64(5.975417960435152), 'sargmax_pixel_MRE': np.float32(5.014818), 'sargmax_mm_MAE': np.float32(12.317863), 'sargmax_mm_RMSE': np.float64(24.421001583337784), 'sargmax_mm_MRE': np.float32(20.271236)}) 
+ (model ) Hint 25 ::: Munch({'hargmax_pixel_MAE': np.float32(1.8600731), 'hargmax_pixel_RMSE': np.float64(3.361678119748831), 'hargmax_pixel_MRE': np.float32(2.9434388), 'hargmax_mm_MAE': np.float32(7.0537424), 'hargmax_mm_RMSE': np.float64(12.629774495959282), 'hargmax_mm_MRE': np.float32(11.165222), 'sargmax_pixel_MAE': np.float32(1.7072558), 'sargmax_pixel_RMSE': np.float64(3.283869668841362), 'sargmax_pixel_MRE': np.float32(2.7066302), 'sargmax_mm_MAE': np.float32(6.441648), 'sargmax_mm_RMSE': np.float64(12.308539286255836), 'sargmax_mm_MRE': np.float32(10.203368)}) 
+ (manual) Hint 25 ::: Munch({'hargmax_pixel_MAE': np.float32(3.1000173), 'hargmax_pixel_RMSE': np.float64(5.836885239928961), 'hargmax_pixel_MRE': np.float32(5.012433), 'hargmax_mm_MAE': np.float32(12.349713), 'hargmax_mm_RMSE': np.float64(23.87996479868889), 'hargmax_mm_MRE': np.float32(20.26141), 'sargmax_pixel_MAE': np.float32(2.9712648), 'sargmax_pixel_RMSE': np.float64(5.80305053666234), 'sargmax_pixel_MRE': np.float32(4.8197236), 'sargmax_mm_MAE': np.float32(11.842094), 'sargmax_mm_RMSE': np.float64(23.746593341231346), 'sargmax_mm_MRE': np.float32(19.491522)}) 
+ (model ) Hint 26 ::: Munch({'hargmax_pixel_MAE': np.float32(1.7869415), 'hargmax_pixel_RMSE': np.float64(3.291628759354353), 'hargmax_pixel_MRE': np.float32(2.8234794), 'hargmax_mm_MAE': np.float32(6.786563), 'hargmax_mm_RMSE': np.float64(12.32132588326931), 'hargmax_mm_MRE': np.float32(10.721237), 'sargmax_pixel_MAE': np.float32(1.6319544), 'sargmax_pixel_RMSE': np.float64(3.2172857001423836), 'sargmax_pixel_MRE': np.float32(2.5850544), 'sargmax_mm_MAE': np.float32(6.1672125), 'sargmax_mm_RMSE': np.float64(12.009071096777916), 'sargmax_mm_MRE': np.float32(9.754728)}) 
+ (manual) Hint 26 ::: Munch({'hargmax_pixel_MAE': np.float32(2.9863281), 'hargmax_pixel_RMSE': np.float64(5.668533086776733), 'hargmax_pixel_MRE': np.float32(4.8230724), 'hargmax_mm_MAE': np.float32(11.90205), 'hargmax_mm_RMSE': np.float64(23.20822621881962), 'hargmax_mm_MRE': np.float32(19.505013), 'sargmax_pixel_MAE': np.float32(2.8557487), 'sargmax_pixel_RMSE': np.float64(5.6358626037836075), 'sargmax_pixel_MRE': np.float32(4.6281166), 'sargmax_mm_MAE': np.float32(11.386906), 'sargmax_mm_RMSE': np.float64(23.078025743365288), 'sargmax_mm_MRE': np.float32(18.726004)}) 
+ (model ) Hint 27 ::: Munch({'hargmax_pixel_MAE': np.float32(1.703619), 'hargmax_pixel_RMSE': np.float64(3.135108131915331), 'hargmax_pixel_MRE': np.float32(2.699354), 'hargmax_mm_MAE': np.float32(6.473525), 'hargmax_mm_RMSE': np.float64(11.769773781299591), 'hargmax_mm_MRE': np.float32(10.249182), 'sargmax_pixel_MAE': np.float32(1.5451245), 'sargmax_pixel_RMSE': np.float64(3.0570939667522907), 'sargmax_pixel_MRE': np.float32(2.4542906), 'sargmax_mm_MAE': np.float32(5.8409863), 'sargmax_mm_RMSE': np.float64(11.441496849060059), 'sargmax_mm_MRE': np.float32(9.257509)}) 
+ (manual) Hint 27 ::: Munch({'hargmax_pixel_MAE': np.float32(2.8760667), 'hargmax_pixel_RMSE': np.float64(5.508316695690155), 'hargmax_pixel_MRE': np.float32(4.641099), 'hargmax_mm_MAE': np.float32(11.462962), 'hargmax_mm_RMSE': np.float64(22.547549158334732), 'hargmax_mm_MRE': np.float32(18.767395), 'sargmax_pixel_MAE': np.float32(2.7443612), 'sargmax_pixel_RMSE': np.float64(5.47637677565217), 'sargmax_pixel_MRE': np.float32(4.443961), 'sargmax_mm_MAE': np.float32(10.943985), 'sargmax_mm_RMSE': np.float64(22.420865774154663), 'sargmax_mm_MRE': np.float32(17.98072)}) 
+ (model ) Hint 28 ::: Munch({'hargmax_pixel_MAE': np.float32(1.6489164), 'hargmax_pixel_RMSE': np.float64(3.1274634934961796), 'hargmax_pixel_MRE': np.float32(2.611249), 'hargmax_mm_MAE': np.float32(6.2644377), 'hargmax_mm_RMSE': np.float64(11.647633597254753), 'hargmax_mm_MRE': np.float32(9.917849), 'sargmax_pixel_MAE': np.float32(1.4890748), 'sargmax_pixel_RMSE': np.float64(3.0541964173316956), 'sargmax_pixel_MRE': np.float32(2.3653574), 'sargmax_mm_MAE': np.float32(5.6242456), 'sargmax_mm_RMSE': np.float64(11.333482310175896), 'sargmax_mm_MRE': np.float32(8.915659)}) 
+ (manual) Hint 28 ::: Munch({'hargmax_pixel_MAE': np.float32(2.7656312), 'hargmax_pixel_RMSE': np.float64(5.344952017068863), 'hargmax_pixel_MRE': np.float32(4.4611435), 'hargmax_mm_MAE': np.float32(11.027891), 'hargmax_mm_RMSE': np.float64(21.8942758589983), 'hargmax_mm_MRE': np.float32(18.046644), 'sargmax_pixel_MAE': np.float32(2.6339774), 'sargmax_pixel_RMSE': np.float64(5.316290259361267), 'sargmax_pixel_MRE': np.float32(4.2640433), 'sargmax_mm_MAE': np.float32(10.509331), 'sargmax_mm_RMSE': np.float64(21.78197056055069), 'sargmax_mm_MRE': np.float32(17.261475)}) 
+ (model ) Hint 29 ::: Munch({'hargmax_pixel_MAE': np.float32(1.5686638), 'hargmax_pixel_RMSE': np.float64(2.9235291704535484), 'hargmax_pixel_MRE': np.float32(2.475565), 'hargmax_mm_MAE': np.float32(5.964231), 'hargmax_mm_RMSE': np.float64(10.940579563379288), 'hargmax_mm_MRE': np.float32(9.412292), 'sargmax_pixel_MAE': np.float32(1.4084091), 'sargmax_pixel_RMSE': np.float64(2.850401770323515), 'sargmax_pixel_MRE': np.float32(2.2288413), 'sargmax_mm_MAE': np.float32(5.3239856), 'sargmax_mm_RMSE': np.float64(10.631292045116425), 'sargmax_mm_MRE': np.float32(8.411018)}) 
+ (manual) Hint 29 ::: Munch({'hargmax_pixel_MAE': np.float32(2.6579905), 'hargmax_pixel_RMSE': np.float64(5.18514746427536), 'hargmax_pixel_MRE': np.float32(4.2865615), 'hargmax_mm_MAE': np.float32(10.601908), 'hargmax_mm_RMSE': np.float64(21.25621797144413), 'hargmax_mm_MRE': np.float32(17.345654), 'sargmax_pixel_MAE': np.float32(2.52499), 'sargmax_pixel_RMSE': np.float64(5.158259470015764), 'sargmax_pixel_MRE': np.float32(4.087399), 'sargmax_mm_MAE': np.float32(10.078236), 'sargmax_mm_RMSE': np.float64(21.150901079177856), 'sargmax_mm_MRE': np.float32(16.552683)}) 
+ (model ) Hint 30 ::: Munch({'hargmax_pixel_MAE': np.float32(1.5010408), 'hargmax_pixel_RMSE': np.float64(2.7680686712265015), 'hargmax_pixel_MRE': np.float32(2.3680253), 'hargmax_mm_MAE': np.float32(5.714407), 'hargmax_mm_RMSE': np.float64(10.416436180472374), 'hargmax_mm_MRE': np.float32(9.0126), 'sargmax_pixel_MAE': np.float32(1.3354056), 'sargmax_pixel_RMSE': np.float64(2.6873542219400406), 'sargmax_pixel_MRE': np.float32(2.112715), 'sargmax_mm_MAE': np.float32(5.0500736), 'sargmax_mm_RMSE': np.float64(10.073543667793274), 'sargmax_mm_MRE': np.float32(7.974163)}) 
+ (manual) Hint 30 ::: Munch({'hargmax_pixel_MAE': np.float32(2.5551045), 'hargmax_pixel_RMSE': np.float64(5.030713077634573), 'hargmax_pixel_MRE': np.float32(4.117839), 'hargmax_mm_MAE': np.float32(10.190688), 'hargmax_mm_RMSE': np.float64(20.631236717104912), 'hargmax_mm_MRE': np.float32(16.664097), 'sargmax_pixel_MAE': np.float32(2.4200587), 'sargmax_pixel_RMSE': np.float64(5.004051946103573), 'sargmax_pixel_MRE': np.float32(3.9155984), 'sargmax_mm_MAE': np.float32(9.659806), 'sargmax_mm_RMSE': np.float64(20.527914449572563), 'sargmax_mm_MRE': np.float32(15.861092)}) 
+ (model ) Hint 31 ::: Munch({'hargmax_pixel_MAE': np.float32(1.4541615), 'hargmax_pixel_RMSE': np.float64(2.7315497510135174), 'hargmax_pixel_MRE': np.float32(2.2985597), 'hargmax_mm_MAE': np.float32(5.526732), 'hargmax_mm_RMSE': np.float64(10.17152887582779), 'hargmax_mm_MRE': np.float32(8.725187), 'sargmax_pixel_MAE': np.float32(1.2867429), 'sargmax_pixel_RMSE': np.float64(2.6545681469142437), 'sargmax_pixel_MRE': np.float32(2.0404007), 'sargmax_mm_MAE': np.float32(4.858842), 'sargmax_mm_RMSE': np.float64(9.850244760513306), 'sargmax_mm_MRE': np.float32(7.682523)}) 
+ (manual) Hint 31 ::: Munch({'hargmax_pixel_MAE': np.float32(2.4546666), 'hargmax_pixel_RMSE': np.float64(4.880553398281336), 'hargmax_pixel_MRE': np.float32(3.953659), 'hargmax_mm_MAE': np.float32(9.788727), 'hargmax_mm_RMSE': np.float64(20.01339603960514), 'hargmax_mm_MRE': np.float32(15.996794), 'sargmax_pixel_MAE': np.float32(2.317533), 'sargmax_pixel_RMSE': np.float64(4.853229481726885), 'sargmax_pixel_MRE': np.float32(3.7475793), 'sargmax_mm_MAE': np.float32(9.249057), 'sargmax_mm_RMSE': np.float64(19.90702550113201), 'sargmax_mm_MRE': np.float32(15.177264)}) 
+ (model ) Hint 32 ::: Munch({'hargmax_pixel_MAE': np.float32(1.3866446), 'hargmax_pixel_RMSE': np.float64(2.582834366708994), 'hargmax_pixel_MRE': np.float32(2.187906), 'hargmax_mm_MAE': np.float32(5.273044), 'hargmax_mm_RMSE': np.float64(9.679854556918144), 'hargmax_mm_MRE': np.float32(8.315486), 'sargmax_pixel_MAE': np.float32(1.2153516), 'sargmax_pixel_RMSE': np.float64(2.5041962154209614), 'sargmax_pixel_MRE': np.float32(1.9264631), 'sargmax_mm_MAE': np.float32(4.587455), 'sargmax_mm_RMSE': np.float64(9.343601621687412), 'sargmax_mm_MRE': np.float32(7.25428)}) 
+ (manual) Hint 32 ::: Munch({'hargmax_pixel_MAE': np.float32(2.3560572), 'hargmax_pixel_RMSE': np.float64(4.733138937503099), 'hargmax_pixel_MRE': np.float32(3.7951097), 'hargmax_mm_MAE': np.float32(9.394408), 'hargmax_mm_RMSE': np.float64(19.40615378320217), 'hargmax_mm_MRE': np.float32(15.35112), 'sargmax_pixel_MAE': np.float32(2.2181416), 'sargmax_pixel_RMSE': np.float64(4.709246814250946), 'sargmax_pixel_MRE': np.float32(3.5878267), 'sargmax_mm_MAE': np.float32(8.852731), 'sargmax_mm_RMSE': np.float64(19.316059410572052), 'sargmax_mm_MRE': np.float32(14.529463)}) 
+ (model ) Hint 33 ::: Munch({'hargmax_pixel_MAE': np.float32(1.2895474), 'hargmax_pixel_RMSE': np.float64(2.4192905575037003), 'hargmax_pixel_MRE': np.float32(2.038381), 'hargmax_mm_MAE': np.float32(4.913178), 'hargmax_mm_RMSE': np.float64(9.034523032605648), 'hargmax_mm_MRE': np.float32(7.7595325), 'sargmax_pixel_MAE': np.float32(1.1169018), 'sargmax_pixel_RMSE': np.float64(2.3428678922355175), 'sargmax_pixel_MRE': np.float32(1.7745559), 'sargmax_mm_MAE': np.float32(4.2236404), 'sargmax_mm_RMSE': np.float64(8.701578609645367), 'sargmax_mm_MRE': np.float32(6.6913233)}) 
+ (manual) Hint 33 ::: Munch({'hargmax_pixel_MAE': np.float32(2.2600243), 'hargmax_pixel_RMSE': np.float64(4.59203489869833), 'hargmax_pixel_MRE': np.float32(3.6412287), 'hargmax_mm_MAE': np.float32(9.0106735), 'hargmax_mm_RMSE': np.float64(18.816723197698593), 'hargmax_mm_MRE': np.float32(14.7235365), 'sargmax_pixel_MAE': np.float32(2.120551), 'sargmax_pixel_RMSE': np.float64(4.571116782724857), 'sargmax_pixel_MRE': np.float32(3.43237), 'sargmax_mm_MAE': np.float32(8.463023), 'sargmax_mm_RMSE': np.float64(18.73763296753168), 'sargmax_mm_MRE': np.float32(13.895269)}) 
+ (model ) Hint 34 ::: Munch({'hargmax_pixel_MAE': np.float32(1.2379727), 'hargmax_pixel_RMSE': np.float64(2.2766948342323303), 'hargmax_pixel_MRE': np.float32(1.957485), 'hargmax_mm_MAE': np.float32(4.713106), 'hargmax_mm_RMSE': np.float64(8.514029547572136), 'hargmax_mm_MRE': np.float32(7.453981), 'sargmax_pixel_MAE': np.float32(1.0666475), 'sargmax_pixel_RMSE': np.float64(2.2032641917467117), 'sargmax_pixel_MRE': np.float32(1.6944056), 'sargmax_mm_MAE': np.float32(4.0293584), 'sargmax_mm_RMSE': np.float64(8.195779740810394), 'sargmax_mm_MRE': np.float32(6.3895254)}) 
+ (manual) Hint 34 ::: Munch({'hargmax_pixel_MAE': np.float32(2.1682785), 'hargmax_pixel_RMSE': np.float64(4.448839422315359), 'hargmax_pixel_MRE': np.float32(3.4893498), 'hargmax_mm_MAE': np.float32(8.646684), 'hargmax_mm_RMSE': np.float64(18.233683541417122), 'hargmax_mm_MRE': np.float32(14.110659), 'sargmax_pixel_MAE': np.float32(2.0270834), 'sargmax_pixel_RMSE': np.float64(4.429283052682877), 'sargmax_pixel_MRE': np.float32(3.2778924), 'sargmax_mm_MAE': np.float32(8.0921955), 'sargmax_mm_RMSE': np.float64(18.160037085413933), 'sargmax_mm_MRE': np.float32(13.27201)}) 
+ (model ) Hint 35 ::: Munch({'hargmax_pixel_MAE': np.float32(1.1807847), 'hargmax_pixel_RMSE': np.float64(2.1751513853669167), 'hargmax_pixel_MRE': np.float32(1.8702073), 'hargmax_mm_MAE': np.float32(4.506542), 'hargmax_mm_RMSE': np.float64(8.185839176177979), 'hargmax_mm_MRE': np.float32(7.134428), 'sargmax_pixel_MAE': np.float32(1.0064361), 'sargmax_pixel_RMSE': np.float64(2.1016874499619007), 'sargmax_pixel_MRE': np.float32(1.6029017), 'sargmax_mm_MAE': np.float32(3.810957), 'sargmax_mm_RMSE': np.float64(7.862906068563461), 'sargmax_mm_MRE': np.float32(6.054405)}) 
+ (manual) Hint 35 ::: Munch({'hargmax_pixel_MAE': np.float32(2.0763793), 'hargmax_pixel_RMSE': np.float64(4.308914579451084), 'hargmax_pixel_MRE': np.float32(3.3415318), 'hargmax_mm_MAE': np.float32(8.280033), 'hargmax_mm_RMSE': np.float64(17.657562613487244), 'hargmax_mm_MRE': np.float32(13.512815), 'sargmax_pixel_MAE': np.float32(1.9333558), 'sargmax_pixel_RMSE': np.float64(4.2914908193051815), 'sargmax_pixel_MRE': np.float32(3.1274393), 'sargmax_mm_MAE': np.float32(7.717855), 'sargmax_mm_RMSE': np.float64(17.592184253036976), 'sargmax_mm_MRE': np.float32(12.663204)}) 
+ (model ) Hint 36 ::: Munch({'hargmax_pixel_MAE': np.float32(1.1349823), 'hargmax_pixel_RMSE': np.float64(2.0788781754672527), 'hargmax_pixel_MRE': np.float32(1.7940723), 'hargmax_mm_MAE': np.float32(4.3405647), 'hargmax_mm_RMSE': np.float64(7.849596671760082), 'hargmax_mm_MRE': np.float32(6.8594847), 'sargmax_pixel_MAE': np.float32(0.95374584), 'sargmax_pixel_RMSE': np.float64(1.998350601643324), 'sargmax_pixel_MRE': np.float32(1.5163242), 'sargmax_mm_MAE': np.float32(3.6184018), 'sargmax_mm_RMSE': np.float64(7.502919994294643), 'sargmax_mm_MRE': np.float32(5.738612)}) 
+ (manual) Hint 36 ::: Munch({'hargmax_pixel_MAE': np.float32(1.9877176), 'hargmax_pixel_RMSE': np.float64(4.174578420817852), 'hargmax_pixel_MRE': np.float32(3.1993608), 'hargmax_mm_MAE': np.float32(7.925513), 'hargmax_mm_RMSE': np.float64(17.09698548913002), 'hargmax_mm_MRE': np.float32(12.932301), 'sargmax_pixel_MAE': np.float32(1.8427887), 'sargmax_pixel_RMSE': np.float64(4.158617343753576), 'sargmax_pixel_MRE': np.float32(2.9824822), 'sargmax_mm_MAE': np.float32(7.3563313), 'sargmax_mm_RMSE': np.float64(17.037635006010532), 'sargmax_mm_MRE': np.float32(12.072479)}) 
+ (model ) Hint 37 ::: Munch({'hargmax_pixel_MAE': np.float32(1.0840474), 'hargmax_pixel_RMSE': np.float64(2.068016428500414), 'hargmax_pixel_MRE': np.float32(1.716463), 'hargmax_mm_MAE': np.float32(4.1351123), 'hargmax_mm_RMSE': np.float64(7.664311192929745), 'hargmax_mm_MRE': np.float32(6.537869), 'sargmax_pixel_MAE': np.float32(0.9014429), 'sargmax_pixel_RMSE': np.float64(1.9904175344854593), 'sargmax_pixel_MRE': np.float32(1.4372928), 'sargmax_mm_MAE': np.float32(3.409639), 'sargmax_mm_RMSE': np.float64(7.329406127333641), 'sargmax_mm_MRE': np.float32(5.4155045)}) 
+ (manual) Hint 37 ::: Munch({'hargmax_pixel_MAE': np.float32(1.9023921), 'hargmax_pixel_RMSE': np.float64(4.043356545269489), 'hargmax_pixel_MRE': np.float32(3.0603545), 'hargmax_mm_MAE': np.float32(7.5835032), 'hargmax_mm_RMSE': np.float64(16.54506891965866), 'hargmax_mm_MRE': np.float32(12.365009), 'sargmax_pixel_MAE': np.float32(1.7557425), 'sargmax_pixel_RMSE': np.float64(4.03043108060956), 'sargmax_pixel_MRE': np.float32(2.8414466), 'sargmax_mm_MAE': np.float32(7.007121), 'sargmax_mm_RMSE': np.float64(16.497101567685604), 'sargmax_mm_MRE': np.float32(11.496563)}) 
+ (model ) Hint 38 ::: Munch({'hargmax_pixel_MAE': np.float32(1.0278015), 'hargmax_pixel_RMSE': np.float64(1.8753480426967144), 'hargmax_pixel_MRE': np.float32(1.6217158), 'hargmax_mm_MAE': np.float32(3.9317338), 'hargmax_mm_RMSE': np.float64(7.085172533988953), 'hargmax_mm_MRE': np.float32(6.2004557), 'sargmax_pixel_MAE': np.float32(0.84363055), 'sargmax_pixel_RMSE': np.float64(1.7981522977352142), 'sargmax_pixel_MRE': np.float32(1.340218), 'sargmax_mm_MAE': np.float32(3.2018695), 'sargmax_mm_RMSE': np.float64(6.755269706249237), 'sargmax_mm_MRE': np.float32(5.0714626)}) 
+ (manual) Hint 38 ::: Munch({'hargmax_pixel_MAE': np.float32(1.8206135), 'hargmax_pixel_RMSE': np.float64(3.9132760129868984), 'hargmax_pixel_MRE': np.float32(2.924891), 'hargmax_mm_MAE': np.float32(7.255701), 'hargmax_mm_RMSE': np.float64(15.99787800014019), 'hargmax_mm_MRE': np.float32(11.813792), 'sargmax_pixel_MAE': np.float32(1.6723747), 'sargmax_pixel_RMSE': np.float64(3.903480388224125), 'sargmax_pixel_MRE': np.float32(2.7033734), 'sargmax_mm_MAE': np.float32(6.673685), 'sargmax_mm_RMSE': np.float64(15.965752191841602), 'sargmax_mm_MRE': np.float32(10.936253)}) 
+ (model ) Hint 39 ::: Munch({'hargmax_pixel_MAE': np.float32(0.9970818), 'hargmax_pixel_RMSE': np.float64(1.9471205435693264), 'hargmax_pixel_MRE': np.float32(1.5778731), 'hargmax_mm_MAE': np.float32(3.7900543), 'hargmax_mm_RMSE': np.float64(7.073794484138489), 'hargmax_mm_MRE': np.float32(5.983191), 'sargmax_pixel_MAE': np.float32(0.8090253), 'sargmax_pixel_RMSE': np.float64(1.8679875489324331), 'sargmax_pixel_MRE': np.float32(1.2907375), 'sargmax_mm_MAE': np.float32(3.042964), 'sargmax_mm_RMSE': np.float64(6.731590092182159), 'sargmax_mm_MRE': np.float32(4.8296585)}) 
+ (manual) Hint 39 ::: Munch({'hargmax_pixel_MAE': np.float32(1.7387836), 'hargmax_pixel_RMSE': np.float64(3.7854391373693943), 'hargmax_pixel_MRE': np.float32(2.7928557), 'hargmax_mm_MAE': np.float32(6.926602), 'hargmax_mm_RMSE': np.float64(15.455705292522907), 'hargmax_mm_MRE': np.float32(11.2730465), 'sargmax_pixel_MAE': np.float32(1.5887275), 'sargmax_pixel_RMSE': np.float64(3.778692848980427), 'sargmax_pixel_MRE': np.float32(2.5684776), 'sargmax_mm_MAE': np.float32(6.3375626), 'sargmax_mm_RMSE': np.float64(15.435248926281929), 'sargmax_mm_MRE': np.float32(10.383886)}) 
+ (model ) Hint 40 ::: Munch({'hargmax_pixel_MAE': np.float32(0.9401453), 'hargmax_pixel_RMSE': np.float64(1.7204723358154297), 'hargmax_pixel_MRE': np.float32(1.4836903), 'hargmax_mm_MAE': np.float32(3.5942006), 'hargmax_mm_RMSE': np.float64(6.483285658061504), 'hargmax_mm_MRE': np.float32(5.664878), 'sargmax_pixel_MAE': np.float32(0.74984956), 'sargmax_pixel_RMSE': np.float64(1.638236852362752), 'sargmax_pixel_MRE': np.float32(1.1934611), 'sargmax_mm_MAE': np.float32(2.84027), 'sargmax_mm_RMSE': np.float64(6.142504684627056), 'sargmax_mm_MRE': np.float32(4.503214)}) 
+ (manual) Hint 40 ::: Munch({'hargmax_pixel_MAE': np.float32(1.6602408), 'hargmax_pixel_RMSE': np.float64(3.6568041257560253), 'hargmax_pixel_MRE': np.float32(2.6626353), 'hargmax_mm_MAE': np.float32(6.6137114), 'hargmax_mm_RMSE': np.float64(14.920886397361755), 'hargmax_mm_MRE': np.float32(10.746533), 'sargmax_pixel_MAE': np.float32(1.5089598), 'sargmax_pixel_RMSE': np.float64(3.6535572819411755), 'sargmax_pixel_MRE': np.float32(2.435912), 'sargmax_mm_MAE': np.float32(6.0203657), 'sargmax_mm_RMSE': np.float64(14.914847411215305), 'sargmax_mm_MRE': np.float32(9.848285)}) 
+ (model ) Hint 41 ::: Munch({'hargmax_pixel_MAE': np.float32(0.8990753), 'hargmax_pixel_RMSE': np.float64(1.6462607942521572), 'hargmax_pixel_MRE': np.float32(1.4179624), 'hargmax_mm_MAE': np.float32(3.4423833), 'hargmax_mm_RMSE': np.float64(6.234534189105034), 'hargmax_mm_MRE': np.float32(5.4246287), 'sargmax_pixel_MAE': np.float32(0.70766926), 'sargmax_pixel_RMSE': np.float64(1.5666479207575321), 'sargmax_pixel_MRE': np.float32(1.1250522), 'sargmax_mm_MAE': np.float32(2.6845474), 'sargmax_mm_RMSE': np.float64(5.90639391541481), 'sargmax_mm_MRE': np.float32(4.2545385)}) 
+ (manual) Hint 41 ::: Munch({'hargmax_pixel_MAE': np.float32(1.5813714), 'hargmax_pixel_RMSE': np.float64(3.5241776388138533), 'hargmax_pixel_MRE': np.float32(2.5338585), 'hargmax_mm_MAE': np.float32(6.3013115), 'hargmax_mm_RMSE': np.float64(14.38713301718235), 'hargmax_mm_MRE': np.float32(10.232092), 'sargmax_pixel_MAE': np.float32(1.4289587), 'sargmax_pixel_RMSE': np.float64(3.525174567475915), 'sargmax_pixel_MRE': np.float32(2.3058724), 'sargmax_mm_MAE': np.float32(5.7039323), 'sargmax_mm_RMSE': np.float64(14.397572912275791), 'sargmax_mm_MRE': np.float32(9.329551)}) 
+ (model ) Hint 42 ::: Munch({'hargmax_pixel_MAE': np.float32(0.8707615), 'hargmax_pixel_RMSE': np.float64(1.6986602023243904), 'hargmax_pixel_MRE': np.float32(1.3769526), 'hargmax_mm_MAE': np.float32(3.323226), 'hargmax_mm_RMSE': np.float64(6.252198450267315), 'hargmax_mm_MRE': np.float32(5.24621), 'sargmax_pixel_MAE': np.float32(0.6799494), 'sargmax_pixel_RMSE': np.float64(1.627728333696723), 'sargmax_pixel_MRE': np.float32(1.0857922), 'sargmax_mm_MAE': np.float32(2.5683267), 'sargmax_mm_RMSE': np.float64(5.956472918391228), 'sargmax_mm_MRE': np.float32(4.083844)}) 
+ (manual) Hint 42 ::: Munch({'hargmax_pixel_MAE': np.float32(1.5072728), 'hargmax_pixel_RMSE': np.float64(3.3997249100357294), 'hargmax_pixel_MRE': np.float32(2.4116578), 'hargmax_mm_MAE': np.float32(6.003244), 'hargmax_mm_RMSE': np.float64(13.85836636275053), 'hargmax_mm_MRE': np.float32(9.73175), 'sargmax_pixel_MAE': np.float32(1.3528551), 'sargmax_pixel_RMSE': np.float64(3.4028930962085724), 'sargmax_pixel_MRE': np.float32(2.1809864), 'sargmax_mm_MAE': np.float32(5.398127), 'sargmax_mm_RMSE': np.float64(13.876787297427654), 'sargmax_mm_MRE': np.float32(8.819608)}) 
+ (model ) Hint 43 ::: Munch({'hargmax_pixel_MAE': np.float32(0.82459944), 'hargmax_pixel_RMSE': np.float64(1.5300067700445652), 'hargmax_pixel_MRE': np.float32(1.3008311), 'hargmax_mm_MAE': np.float32(3.1624713), 'hargmax_mm_RMSE': np.float64(5.809667162597179), 'hargmax_mm_MRE': np.float32(4.9857435), 'sargmax_pixel_MAE': np.float32(0.632615), 'sargmax_pixel_RMSE': np.float64(1.4567788764834404), 'sargmax_pixel_MRE': np.float32(1.0076125), 'sargmax_mm_MAE': np.float32(2.4027455), 'sargmax_mm_RMSE': np.float64(5.498888321220875), 'sargmax_mm_MRE': np.float32(3.8135588)}) 
+ (manual) Hint 43 ::: Munch({'hargmax_pixel_MAE': np.float32(1.432452), 'hargmax_pixel_RMSE': np.float64(3.27394718490541), 'hargmax_pixel_MRE': np.float32(2.291219), 'hargmax_mm_MAE': np.float32(5.70477), 'hargmax_mm_RMSE': np.float64(13.3302536085248), 'hargmax_mm_MRE': np.float32(9.242119), 'sargmax_pixel_MAE': np.float32(1.2762535), 'sargmax_pixel_RMSE': np.float64(3.27988338842988), 'sargmax_pixel_MRE': np.float32(2.057365), 'sargmax_mm_MAE': np.float32(5.0928946), 'sargmax_mm_RMSE': np.float64(13.362904950976372), 'sargmax_mm_MRE': np.float32(8.318272)}) 
+ (model ) Hint 44 ::: Munch({'hargmax_pixel_MAE': np.float32(0.78711665), 'hargmax_pixel_RMSE': np.float64(1.4597128052264452), 'hargmax_pixel_MRE': np.float32(1.2412674), 'hargmax_mm_MAE': np.float32(3.01548), 'hargmax_mm_RMSE': np.float64(5.498987801373005), 'hargmax_mm_MRE': np.float32(4.7496037), 'sargmax_pixel_MAE': np.float32(0.5924483), 'sargmax_pixel_RMSE': np.float64(1.3843894638121128), 'sargmax_pixel_MRE': np.float32(0.9446652), 'sargmax_mm_MAE': np.float32(2.243268), 'sargmax_mm_RMSE': np.float64(5.174534723162651), 'sargmax_mm_MRE': np.float32(3.5608525)}) 
+ (manual) Hint 44 ::: Munch({'hargmax_pixel_MAE': np.float32(1.3588693), 'hargmax_pixel_RMSE': np.float64(3.144953217357397), 'hargmax_pixel_MRE': np.float32(2.1717153), 'hargmax_mm_MAE': np.float32(5.414448), 'hargmax_mm_RMSE': np.float64(12.803519368171692), 'hargmax_mm_MRE': np.float32(8.764163), 'sargmax_pixel_MAE': np.float32(1.2003604), 'sargmax_pixel_RMSE': np.float64(3.152978563681245), 'sargmax_pixel_MRE': np.float32(1.9343655), 'sargmax_mm_MAE': np.float32(4.7935658), 'sargmax_mm_RMSE': np.float64(12.844375506043434), 'sargmax_mm_MRE': np.float32(7.826754)}) 
+ (model ) Hint 45 ::: Munch({'hargmax_pixel_MAE': np.float32(0.75738734), 'hargmax_pixel_RMSE': np.float64(1.4498070981353521), 'hargmax_pixel_MRE': np.float32(1.194982), 'hargmax_mm_MAE': np.float32(2.8978682), 'hargmax_mm_RMSE': np.float64(5.442556641995907), 'hargmax_mm_MRE': np.float32(4.5647154), 'sargmax_pixel_MAE': np.float32(0.56068623), 'sargmax_pixel_RMSE': np.float64(1.377786997705698), 'sargmax_pixel_MRE': np.float32(0.89438117), 'sargmax_mm_MAE': np.float32(2.12176), 'sargmax_mm_RMSE': np.float64(5.143863253295422), 'sargmax_mm_MRE': np.float32(3.368123)}) 
+ (manual) Hint 45 ::: Munch({'hargmax_pixel_MAE': np.float32(1.2885985), 'hargmax_pixel_RMSE': np.float64(3.0218093637377024), 'hargmax_pixel_MRE': np.float32(2.0587945), 'hargmax_mm_MAE': np.float32(5.133567), 'hargmax_mm_RMSE': np.float64(12.295914061367512), 'hargmax_mm_MRE': np.float32(8.30525), 'sargmax_pixel_MAE': np.float32(1.1278131), 'sargmax_pixel_RMSE': np.float64(3.0310646444559097), 'sargmax_pixel_MRE': np.float32(1.8181205), 'sargmax_mm_MAE': np.float32(4.5033827), 'sargmax_mm_RMSE': np.float64(12.338238149881363), 'sargmax_mm_MRE': np.float32(7.354146)}) 
+ (model ) Hint 46 ::: Munch({'hargmax_pixel_MAE': np.float32(0.7157421), 'hargmax_pixel_RMSE': np.float64(1.3299445118755102), 'hargmax_pixel_MRE': np.float32(1.128128), 'hargmax_mm_MAE': np.float32(2.7408001), 'hargmax_mm_RMSE': np.float64(5.003991775214672), 'hargmax_mm_MRE': np.float32(4.311653), 'sargmax_pixel_MAE': np.float32(0.5175097), 'sargmax_pixel_RMSE': np.float64(1.2570702340453863), 'sargmax_pixel_MRE': np.float32(0.8252483), 'sargmax_mm_MAE': np.float32(1.9595435), 'sargmax_mm_RMSE': np.float64(4.706305921077728), 'sargmax_mm_MRE': np.float32(3.1083004)}) 
+ (manual) Hint 46 ::: Munch({'hargmax_pixel_MAE': np.float32(1.2190284), 'hargmax_pixel_RMSE': np.float64(2.8971271459013224), 'hargmax_pixel_MRE': np.float32(1.9474334), 'hargmax_mm_MAE': np.float32(4.857716), 'hargmax_mm_RMSE': np.float64(11.785542294383049), 'hargmax_mm_MRE': np.float32(7.854512), 'sargmax_pixel_MAE': np.float32(1.0555631), 'sargmax_pixel_RMSE': np.float64(2.9061354231089354), 'sargmax_pixel_MRE': np.float32(1.7028277), 'sargmax_mm_MAE': np.float32(4.2173567), 'sargmax_mm_RMSE': np.float64(11.828778646886349), 'sargmax_mm_MRE': np.float32(6.88855)}) 
+ (model ) Hint 47 ::: Munch({'hargmax_pixel_MAE': np.float32(0.6932905), 'hargmax_pixel_RMSE': np.float64(1.3656759522855282), 'hargmax_pixel_MRE': np.float32(1.0931515), 'hargmax_mm_MAE': np.float32(2.6401525), 'hargmax_mm_RMSE': np.float64(4.944683820009232), 'hargmax_mm_MRE': np.float32(4.1529264), 'sargmax_pixel_MAE': np.float32(0.49407908), 'sargmax_pixel_RMSE': np.float64(1.2948880046606064), 'sargmax_pixel_MRE': np.float32(0.7901372), 'sargmax_mm_MAE': np.float32(1.8540316), 'sargmax_mm_RMSE': np.float64(4.651843510568142), 'sargmax_mm_MRE': np.float32(2.9452074)}) 
+ (manual) Hint 47 ::: Munch({'hargmax_pixel_MAE': np.float32(1.1516361), 'hargmax_pixel_RMSE': np.float64(2.772755730897188), 'hargmax_pixel_MRE': np.float32(1.839334), 'hargmax_mm_MAE': np.float32(4.587411), 'hargmax_mm_RMSE': np.float64(11.274717874825), 'hargmax_mm_MRE': np.float32(7.415726), 'sargmax_pixel_MAE': np.float32(0.98535), 'sargmax_pixel_RMSE': np.float64(2.7820488400757313), 'sargmax_pixel_MRE': np.float32(1.5901189), 'sargmax_mm_MAE': np.float32(3.9364889), 'sargmax_mm_RMSE': np.float64(11.317823559045792), 'sargmax_mm_MRE': np.float32(6.432649)}) 
+ (model ) Hint 48 ::: Munch({'hargmax_pixel_MAE': np.float32(0.65161514), 'hargmax_pixel_RMSE': np.float64(1.2226794324815273), 'hargmax_pixel_MRE': np.float32(1.0239892), 'hargmax_mm_MAE': np.float32(2.4961665), 'hargmax_mm_RMSE': np.float64(4.58214744925499), 'hargmax_mm_MRE': np.float32(3.9166515), 'sargmax_pixel_MAE': np.float32(0.45118338), 'sargmax_pixel_RMSE': np.float64(1.1543296705931425), 'sargmax_pixel_MRE': np.float32(0.71961606), 'sargmax_mm_MAE': np.float32(1.70496), 'sargmax_mm_RMSE': np.float64(4.2957968562841415), 'sargmax_mm_MRE': np.float32(2.7030895)}) 
+ (manual) Hint 48 ::: Munch({'hargmax_pixel_MAE': np.float32(1.0841758), 'hargmax_pixel_RMSE': np.float64(2.645046178251505), 'hargmax_pixel_MRE': np.float32(1.7330828), 'hargmax_mm_MAE': np.float32(4.320496), 'hargmax_mm_RMSE': np.float64(10.767541766166687), 'hargmax_mm_MRE': np.float32(6.9895163), 'sargmax_pixel_MAE': np.float32(0.9162872), 'sargmax_pixel_RMSE': np.float64(2.6581041775643826), 'sargmax_pixel_MRE': np.float32(1.4810829), 'sargmax_mm_MAE': np.float32(3.6626093), 'sargmax_mm_RMSE': np.float64(10.822278574109077), 'sargmax_mm_MRE': np.float32(5.9942603)}) 
+ (model ) Hint 49 ::: Munch({'hargmax_pixel_MAE': np.float32(0.6418159), 'hargmax_pixel_RMSE': np.float64(1.3593387510627508), 'hargmax_pixel_MRE': np.float32(1.0146079), 'hargmax_mm_MAE': np.float32(2.4472268), 'hargmax_mm_RMSE': np.float64(4.970504485070705), 'hargmax_mm_MRE': np.float32(3.8581786), 'sargmax_pixel_MAE': np.float32(0.43840447), 'sargmax_pixel_RMSE': np.float64(1.2906365673989058), 'sargmax_pixel_MRE': np.float32(0.7050916), 'sargmax_mm_MAE': np.float32(1.6441938), 'sargmax_mm_RMSE': np.float64(4.679514855146408), 'sargmax_mm_MRE': np.float32(2.6240237)}) 
+ (manual) Hint 49 ::: Munch({'hargmax_pixel_MAE': np.float32(1.0207492), 'hargmax_pixel_RMSE': np.float64(2.5215262491256), 'hargmax_pixel_MRE': np.float32(1.6308155), 'hargmax_mm_MAE': np.float32(4.067553), 'hargmax_mm_RMSE': np.float64(10.261969059705734), 'hargmax_mm_MRE': np.float32(6.5754404), 'sargmax_pixel_MAE': np.float32(0.8514017), 'sargmax_pixel_RMSE': np.float64(2.540856782346964), 'sargmax_pixel_MRE': np.float32(1.3764389), 'sargmax_mm_MAE': np.float32(3.4039834), 'sargmax_mm_RMSE': np.float64(10.340714782476425), 'sargmax_mm_MRE': np.float32(5.5704393)}) 
+ (model ) Hint 50 ::: Munch({'hargmax_pixel_MAE': np.float32(0.5978594), 'hargmax_pixel_RMSE': np.float64(1.1386313140392303), 'hargmax_pixel_MRE': np.float32(0.94069386), 'hargmax_mm_MAE': np.float32(2.2944865), 'hargmax_mm_RMSE': np.float64(4.2763382494449615), 'hargmax_mm_MRE': np.float32(3.608832), 'sargmax_pixel_MAE': np.float32(0.39059404), 'sargmax_pixel_RMSE': np.float64(1.0609767604619265), 'sargmax_pixel_MRE': np.float32(0.624558), 'sargmax_mm_MAE': np.float32(1.4774683), 'sargmax_mm_RMSE': np.float64(3.954994171857834), 'sargmax_mm_MRE': np.float32(2.3494718)}) 
+ (manual) Hint 50 ::: Munch({'hargmax_pixel_MAE': np.float32(0.95912105), 'hargmax_pixel_RMSE': np.float64(2.3937731981277466), 'hargmax_pixel_MRE': np.float32(1.5302293), 'hargmax_mm_MAE': np.float32(3.8227458), 'hargmax_mm_RMSE': np.float64(9.755627751350403), 'hargmax_mm_MRE': np.float32(6.1730433), 'sargmax_pixel_MAE': np.float32(0.78598), 'sargmax_pixel_RMSE': np.float64(2.4101720601320267), 'sargmax_pixel_MRE': np.float32(1.2703679), 'sargmax_mm_MAE': np.float32(3.1439722), 'sargmax_mm_RMSE': np.float64(9.821521893143654), 'sargmax_mm_MRE': np.float32(5.1458497)}) 
+ (model ) Hint 51 ::: Munch({'hargmax_pixel_MAE': np.float32(0.57038033), 'hargmax_pixel_RMSE': np.float64(1.083183178678155), 'hargmax_pixel_MRE': np.float32(0.89610696), 'hargmax_mm_MAE': np.float32(2.1895366), 'hargmax_mm_RMSE': np.float64(4.041185401380062), 'hargmax_mm_MRE': np.float32(3.4383702), 'sargmax_pixel_MAE': np.float32(0.36242816), 'sargmax_pixel_RMSE': np.float64(1.0113462414592505), 'sargmax_pixel_MRE': np.float32(0.579854), 'sargmax_mm_MAE': np.float32(1.3702374), 'sargmax_mm_RMSE': np.float64(3.7445902451872826), 'sargmax_mm_MRE': np.float32(2.1797507)}) 
+ (manual) Hint 51 ::: Munch({'hargmax_pixel_MAE': np.float32(0.8992777), 'hargmax_pixel_RMSE': np.float64(2.2729280404746532), 'hargmax_pixel_MRE': np.float32(1.4345682), 'hargmax_mm_MAE': np.float32(3.5821233), 'hargmax_mm_RMSE': np.float64(9.256044115871191), 'hargmax_mm_MRE': np.float32(5.782504), 'sargmax_pixel_MAE': np.float32(0.7233654), 'sargmax_pixel_RMSE': np.float64(2.288934178650379), 'sargmax_pixel_MRE': np.float32(1.170054), 'sargmax_mm_MAE': np.float32(2.892701), 'sargmax_mm_RMSE': np.float64(9.323677070438862), 'sargmax_mm_MRE': np.float32(4.7379713)}) 
+ (model ) Hint 52 ::: Munch({'hargmax_pixel_MAE': np.float32(0.5513854), 'hargmax_pixel_RMSE': np.float64(1.1080237179994583), 'hargmax_pixel_MRE': np.float32(0.8648557), 'hargmax_mm_MAE': np.float32(2.1100855), 'hargmax_mm_RMSE': np.float64(4.057395271956921), 'hargmax_mm_MRE': np.float32(3.30798), 'sargmax_pixel_MAE': np.float32(0.341267), 'sargmax_pixel_RMSE': np.float64(1.0383145790547132), 'sargmax_pixel_MRE': np.float32(0.54608786), 'sargmax_mm_MAE': np.float32(1.2831615), 'sargmax_mm_RMSE': np.float64(3.7726906836032867), 'sargmax_mm_MRE': np.float32(2.0410104)}) 
+ (manual) Hint 52 ::: Munch({'hargmax_pixel_MAE': np.float32(0.8432738), 'hargmax_pixel_RMSE': np.float64(2.1557973343878984), 'hargmax_pixel_MRE': np.float32(1.3440562), 'hargmax_mm_MAE': np.float32(3.356276), 'hargmax_mm_RMSE': np.float64(8.765348862856627), 'hargmax_mm_MRE': np.float32(5.4092145), 'sargmax_pixel_MAE': np.float32(0.664402), 'sargmax_pixel_RMSE': np.float64(2.170099599286914), 'sargmax_pixel_MRE': np.float32(1.0747383), 'sargmax_mm_MAE': np.float32(2.6555645), 'sargmax_mm_RMSE': np.float64(8.82821223884821), 'sargmax_mm_MRE': np.float32(4.3468795)}) 
+ (model ) Hint 53 ::: Munch({'hargmax_pixel_MAE': np.float32(0.51855564), 'hargmax_pixel_RMSE': np.float64(0.9808971099555492), 'hargmax_pixel_MRE': np.float32(0.8133858), 'hargmax_mm_MAE': np.float32(1.9895368), 'hargmax_mm_RMSE': np.float64(3.6389696523547173), 'hargmax_mm_MRE': np.float32(3.1200662), 'sargmax_pixel_MAE': np.float32(0.30814594), 'sargmax_pixel_RMSE': np.float64(0.9139298386871815), 'sargmax_pixel_MRE': np.float32(0.49340078), 'sargmax_mm_MAE': np.float32(1.1595004), 'sargmax_mm_RMSE': np.float64(3.3545103147625923), 'sargmax_mm_MRE': np.float32(1.8449252)}) 
+ (manual) Hint 53 ::: Munch({'hargmax_pixel_MAE': np.float32(0.7877526), 'hargmax_pixel_RMSE': np.float64(2.0363373309373856), 'hargmax_pixel_MRE': np.float32(1.2550716), 'hargmax_mm_MAE': np.float32(3.133874), 'hargmax_mm_RMSE': np.float64(8.273204077035189), 'hargmax_mm_MRE': np.float32(5.047612), 'sargmax_pixel_MAE': np.float32(0.60473716), 'sargmax_pixel_RMSE': np.float64(2.0462999381124973), 'sargmax_pixel_MRE': np.float32(0.9792789), 'sargmax_mm_MAE': np.float32(2.416324), 'sargmax_mm_RMSE': np.float64(8.316582523286343), 'sargmax_mm_MRE': np.float32(3.958278)}) 
+ (model ) Hint 54 ::: Munch({'hargmax_pixel_MAE': np.float32(0.5004644), 'hargmax_pixel_RMSE': np.float64(1.0256431680172682), 'hargmax_pixel_MRE': np.float32(0.78482044), 'hargmax_mm_MAE': np.float32(1.9206144), 'hargmax_mm_RMSE': np.float64(3.7789533883333206), 'hargmax_mm_MRE': np.float32(3.0089645), 'sargmax_pixel_MAE': np.float32(0.28832513), 'sargmax_pixel_RMSE': np.float64(0.9595687612891197), 'sargmax_pixel_MRE': np.float32(0.46251655), 'sargmax_mm_MAE': np.float32(1.0854235), 'sargmax_mm_RMSE': np.float64(3.5078852660954), 'sargmax_mm_MRE': np.float32(1.7287757)}) 
+ (manual) Hint 54 ::: Munch({'hargmax_pixel_MAE': np.float32(0.73458266), 'hargmax_pixel_RMSE': np.float64(1.9148873928934336), 'hargmax_pixel_MRE': np.float32(1.1690505), 'hargmax_mm_MAE': np.float32(2.9218168), 'hargmax_mm_RMSE': np.float64(7.783566549420357), 'hargmax_mm_MRE': np.float32(4.6993713), 'sargmax_pixel_MAE': np.float32(0.5482526), 'sargmax_pixel_RMSE': np.float64(1.922436804510653), 'sargmax_pixel_MRE': np.float32(0.88798803), 'sargmax_mm_MAE': np.float32(2.1908424), 'sargmax_mm_RMSE': np.float64(7.815831404179335), 'sargmax_mm_MRE': np.float32(3.5883236)}) 
+ (model ) Hint 55 ::: Munch({'hargmax_pixel_MAE': np.float32(0.46876574), 'hargmax_pixel_RMSE': np.float64(0.8689364604651928), 'hargmax_pixel_MRE': np.float32(0.73360306), 'hargmax_mm_MAE': np.float32(1.8083303), 'hargmax_mm_RMSE': np.float64(3.274574100971222), 'hargmax_mm_MRE': np.float32(2.831686), 'sargmax_pixel_MAE': np.float32(0.2543792), 'sargmax_pixel_RMSE': np.float64(0.7998787900432944), 'sargmax_pixel_MRE': np.float32(0.40775612), 'sargmax_mm_MAE': np.float32(0.9649626), 'sargmax_mm_RMSE': np.float64(2.9929908737540245), 'sargmax_mm_MRE': np.float32(1.5392925)}) 
+ (manual) Hint 55 ::: Munch({'hargmax_pixel_MAE': np.float32(0.683195), 'hargmax_pixel_RMSE': np.float64(1.7945458982139826), 'hargmax_pixel_MRE': np.float32(1.0861857), 'hargmax_mm_MAE': np.float32(2.716093), 'hargmax_mm_RMSE': np.float64(7.29090828448534), 'hargmax_mm_MRE': np.float32(4.3623543), 'sargmax_pixel_MAE': np.float32(0.49454176), 'sargmax_pixel_RMSE': np.float64(1.8021293943747878), 'sargmax_pixel_MRE': np.float32(0.8006885), 'sargmax_mm_MAE': np.float32(1.9762311), 'sargmax_mm_RMSE': np.float64(7.3254468739032745), 'sargmax_mm_MRE': np.float32(3.2344055)}) 
+ (model ) Hint 56 ::: Munch({'hargmax_pixel_MAE': np.float32(0.45415685), 'hargmax_pixel_RMSE': np.float64(0.9185241926461458), 'hargmax_pixel_MRE': np.float32(0.7126998), 'hargmax_mm_MAE': np.float32(1.74699), 'hargmax_mm_RMSE': np.float64(3.3525799438357353), 'hargmax_mm_MRE': np.float32(2.7388406), 'sargmax_pixel_MAE': np.float32(0.2393749), 'sargmax_pixel_RMSE': np.float64(0.8527118945494294), 'sargmax_pixel_MRE': np.float32(0.38577178), 'sargmax_mm_MAE': np.float32(0.9025582), 'sargmax_mm_RMSE': np.float64(3.085203677415848), 'sargmax_mm_MRE': np.float32(1.4433513)}) 
+ (manual) Hint 56 ::: Munch({'hargmax_pixel_MAE': np.float32(0.63342583), 'hargmax_pixel_RMSE': np.float64(1.6795724257826805), 'hargmax_pixel_MRE': np.float32(1.008035), 'hargmax_mm_MAE': np.float32(2.5155802), 'hargmax_mm_RMSE': np.float64(6.808516591787338), 'hargmax_mm_MRE': np.float32(4.0429916), 'sargmax_pixel_MAE': np.float32(0.44090134), 'sargmax_pixel_RMSE': np.float64(1.6833665408194065), 'sargmax_pixel_MRE': np.float32(0.7165022), 'sargmax_mm_MAE': np.float32(1.7593157), 'sargmax_mm_RMSE': np.float64(6.822877820581198), 'sargmax_mm_MRE': np.float32(2.8890123)}) 
+ (model ) Hint 57 ::: Munch({'hargmax_pixel_MAE': np.float32(0.43063343), 'hargmax_pixel_RMSE': np.float64(0.8959008082747459), 'hargmax_pixel_MRE': np.float32(0.6731473), 'hargmax_mm_MAE': np.float32(1.6637956), 'hargmax_mm_RMSE': np.float64(3.345890633761883), 'hargmax_mm_MRE': np.float32(2.6033645), 'sargmax_pixel_MAE': np.float32(0.21476254), 'sargmax_pixel_RMSE': np.float64(0.8304702285677195), 'sargmax_pixel_MRE': np.float32(0.34454376), 'sargmax_mm_MAE': np.float32(0.81557775), 'sargmax_mm_RMSE': np.float64(3.082700986415148), 'sargmax_mm_MRE': np.float32(1.303051)}) 
+ (manual) Hint 57 ::: Munch({'hargmax_pixel_MAE': np.float32(0.58740866), 'hargmax_pixel_RMSE': np.float64(1.5590032935142517), 'hargmax_pixel_MRE': np.float32(0.9320924), 'hargmax_mm_MAE': np.float32(2.3316832), 'hargmax_mm_RMSE': np.float64(6.327376466244459), 'hargmax_mm_MRE': np.float32(3.7369018), 'sargmax_pixel_MAE': np.float32(0.391388), 'sargmax_pixel_RMSE': np.float64(1.5597668932750821), 'sargmax_pixel_MRE': np.float32(0.6345233), 'sargmax_mm_MAE': np.float32(1.5612452), 'sargmax_mm_RMSE': np.float64(6.325606532394886), 'sargmax_mm_MRE': np.float32(2.558116)}) 
+ (model ) Hint 58 ::: Munch({'hargmax_pixel_MAE': np.float32(0.40416628), 'hargmax_pixel_RMSE': np.float64(0.783838115632534), 'hargmax_pixel_MRE': np.float32(0.63208497), 'hargmax_mm_MAE': np.float32(1.566489), 'hargmax_mm_RMSE': np.float64(2.980865467339754), 'hargmax_mm_MRE': np.float32(2.4554508), 'sargmax_pixel_MAE': np.float32(0.18666096), 'sargmax_pixel_RMSE': np.float64(0.7198046818375587), 'sargmax_pixel_MRE': np.float32(0.3003574), 'sargmax_mm_MAE': np.float32(0.7120254), 'sargmax_mm_RMSE': np.float64(2.7244141958653927), 'sargmax_mm_MRE': np.float32(1.1430233)}) 
+ (manual) Hint 58 ::: Munch({'hargmax_pixel_MAE': np.float32(0.5425261), 'hargmax_pixel_RMSE': np.float64(1.4421517318114638), 'hargmax_pixel_MRE': np.float32(0.86013985), 'hargmax_mm_MAE': np.float32(2.1521816), 'hargmax_mm_RMSE': np.float64(5.843989927321672), 'hargmax_mm_MRE': np.float32(3.445486), 'sargmax_pixel_MAE': np.float32(0.34207755), 'sargmax_pixel_RMSE': np.float64(1.4357549920678139), 'sargmax_pixel_MRE': np.float32(0.5557487), 'sargmax_mm_MAE': np.float32(1.3644435), 'sargmax_mm_RMSE': np.float64(5.813684359192848), 'sargmax_mm_MRE': np.float32(2.2402885)}) 
+ (model ) Hint 59 ::: Munch({'hargmax_pixel_MAE': np.float32(0.37894222), 'hargmax_pixel_RMSE': np.float64(0.6626660684123635), 'hargmax_pixel_MRE': np.float32(0.58949256), 'hargmax_mm_MAE': np.float32(1.4698931), 'hargmax_mm_RMSE': np.float64(2.5065732784569263), 'hargmax_mm_MRE': np.float32(2.292553), 'sargmax_pixel_MAE': np.float32(0.158971), 'sargmax_pixel_RMSE': np.float64(0.5960530694574118), 'sargmax_pixel_MRE': np.float32(0.2550344), 'sargmax_mm_MAE': np.float32(0.6054404), 'sargmax_mm_RMSE': np.float64(2.241342093795538), 'sargmax_mm_MRE': np.float32(0.9686669)}) 
+ (manual) Hint 59 ::: Munch({'hargmax_pixel_MAE': np.float32(0.4996194), 'hargmax_pixel_RMSE': np.float64(1.3199352705851197), 'hargmax_pixel_MRE': np.float32(0.7909646), 'hargmax_mm_MAE': np.float32(1.9820876), 'hargmax_mm_RMSE': np.float64(5.360131971538067), 'hargmax_mm_MRE': np.float32(3.1689725), 'sargmax_pixel_MAE': np.float32(0.29635653), 'sargmax_pixel_RMSE': np.float64(1.3131516119465232), 'sargmax_pixel_MRE': np.float32(0.48147714), 'sargmax_mm_MAE': np.float32(1.1834404), 'sargmax_mm_RMSE': np.float64(5.32738895714283), 'sargmax_mm_MRE': np.float32(1.9437609)}) 
+ (model ) Hint 60 ::: Munch({'hargmax_pixel_MAE': np.float32(0.36168885), 'hargmax_pixel_RMSE': np.float64(0.6776998089626431), 'hargmax_pixel_MRE': np.float32(0.56234646), 'hargmax_mm_MAE': np.float32(1.4046146), 'hargmax_mm_RMSE': np.float64(2.5621917881071568), 'hargmax_mm_MRE': np.float32(2.1882417), 'sargmax_pixel_MAE': np.float32(0.13984327), 'sargmax_pixel_RMSE': np.float64(0.6097615789622068), 'sargmax_pixel_MRE': np.float32(0.22443512), 'sargmax_mm_MAE': np.float32(0.53233784), 'sargmax_mm_RMSE': np.float64(2.285516422241926), 'sargmax_mm_MRE': np.float32(0.84988844)}) 
+ (manual) Hint 60 ::: Munch({'hargmax_pixel_MAE': np.float32(0.45937258), 'hargmax_pixel_RMSE': np.float64(1.1966285835951567), 'hargmax_pixel_MRE': np.float32(0.72493994), 'hargmax_mm_MAE': np.float32(1.8228402), 'hargmax_mm_RMSE': np.float64(4.873627595603466), 'hargmax_mm_MRE': np.float32(2.9052515), 'sargmax_pixel_MAE': np.float32(0.2518039), 'sargmax_pixel_RMSE': np.float64(1.184038607403636), 'sargmax_pixel_MRE': np.float32(0.40914506), 'sargmax_mm_MAE': np.float32(1.0062574), 'sargmax_mm_RMSE': np.float64(4.812837526202202), 'sargmax_mm_MRE': np.float32(1.6534485)}) 
+ (model ) Hint 61 ::: Munch({'hargmax_pixel_MAE': np.float32(0.33714217), 'hargmax_pixel_RMSE': np.float64(0.5425853841006756), 'hargmax_pixel_MRE': np.float32(0.5225846), 'hargmax_mm_MAE': np.float32(1.3121917), 'hargmax_mm_RMSE': np.float64(2.0765091851353645), 'hargmax_mm_MRE': np.float32(2.0412412), 'sargmax_pixel_MAE': np.float32(0.114533894), 'sargmax_pixel_RMSE': np.float64(0.4725369568914175), 'sargmax_pixel_MRE': np.float32(0.18318617), 'sargmax_mm_MAE': np.float32(0.43702257), 'sargmax_mm_RMSE': np.float64(1.7908692546188831), 'sargmax_mm_MRE': np.float32(0.6968718)}) 
+ (manual) Hint 61 ::: Munch({'hargmax_pixel_MAE': np.float32(0.42223793), 'hargmax_pixel_RMSE': np.float64(1.073974510654807), 'hargmax_pixel_MRE': np.float32(0.6638806), 'hargmax_mm_MAE': np.float32(1.6751777), 'hargmax_mm_RMSE': np.float64(4.401056237518787), 'hargmax_mm_MRE': np.float32(2.6615543), 'sargmax_pixel_MAE': np.float32(0.21106601), 'sargmax_pixel_RMSE': np.float64(1.0550293633714318), 'sargmax_pixel_MRE': np.float32(0.34246516), 'sargmax_mm_MAE': np.float32(0.8444357), 'sargmax_mm_RMSE': np.float64(4.314776461571455), 'sargmax_mm_MRE': np.float32(1.3872926)}) 
+ (model ) Hint 62 ::: Munch({'hargmax_pixel_MAE': np.float32(0.3204561), 'hargmax_pixel_RMSE': np.float64(0.5044561307877302), 'hargmax_pixel_MRE': np.float32(0.49562913), 'hargmax_mm_MAE': np.float32(1.2475646), 'hargmax_mm_RMSE': np.float64(1.9189099669456482), 'hargmax_mm_MRE': np.float32(1.9364033), 'sargmax_pixel_MAE': np.float32(0.09593785), 'sargmax_pixel_RMSE': np.float64(0.43144230265170336), 'sargmax_pixel_MRE': np.float32(0.15356141), 'sargmax_mm_MAE': np.float32(0.36479148), 'sargmax_mm_RMSE': np.float64(1.6202769130468369), 'sargmax_mm_MRE': np.float32(0.58140194)}) 
+ (manual) Hint 62 ::: Munch({'hargmax_pixel_MAE': np.float32(0.38743833), 'hargmax_pixel_RMSE': np.float64(0.9613036932423711), 'hargmax_pixel_MRE': np.float32(0.60798746), 'hargmax_mm_MAE': np.float32(1.5377623), 'hargmax_mm_RMSE': np.float64(3.9487137645483017), 'hargmax_mm_MRE': np.float32(2.4378254), 'sargmax_pixel_MAE': np.float32(0.17251927), 'sargmax_pixel_RMSE': np.float64(0.9333602357655764), 'sargmax_pixel_MRE': np.float32(0.28046322), 'sargmax_mm_MAE': np.float32(0.69198227), 'sargmax_mm_RMSE': np.float64(3.825661338865757), 'sargmax_mm_MRE': np.float32(1.1387801)}) 
+ (model ) Hint 63 ::: Munch({'hargmax_pixel_MAE': np.float32(0.30193883), 'hargmax_pixel_RMSE': np.float64(0.445785746909678), 'hargmax_pixel_MRE': np.float32(0.4659099), 'hargmax_mm_MAE': np.float32(1.1789763), 'hargmax_mm_RMSE': np.float64(1.7279690653085709), 'hargmax_mm_MRE': np.float32(1.8287627), 'sargmax_pixel_MAE': np.float32(0.07395291), 'sargmax_pixel_RMSE': np.float64(0.35720533039420843), 'sargmax_pixel_MRE': np.float32(0.11840993), 'sargmax_mm_MAE': np.float32(0.28248006), 'sargmax_mm_RMSE': np.float64(1.364618493244052), 'sargmax_mm_MRE': np.float32(0.45171502)}) 
+ (manual) Hint 63 ::: Munch({'hargmax_pixel_MAE': np.float32(0.356032), 'hargmax_pixel_RMSE': np.float64(0.8506404934450984), 'hargmax_pixel_MRE': np.float32(0.5566728), 'hargmax_mm_MAE': np.float32(1.4132633), 'hargmax_mm_RMSE': np.float64(3.5034127980470657), 'hargmax_mm_MRE': np.float32(2.2328892), 'sargmax_pixel_MAE': np.float32(0.1364334), 'sargmax_pixel_RMSE': np.float64(0.8131293435581028), 'sargmax_pixel_MRE': np.float32(0.22231442), 'sargmax_mm_MAE': np.float32(0.54886377), 'sargmax_mm_RMSE': np.float64(3.3406995180994272), 'sargmax_mm_MRE': np.float32(0.9059688)}) 
+ (model ) Hint 64 ::: Munch({'hargmax_pixel_MAE': np.float32(0.28877628), 'hargmax_pixel_RMSE': np.float64(0.40699845738708973), 'hargmax_pixel_MRE': np.float32(0.44371265), 'hargmax_mm_MAE': np.float32(1.1280644), 'hargmax_mm_RMSE': np.float64(1.5707475692033768), 'hargmax_mm_MRE': np.float32(1.7428089), 'sargmax_pixel_MAE': np.float32(0.057700727), 'sargmax_pixel_RMSE': np.float64(0.3066095276735723), 'sargmax_pixel_MRE': np.float32(0.091200955), 'sargmax_mm_MAE': np.float32(0.21949074), 'sargmax_mm_RMSE': np.float64(1.1593077722936869), 'sargmax_mm_MRE': np.float32(0.34583244)}) 
+ (manual) Hint 64 ::: Munch({'hargmax_pixel_MAE': np.float32(0.32684198), 'hargmax_pixel_RMSE': np.float64(0.7341775028035045), 'hargmax_pixel_MRE': np.float32(0.50873053), 'hargmax_mm_MAE': np.float32(1.2981701), 'hargmax_mm_RMSE': np.float64(3.054387655109167), 'hargmax_mm_MRE': np.float32(2.0435328), 'sargmax_pixel_MAE': np.float32(0.10202245), 'sargmax_pixel_RMSE': np.float64(0.680046102963388), 'sargmax_pixel_MRE': np.float32(0.1666161), 'sargmax_mm_MAE': np.float32(0.41288358), 'sargmax_mm_RMSE': np.float64(2.8299978617578745), 'sargmax_mm_MRE': np.float32(0.6852024)}) 
+ (model ) Hint 65 ::: Munch({'hargmax_pixel_MAE': np.float32(0.27513057), 'hargmax_pixel_RMSE': np.float64(0.36465029418468475), 'hargmax_pixel_MRE': np.float32(0.4218772), 'hargmax_mm_MAE': np.float32(1.0787896), 'hargmax_mm_RMSE': np.float64(1.4352917075157166), 'hargmax_mm_MRE': np.float32(1.6654832), 'sargmax_pixel_MAE': np.float32(0.04038), 'sargmax_pixel_RMSE': np.float64(0.24626739230006933), 'sargmax_pixel_MRE': np.float32(0.063557506), 'sargmax_mm_MAE': np.float32(0.15450498), 'sargmax_mm_RMSE': np.float64(0.9462557844817638), 'sargmax_mm_MRE': np.float32(0.24312592)}) 
+ (manual) Hint 65 ::: Munch({'hargmax_pixel_MAE': np.float32(0.30211186), 'hargmax_pixel_RMSE': np.float64(0.6257398808375001), 'hargmax_pixel_MRE': np.float32(0.4676336), 'hargmax_mm_MAE': np.float32(1.1984844), 'hargmax_mm_RMSE': np.float64(2.6043125577270985), 'hargmax_mm_MRE': np.float32(1.8748057), 'sargmax_pixel_MAE': np.float32(0.071587406), 'sargmax_pixel_RMSE': np.float64(0.5515400124713778), 'sargmax_pixel_MRE': np.float32(0.11683291), 'sargmax_mm_MAE': np.float32(0.2907861), 'sargmax_mm_RMSE': np.float64(2.3035221211612225), 'sargmax_mm_MRE': np.float32(0.48221973)}) 
+ (model ) Hint 66 ::: Munch({'hargmax_pixel_MAE': np.float32(0.26379898), 'hargmax_pixel_RMSE': np.float64(0.3301327573135495), 'hargmax_pixel_MRE': np.float32(0.40403026), 'hargmax_mm_MAE': np.float32(1.0363964), 'hargmax_mm_RMSE': np.float64(1.310171216726303), 'hargmax_mm_MRE': np.float32(1.5990419), 'sargmax_pixel_MAE': np.float32(0.02500903), 'sargmax_pixel_RMSE': np.float64(0.1843053533229977), 'sargmax_pixel_MRE': np.float32(0.039152563), 'sargmax_mm_MAE': np.float32(0.09645453), 'sargmax_mm_RMSE': np.float64(0.7157612023875117), 'sargmax_mm_MRE': np.float32(0.15082243)}) 
+ (manual) Hint 66 ::: Munch({'hargmax_pixel_MAE': np.float32(0.27996194), 'hargmax_pixel_RMSE': np.float64(0.5069371126592159), 'hargmax_pixel_MRE': np.float32(0.43106717), 'hargmax_mm_MAE': np.float32(1.1092865), 'hargmax_mm_RMSE': np.float64(2.1295685917139053), 'hargmax_mm_MRE': np.float32(1.7256465), 'sargmax_pixel_MAE': np.float32(0.044365488), 'sargmax_pixel_RMSE': np.float64(0.41056151082739234), 'sargmax_pixel_MRE': np.float32(0.07188259), 'sargmax_mm_MAE': np.float32(0.18081474), 'sargmax_mm_RMSE': np.float64(1.7321981759741902), 'sargmax_mm_MRE': np.float32(0.2980768)}) 
+ (model ) Hint 67 ::: Munch({'hargmax_pixel_MAE': np.float32(0.25566816), 'hargmax_pixel_RMSE': np.float64(0.308662592433393), 'hargmax_pixel_MRE': np.float32(0.39106685), 'hargmax_mm_MAE': np.float32(1.0056417), 'hargmax_mm_RMSE': np.float64(1.223639853298664), 'hargmax_mm_MRE': np.float32(1.55055), 'sargmax_pixel_MAE': np.float32(0.0117236525), 'sargmax_pixel_RMSE': np.float64(0.12024187133647501), 'sargmax_pixel_MRE': np.float32(0.01824358), 'sargmax_mm_MAE': np.float32(0.045003325), 'sargmax_mm_RMSE': np.float64(0.4611703478731215), 'sargmax_mm_MRE': np.float32(0.070104614)}) 
+ (manual) Hint 67 ::: Munch({'hargmax_pixel_MAE': np.float32(0.26241884), 'hargmax_pixel_RMSE': np.float64(0.39752860460430384), 'hargmax_pixel_MRE': np.float32(0.40236136), 'hargmax_mm_MAE': np.float32(1.0363438), 'hargmax_mm_RMSE': np.float64(1.6435112990438938), 'hargmax_mm_MRE': np.float32(1.6034086), 'sargmax_pixel_MAE': np.float32(0.019959506), 'sargmax_pixel_RMSE': np.float64(0.2551778396591544), 'sargmax_pixel_MRE': np.float32(0.032358468), 'sargmax_mm_MAE': np.float32(0.08125894), 'sargmax_mm_RMSE': np.float64(1.064097760245204), 'sargmax_mm_MRE': np.float32(0.13357127)}) 
+ (model ) Hint 68 ::: Munch({'hargmax_pixel_MAE': np.float32(0.25005084), 'hargmax_pixel_RMSE': np.float64(0.2883858298882842), 'hargmax_pixel_MRE': np.float32(0.3819521), 'hargmax_mm_MAE': np.float32(0.9854911), 'hargmax_mm_RMSE': np.float64(1.1584273409098387), 'hargmax_mm_MRE': np.float32(1.5180595), 'sargmax_pixel_MAE': np.float32(0.0), 'sargmax_pixel_RMSE': np.float64(0.0), 'sargmax_pixel_MRE': np.float32(0.0), 'sargmax_mm_MAE': np.float32(0.0), 'sargmax_mm_RMSE': np.float64(0.0), 'sargmax_mm_MRE': np.float32(0.0)}) 
+ (manual) Hint 68 ::: Munch({'hargmax_pixel_MAE': np.float32(0.25005084), 'hargmax_pixel_RMSE': np.float64(0.2883858298882842), 'hargmax_pixel_MRE': np.float32(0.3819521), 'hargmax_mm_MAE': np.float32(0.9854911), 'hargmax_mm_RMSE': np.float64(1.1584273409098387), 'hargmax_mm_MRE': np.float32(1.5180595), 'sargmax_pixel_MAE': np.float32(0.0), 'sargmax_pixel_RMSE': np.float64(0.0), 'sargmax_pixel_MRE': np.float32(0.0), 'sargmax_mm_MAE': np.float32(0.0), 'sargmax_mm_RMSE': np.float64(0.0), 'sargmax_mm_MRE': np.float32(0.0)}) 
+================ Process End ::: 2025-10-20 14:41:06.437318+09:00 2.38 hours ================
+================ Version ::: AASCE_interactive_keypoint_estimation ================

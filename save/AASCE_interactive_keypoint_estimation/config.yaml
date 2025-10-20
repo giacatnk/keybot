@@ -43,7 +43,7 @@ Model:
   input_padding: null
   no_iterative_training: false
   subpixel_decoding_coord_loss: false
-  use_prev_heatmap: false
+  use_prev_heatmap: true
   use_prev_heatmap_only_for_hint_index: true
 Morph:
   angle_lambda: 0.01
@@ -73,7 +73,7 @@ Revision:
   type: worst
 Train:
   SR_standard: ''
-  batch_size: 4
+  batch_size: 1
   decision_metric: hargmax_mm_MRE
   epoch: 1000
   metric:
@@ -81,21 +81,22 @@ Train:
   - RMSE
   - MRE
   patience: 50
-batch_size: null
-config: config_AASCE
+batch_size: 1
+config: ForTest
 debug: false
 fBRS_test_mode: null
-only_test_version: null
+gpu: '6'
+only_test_version: AASCE_interactive_keypoint_estimation
 random_morph_angle_lambda: -1
 random_morph_distance_lambda: -1
 revision_type: worst
 save_test_prediction: true
-seed: 42
+seed: '42'
 split_test_dataset: null
 subpixel_inference: 15
 test_pixelspacing_one: false
 use_cpu: false
 use_deterministic: false
-use_prev_heatmap_inference: false
+use_prev_heatmap_inference: true
 use_prev_heatmap_only_for_hint_index: true
 version: AASCE_interactive_keypoint_estimation
