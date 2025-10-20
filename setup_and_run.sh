@@ -335,17 +335,22 @@ save_and_commit_models() {
     # Git operations
     print_info "Committing models to git..."
     
-    # Add save directory and git attributes
-    git add save/
+    # Add all save directories and git attributes
+    git add save/ 2>/dev/null || true
+    git add save_suggestion/ 2>/dev/null || true
+    git add save_refine/ 2>/dev/null || true
     git add .gitattributes 2>/dev/null || true
     
     # Create commit with timestamp
     TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
-    COMMIT_MSG="Add trained model checkpoint
+    COMMIT_MSG="Add trained model checkpoints
 
 Trained on: $(date '+%Y-%m-%d %H:%M:%S')
 Timestamp: ${TIMESTAMP}
-Location: save/AASCE_interactive_keypoint_estimation/"
+Models:
+  - Interactive keypoint: save/AASCE_interactive_keypoint_estimation/
+  - Suggestion model: save_suggestion/
+  - Refinement model: save_refine/"
     
     git commit -m "$COMMIT_MSG" || print_warning "No changes to commit"
     
