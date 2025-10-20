@@ -20,6 +20,7 @@ torchvision = "^0.23.0"
 matplotlib = "^3.10.6"
 pyyaml = "^6.0.3"
 tensorboard = "^2.20.0"
+scikit-learn = "^1.6.1"
 
 
 [build-system]
