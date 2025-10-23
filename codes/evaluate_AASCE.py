@@ -28,12 +28,25 @@ keypoint_train_loader, keypoint_val_loader, keypoint_test_loader, trainer, save_
 suggestion_cls_train_dataset = SuggestionDataset(keypoint_train_loader, inference_mode=True)
 
 suggest_model = SuggestionConvModel()
-suggest_model.load_state_dict(torch.load(suggest_model_path,map_location='cpu'))
+suggest_model.load_state_dict(
+    torch.load(
+        suggest_model_path,
+        map_location='mps' if torch.backends.mps.is_available() 
+        else 'cuda' if torch.cuda.is_available() 
+        else 'cpu')
+)
 suggest_model.eval()
 
 refine_train_dataset = RefineDataset(keypoint_train_loader, split='train', inference_mode=True)
 pseudo_label_model = PseudoLabelModel(n_keypoint=68, num_bones=17)
-pseudo_label_model.load_state_dict(torch.load(pseudo_label_model_path,map_location='cpu'))
+pseudo_label_model.load_state_dict(
+    torch.load(
+        pseudo_label_model_path,
+        map_location='mps' if torch.backends.mps.is_available() 
+        else 'cuda' if torch.cuda.is_available() 
+        else 'cpu'
+    )
+)
 pseudo_label_model.eval()
 
 get_pseudo_label = get_func_pseudo_label()
