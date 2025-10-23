@@ -10,6 +10,7 @@ from suggest_codes.get_suggest_dataset import SuggestionDataset
 from suggest_codes.get_suggest_model import SuggestionConvModel
 from suggest_codes.get_pseudo_generation_dataset_image_negative_sample import RefineDataset
 from suggest_codes.get_pseudo_generation_model_image_heatmap import PseudoLabelModel, get_func_pseudo_label
+from util import DEVICE
 
 dataset = 'spineweb'
 
@@ -28,25 +29,12 @@ keypoint_train_loader, keypoint_val_loader, keypoint_test_loader, trainer, save_
 suggestion_cls_train_dataset = SuggestionDataset(keypoint_train_loader, inference_mode=True)
 
 suggest_model = SuggestionConvModel()
-suggest_model.load_state_dict(
-    torch.load(
-        suggest_model_path,
-        map_location='mps' if torch.backends.mps.is_available() 
-        else 'cuda' if torch.cuda.is_available() 
-        else 'cpu')
-)
+suggest_model.load_state_dict(torch.load(suggest_model_path, map_location=DEVICE))
 suggest_model.eval()
 
 refine_train_dataset = RefineDataset(keypoint_train_loader, split='train', inference_mode=True)
 pseudo_label_model = PseudoLabelModel(n_keypoint=68, num_bones=17)
-pseudo_label_model.load_state_dict(
-    torch.load(
-        pseudo_label_model_path,
-        map_location='mps' if torch.backends.mps.is_available() 
-        else 'cuda' if torch.cuda.is_available() 
-        else 'cpu'
-    )
-)
+pseudo_label_model.load_state_dict(torch.load(pseudo_label_model_path,map_location=DEVICE))
 pseudo_label_model.eval()
 
 get_pseudo_label = get_func_pseudo_label()

@@ -9,6 +9,7 @@ from torch.utils.tensorboard import SummaryWriter
 import torchvision
 import numpy as np
 
+DEVICE = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
 random_distance_lambda = [0.02694842405617237,
  0.09876708686351776,
  0.07010390609502792,

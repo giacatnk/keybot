@@ -10,6 +10,8 @@ from model import get_model
 from misc.metric import MetricManager
 from misc.train import Trainer
 import copy
+from util import DEVICE
+
 
 def test(trainer, save_manager, keypoint_test_loader, test_error_index,
                 max_hint=2,
@@ -36,7 +38,7 @@ def test(trainer, save_manager, keypoint_test_loader, test_error_index,
                 continue
             batch = Munch.fromDict(batch)
             batch.is_training = False
-            batch.prev_heatmap = torch.zeros_like(trainer.model.module.heatmap_maker.coord2heatmap(batch.label.coord))
+            batch.prev_heatmap = torch.zeros_like(trainer.model.module.heatmap_maker.coord2heatmap(batch.label.coord), device=DEVICE)
             for n_hint in range(max_hint):
                 initial_forward_manager=MetricManager(copy.deepcopy(save_manager))
                 _out, _batch, _post_processing_pred = trainer.forward_batch(batch, metric_flag=True,

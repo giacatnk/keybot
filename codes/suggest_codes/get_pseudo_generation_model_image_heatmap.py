@@ -14,6 +14,7 @@ import torch.nn.functional as F
 import torchvision
 from functools import partial
 import numpy as np
+from util import DEVICE
 
 
 def get_func_pseudo_label():
@@ -177,7 +178,7 @@ class PseudoLabelModel(nn.Module):
 
         dataset_util = refine_train_dataset
         dataset_util.inference_mode = True
-        self.cuda()
+        self.to(DEVICE)
         self.eval()
 
         result = []
@@ -185,8 +186,8 @@ class PseudoLabelModel(nn.Module):
         recon_out_list = []
         for img, kp in zip(batch_image, batch_pred_keypoint):
             img, _, _, kp = dataset_util.transform(img, kp)
-            img = img[None,:].cuda()
-            kp = kp[None,:].cuda()
+            img = img[None,:].to(DEVICE)
+            kp = kp[None,:].to(DEVICE)
 
             with torch.no_grad():
                 recon_heatmap = self(img, kp)  # batch, 68, 2

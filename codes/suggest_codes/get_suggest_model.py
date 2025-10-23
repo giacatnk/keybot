@@ -31,6 +31,7 @@ import pandas as pd
 
 from PIL import ImageDraw
 import torchvision
+from util import DEVICE
 
 
 class HeatmapMaker():
@@ -162,7 +163,7 @@ class SuggestionConvModel(nn.Module):
         dataset_util = suggestion_cls_train_dataset
         dataset_util.inference_mode = True
 
-        self.cuda()
+        self.to(DEVICE)
         self.eval()
 
         result = []
@@ -190,7 +191,7 @@ class SuggestionConvModel(nn.Module):
             label_list = torch.tensor(label_list)
             keypoints_list = torch.stack(keypoints_list)
             with torch.no_grad():
-                suggestion_prob = self(image_list.cuda(), keypoints_list.cuda())
+                suggestion_prob = self(image_list.to(DEVICE), keypoints_list.to(DEVICE))
                 result.append((suggestion_prob > 0.5).detach().cpu())
                 prob_result.append(suggestion_prob.detach().cpu())
 
