@@ -415,57 +415,29 @@ run_visualization() {
     
     cd "$PROJECT_DIR"
     
-    # Ask which visualization to run
-    if [ "$NON_INTERACTIVE" = false ]; then
-        echo
-        print_info "Select visualization type:"
-        echo "  1. Vertebrae boxes (paper-style)"
-        echo "  2. Keypoint dots (detailed)"
-        echo "  3. Both"
-        read -p "Choice (1-3, default=1): " viz_choice
-        viz_choice=${viz_choice:-1}
-    else
-        viz_choice=1  # Default to vertebrae for non-interactive
-    fi
+    # Always use vertebrae visualization (paper-style)
+    print_info "Running vertebrae visualization (paper-style)..."
+    $PYTHON_CMD visualize_vertebrae.py
     
-    case $viz_choice in
-        1)
-            print_info "Running vertebrae visualization..."
-            $PYTHON_CMD visualize_vertebrae.py
-            output_file="keybot_vertebrae_visualization.png"
-            ;;
-        2)
-            print_info "Running keypoint visualization..."
-            $PYTHON_CMD load_and_visualize.py
-            output_file="keybot_visualization.png"
-            ;;
-        3)
-            print_info "Running both visualizations..."
-            $PYTHON_CMD visualize_vertebrae.py
-            $PYTHON_CMD load_and_visualize.py
-            output_file="keybot_vertebrae_visualization.png and keybot_visualization.png"
-            ;;
-        *)
-            print_error "Invalid choice"
-            return 1
-            ;;
-    esac
-    
-    if [ -f "keybot_vertebrae_visualization.png" ] || [ -f "keybot_visualization.png" ]; then
+    if [ -f "keybot_vertebrae_visualization.png" ]; then
         print_success "Visualization completed!"
         print_info "Output files:"
-        [ -f "keybot_vertebrae_visualization.png" ] && print_info "  - keybot_vertebrae_visualization.png (paper-style)"
-        [ -f "keybot_visualization.png" ] && print_info "  - keybot_visualization.png (6-panel detailed)"
-        [ -f "keybot_results.json" ] && print_info "  - keybot_results.json"
+        print_info "  - keybot_vertebrae_visualization.png (paper-style)"
         [ -f "keybot_vertebrae_results.json" ] && print_info "  - keybot_vertebrae_results.json"
+        echo
+        print_info "For detailed keypoint visualization, run:"
+        if [ "$IS_COLAB" = true ]; then
+            echo "  !python3 load_and_visualize.py"
+        else
+            echo "  $PYTHON_CMD load_and_visualize.py"
+        fi
         
         # Open image if on macOS
         if [[ "$OSTYPE" == "darwin"* ]] && [ "$NON_INTERACTIVE" = false ]; then
             read -p "Open visualization? (y/n): " -n 1 -r
             echo
             if [[ $REPLY =~ ^[Yy]$ ]]; then
-                [ -f "keybot_vertebrae_visualization.png" ] && open keybot_vertebrae_visualization.png
-                [ -f "keybot_visualization.png" ] && open keybot_visualization.png
+                open keybot_vertebrae_visualization.png
             fi
         fi
         
@@ -474,8 +446,7 @@ run_visualization() {
             echo
             print_info "In Colab, view the image with:"
             echo "  from IPython.display import Image, display"
-            [ -f "keybot_vertebrae_visualization.png" ] && echo "  display(Image('keybot_vertebrae_visualization.png'))"
-            [ -f "keybot_visualization.png" ] && echo "  display(Image('keybot_visualization.png'))"
+            echo "  display(Image('keybot_vertebrae_visualization.png'))"
         fi
     else
         print_error "Visualization failed - output file not created"
