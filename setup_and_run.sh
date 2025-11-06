@@ -379,6 +379,74 @@ show_results() {
 }
 
 # ========================================
+# 7.5. Run Visualization
+# ========================================
+run_visualization() {
+    print_section "7.5. Running Visualization"
+    
+    # Check if dependencies are installed
+    if [ "$IS_COLAB" = true ]; then
+        CHECK_CMD="python3 -c"
+        PYTHON_CMD="python3"
+    else
+        CHECK_CMD="poetry run python -c"
+        PYTHON_CMD="poetry run python"
+    fi
+    
+    if ! $CHECK_CMD "import munch" 2>/dev/null; then
+        print_warning "Dependencies not installed. Running setup first..."
+        setup_environment
+    fi
+    
+    # Check if models exist
+    if [ ! -f "save/AASCE_interactive_keypoint_estimation/model.pth" ]; then
+        print_error "Refiner model not found!"
+        print_info "Please train or download the model first"
+        return 1
+    fi
+    
+    if [ ! -f "save_suggestion/AASCE_suggestModel.pth" ]; then
+        print_warning "Detector model not found at save_suggestion/AASCE_suggestModel.pth"
+    fi
+    
+    if [ ! -f "save_refine/AASCE_refineModel.pth" ]; then
+        print_warning "Corrector model not found at save_refine/AASCE_refineModel.pth"
+    fi
+    
+    cd "$PROJECT_DIR"
+    print_info "Running visualization script..."
+    
+    $PYTHON_CMD load_and_visualize.py
+    
+    if [ -f "keybot_visualization.png" ]; then
+        print_success "Visualization completed!"
+        print_info "Output files:"
+        print_info "  - keybot_visualization.png (6-panel visualization)"
+        print_info "  - keybot_results.json (numerical results)"
+        
+        # Open image if on macOS
+        if [[ "$OSTYPE" == "darwin"* ]] && [ "$NON_INTERACTIVE" = false ]; then
+            read -p "Open visualization? (y/n): " -n 1 -r
+            echo
+            if [[ $REPLY =~ ^[Yy]$ ]]; then
+                open keybot_visualization.png
+            fi
+        fi
+        
+        # In Colab, show instructions
+        if [ "$IS_COLAB" = true ]; then
+            echo
+            print_info "In Colab, view the image with:"
+            echo "  from IPython.display import Image, display"
+            echo "  display(Image('keybot_visualization.png'))"
+        fi
+    else
+        print_error "Visualization failed - output file not created"
+        return 1
+    fi
+}
+
+# ========================================
 # 8. Commit Models to GitHub
 # ========================================
 save_and_commit_models() {
@@ -492,9 +560,10 @@ show_menu() {
     echo "5. Train model"
     echo "6. Run evaluation"
     echo "7. Show results"
-    echo "8. Commit models to GitHub"
-    echo "9. Start TensorBoard"
-    echo "10. Run all (1-6)"
+    echo "8. Run visualization (load_and_visualize.py)"
+    echo "9. Commit models to GitHub"
+    echo "10. Start TensorBoard"
+    echo "11. Run all (1-6)"
     echo "0. Exit"
     echo
 }
@@ -548,9 +617,10 @@ EOF
                 5) train_model ;;
                 6) run_evaluation ;;
                 7) show_results ;;
-                8) save_and_commit_models ;;
-                9) start_tensorboard ;;
-                10) run_all ;;
+                8) run_visualization ;;
+                9) save_and_commit_models ;;
+                10) start_tensorboard ;;
+                11) run_all ;;
                 0) print_info "Exiting..."; exit 0 ;;
                 *) print_error "Invalid option" ;;
             esac
@@ -566,12 +636,26 @@ EOF
             train) train_model ;;
             eval) run_evaluation ;;
             results) show_results ;;
+            viz|visualize) run_visualization ;;
             save) save_and_commit_models ;;
             tensorboard) start_tensorboard ;;
             all) run_all ;;
             *)
-                echo "Usage: $0 [clone|setup|verify|data|train|eval|results|save|tensorboard|all]"
+                echo "Usage: $0 [clone|setup|verify|data|train|eval|results|viz|save|tensorboard|all]"
                 echo "Or run without arguments for interactive menu"
+                echo ""
+                echo "Commands:"
+                echo "  clone       - Clone the repository"
+                echo "  setup       - Install dependencies"
+                echo "  verify      - Verify installation"
+                echo "  data        - Prepare dataset"
+                echo "  train       - Train all models"
+                echo "  eval        - Run evaluation"
+                echo "  results     - Show training results"
+                echo "  viz         - Run visualization (load_and_visualize.py)"
+                echo "  save        - Commit models to GitHub"
+                echo "  tensorboard - Start TensorBoard"
+                echo "  all         - Run all steps"
                 exit 1
                 ;;
         esac
