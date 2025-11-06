@@ -2,15 +2,23 @@
 
 # KeyBot Setup and Run Script
 # This script clones the repository, sets up the environment, and runs the project
+# Works on: Local machine, Google Colab
 
 set -e  # Exit on error
 
-# Add Poetry to PATH
+# Detect if running in Google Colab
+IS_COLAB=false
+if [ -d "/content" ] && [ -f "/usr/local/lib/python3.10/dist-packages/google/colab/_ipython.py" ] 2>/dev/null || [ -n "$COLAB_GPU" ]; then
+    IS_COLAB=true
+    echo "🔍 Detected Google Colab environment"
+fi
+
+# Add Poetry to PATH (only needed for local)
 export PATH="$HOME/.local/bin:$PATH"
 
 # Non-interactive mode flag
 NON_INTERACTIVE=false
-if [[ "$*" == *"-y"* ]] || [[ "$*" == *"--yes"* ]]; then
+if [[ "$*" == *"-y"* ]] || [[ "$*" == *"--yes"* ]] || [ "$IS_COLAB" = true ]; then
     NON_INTERACTIVE=true
 fi
 
@@ -36,6 +44,8 @@ fi
 # Otherwise use ~/keybot_project for cloning
 if [ -f "pyproject.toml" ] && [ -f "setup_and_run.sh" ]; then
     PROJECT_DIR="$(pwd)"
+elif [ "$IS_COLAB" = true ]; then
+    PROJECT_DIR="/content/keybot"
 else
     PROJECT_DIR="${HOME}/${PROJECT_NAME}"
 fi
@@ -110,37 +120,54 @@ clone_repository() {
 setup_environment() {
     print_section "2. Setting Up Environment"
     
-    # Add Poetry to PATH if it exists
-    export PATH="$HOME/.local/bin:$PATH"
-    
-    # Check for Poetry
-    if ! command_exists poetry; then
-        print_error "Poetry is not installed"
-        print_info "Installing Poetry..."
-        curl -sSL https://install.python-poetry.org | python3 -
-    else
-        print_success "Poetry is installed: $(poetry --version)"
-    fi
-    
-    # Setup Python version with pyenv if available
-    if command_exists pyenv; then
-        print_info "Setting Python version to 3.12.6 using pyenv"
-        pyenv local 3.12.6 || print_warning "Python 3.12.6 not available in pyenv, using system Python"
+    if [ "$IS_COLAB" = true ]; then
+        # Google Colab setup - use pip
+        print_info "Setting up for Google Colab (using pip)..."
+        print_info "Python version: $(python3 --version)"
         
-        # Get Python path and configure Poetry
-        if pyenv which python >/dev/null 2>&1; then
-            PYTHON_PATH=$(pyenv which python)
-            poetry env use "$PYTHON_PATH"
-            print_success "Poetry configured to use: $PYTHON_PATH"
-        fi
+        # Install dependencies from requirements.txt
+        print_info "Installing dependencies..."
+        pip install -q -r requirements.txt 2>/dev/null || {
+            print_warning "requirements.txt not found, installing manually..."
+            pip install -q torch torchvision albumentations scipy munch pytz tqdm opencv-python pandas matplotlib
+        }
+        
+        print_success "All dependencies installed (pip)"
+        
     else
-        print_warning "pyenv not available, using system Python: $(python3 --version)"
+        # Local setup - use Poetry
+        # Add Poetry to PATH if it exists
+        export PATH="$HOME/.local/bin:$PATH"
+        
+        # Check for Poetry
+        if ! command_exists poetry; then
+            print_error "Poetry is not installed"
+            print_info "Installing Poetry..."
+            curl -sSL https://install.python-poetry.org | python3 -
+        else
+            print_success "Poetry is installed: $(poetry --version)"
+        fi
+        
+        # Setup Python version with pyenv if available
+        if command_exists pyenv; then
+            print_info "Setting Python version to 3.12.6 using pyenv"
+            pyenv local 3.12.6 || print_warning "Python 3.12.6 not available in pyenv, using system Python"
+            
+            # Get Python path and configure Poetry
+            if pyenv which python >/dev/null 2>&1; then
+                PYTHON_PATH=$(pyenv which python)
+                poetry env use "$PYTHON_PATH"
+                print_success "Poetry configured to use: $PYTHON_PATH"
+            fi
+        else
+            print_warning "pyenv not available, using system Python: $(python3 --version)"
+        fi
+        
+        # Install dependencies
+        print_info "Installing dependencies (this may take several minutes)..."
+        poetry install
+        print_success "All dependencies installed (poetry)"
     fi
-    
-    # Install dependencies
-    print_info "Installing dependencies (this may take several minutes)..."
-    poetry install
-    print_success "All dependencies installed"
 }
 
 # ========================================
@@ -150,7 +177,15 @@ verify_installation() {
     print_section "3. Verifying Installation"
     
     cd "$PROJECT_DIR"
-    poetry run python -c "
+    
+    # Use python3 directly in Colab, poetry run python locally
+    if [ "$IS_COLAB" = true ]; then
+        PYTHON_CMD="python3"
+    else
+        PYTHON_CMD="poetry run python"
+    fi
+    
+    $PYTHON_CMD -c "
 import torch
 import cv2
 import pandas
@@ -163,8 +198,10 @@ print('✓ Albumentations:', albumentations.__version__)
 
 if torch.cuda.is_available():
     print('✓ CUDA available:', torch.cuda.get_device_name(0))
+elif hasattr(torch.backends, 'mps') and torch.backends.mps.is_available():
+    print('✓ MPS (Apple Silicon) available')
 else:
-    print('⚠ CUDA not available - will use CPU (slower)')
+    print('⚠ CUDA/MPS not available - will use CPU (slower)')
 "
     
     print_success "Installation verified"
@@ -206,7 +243,16 @@ prepare_data() {
     # Run preprocessing
     print_info "Running data preprocessing..."
     cd "${PROJECT_DIR}/codes/preprocess_data"
-    poetry run python preprocess_data.py
+    
+    # Use python3 directly in Colab, poetry run python locally
+    if [ "$IS_COLAB" = true ]; then
+        python3 data_split.py
+        python3 preprocess_data.py
+    else
+        poetry run python data_split.py
+        poetry run python preprocess_data.py
+    fi
+    
     cd "$PROJECT_DIR"
     print_success "Data preprocessing completed"
 }
@@ -218,7 +264,13 @@ train_model() {
     print_section "5. Training Model"
     
     # Check if dependencies are installed
-    if ! poetry run python -c "import munch" 2>/dev/null; then
+    if [ "$IS_COLAB" = true ]; then
+        CHECK_CMD="python3 -c"
+    else
+        CHECK_CMD="poetry run python -c"
+    fi
+    
+    if ! $CHECK_CMD "import munch" 2>/dev/null; then
         print_warning "Dependencies not installed. Running setup first..."
         setup_environment
     fi
@@ -236,16 +288,24 @@ train_model() {
     
     cd "${PROJECT_DIR}/codes"
     
-    # Train interactive keypoint model (using poetry run)
-    if [ -f "train_interactive_keypoint_model.sh" ]; then
-        print_info "Training interactive keypoint model..."
-        # Run with poetry environment (device auto-detected in code)
-        CUDA_VISIBLE_DEVICES="0" poetry run python -u main.py --seed 42 --config config_AASCE --save_test_prediction --subpixel_inference 15 --use_prev_heatmap_only_for_hint_index
+    # Set python command based on environment
+    if [ "$IS_COLAB" = true ]; then
+        PYTHON_CMD="python3"
+        print_info "Training on Colab (this will take ~30 hours)..."
+    else
+        PYTHON_CMD="poetry run python"
     fi
     
-    # Train AASCE model
-    print_info "Training AASCE model..."
-    poetry run python train_AASCE.py
+    # Train interactive keypoint model
+    if [ -f "train_interactive_keypoint_model.sh" ]; then
+        print_info "Training interactive keypoint model (Refiner)..."
+        # Run with appropriate environment (device auto-detected in code)
+        CUDA_VISIBLE_DEVICES="0" $PYTHON_CMD -u main.py --seed 42 --config config_AASCE --save_test_prediction --subpixel_inference 15 --use_prev_heatmap_only_for_hint_index
+    fi
+    
+    # Train AASCE model (Detector + Corrector)
+    print_info "Training AASCE model (Detector + Corrector)..."
+    $PYTHON_CMD train_AASCE.py
     
     cd "$PROJECT_DIR"
     print_success "Training completed"
@@ -258,7 +318,13 @@ run_evaluation() {
     print_section "6. Running Evaluation"
     
     # Check if dependencies are installed
-    if ! poetry run python -c "import munch" 2>/dev/null; then
+    if [ "$IS_COLAB" = true ]; then
+        CHECK_CMD="python3 -c"
+    else
+        CHECK_CMD="poetry run python -c"
+    fi
+    
+    if ! $CHECK_CMD "import munch" 2>/dev/null; then
         print_warning "Dependencies not installed. Running setup first..."
         setup_environment
     fi
@@ -276,7 +342,14 @@ run_evaluation() {
     
     cd "${PROJECT_DIR}/codes"
     print_info "Running evaluation..."
-    poetry run python evaluate_AASCE.py
+    
+    # Use python3 directly in Colab, poetry run python locally
+    if [ "$IS_COLAB" = true ]; then
+        python3 evaluate_AASCE.py
+    else
+        poetry run python evaluate_AASCE.py
+    fi
+    
     cd "$PROJECT_DIR"
     print_success "Evaluation completed"
 }
@@ -335,22 +408,17 @@ save_and_commit_models() {
     # Git operations
     print_info "Committing models to git..."
     
-    # Add all save directories and git attributes
-    git add save/ 2>/dev/null || true
-    git add save_suggestion/ 2>/dev/null || true
-    git add save_refine/ 2>/dev/null || true
+    # Add save directory and git attributes
+    git add save/
     git add .gitattributes 2>/dev/null || true
     
     # Create commit with timestamp
     TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
-    COMMIT_MSG="Add trained model checkpoints
+    COMMIT_MSG="Add trained model checkpoint
 
 Trained on: $(date '+%Y-%m-%d %H:%M:%S')
 Timestamp: ${TIMESTAMP}
-Models:
-  - Interactive keypoint: save/AASCE_interactive_keypoint_estimation/
-  - Suggestion model: save_suggestion/
-  - Refinement model: save_refine/"
+Location: save/AASCE_interactive_keypoint_estimation/"
     
     git commit -m "$COMMIT_MSG" || print_warning "No changes to commit"
     
@@ -396,7 +464,16 @@ start_tensorboard() {
         print_info "Starting TensorBoard on http://localhost:6006"
         print_info "Press Ctrl+C to stop"
         cd "$PROJECT_DIR"
-        poetry run tensorboard --logdir "$SAVE_DIR" --port 6006
+        
+        # Use appropriate command based on environment
+        if [ "$IS_COLAB" = true ]; then
+            # In Colab, use %load_ext tensorboard magic instead
+            print_warning "In Colab, use this command in a notebook cell:"
+            echo "  %load_ext tensorboard"
+            echo "  %tensorboard --logdir $SAVE_DIR"
+        else
+            poetry run tensorboard --logdir "$SAVE_DIR" --port 6006
+        fi
     else
         print_warning "No training data found for TensorBoard"
     fi
@@ -449,6 +526,13 @@ EOF
     echo "Vertebrae Keypoint Estimation Setup Script"
     echo "ECCV 2024"
     echo
+    
+    # Show Colab-specific instructions
+    if [ "$IS_COLAB" = true ]; then
+        print_info "Running in Google Colab mode"
+        print_info "Usage in Colab notebook cell: !bash setup_and_run.sh <command>"
+        echo
+    fi
     
     # Check if we're running with arguments
     if [ $# -eq 0 ]; then
