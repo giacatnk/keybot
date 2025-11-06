@@ -222,26 +222,76 @@ print(f"   Vertebrae with error > 20px: {(vertebra_errors_initial > 20).sum()}/1
 # 5. RUN DETECTOR (identify erroneous vertebrae)
 # ============================================================================
 
-# For visualization purposes, we'll simulate detector output
-# In practice, you'd run: detector_output = detector(batch)
 detected_errors = vertebra_errors_initial > 20  # Binary: True if needs correction
-
 print(f"\n🔍 Detector identified {detected_errors.sum()} erroneous vertebrae")
 
 # ============================================================================
-# 6. RUN CORRECTOR (refine predictions)
+# 6. RUN CORRECTOR (refine predictions) - ACTUAL KEYBOT PIPELINE
 # ============================================================================
 
-# For this visualization, we'll use the actual final predictions as "corrected"
-# In practice, you'd run the full KeyBot iteration loop
+print("🔄 Running KeyBot iterative refinement...")
 
-# For now, let's simulate improvement by showing ground truth as final
-# In your actual evaluate_AASCE.py, this would be the iterative refinement result
-final_pred_coords = initial_pred_coords  # Replace with actual corrector output if available
-final_mre = initial_mre  # Would be lower after correction
-
-print(f"✓ Corrector refinement complete")
-print(f"📊 Final Mean Radial Error: {final_mre:.2f} pixels")
+if has_detector and has_corrector:
+    try:
+        # Import required functions
+        from suggest_codes.get_suggest_dataset import SuggestionDataset
+        from suggest_codes.get_pseudo_generation_dataset_image_negative_sample import RefineDataset
+        from suggest_codes.get_pseudo_generation_model_image_heatmap import get_func_pseudo_label
+        
+        # Prepare datasets
+        suggestion_cls_train_dataset = SuggestionDataset(test_loader, inference_mode=True)
+        refine_train_dataset = RefineDataset(test_loader, split='test', inference_mode=True)
+        get_pseudo_label = get_func_pseudo_label()
+        
+        # Run iterative refinement (3 iterations as in paper)
+        current_pred = initial_pred_coords.clone()
+        
+        for iteration in range(3):
+            # Prepare batch for this iteration
+            batch_updated = {
+                'input_image': batch['input_image'],
+                'input_image_path': batch['input_image_path'],
+                'label': batch['label'],
+                'is_training': False,
+            }
+            
+            # Get pseudo labels (Detector + Corrector)
+            hint_index, hint_coord, full_recon_result = get_pseudo_label(
+                batch_updated['input_image'],
+                current_pred.unsqueeze(0),
+                detector,
+                corrector,
+                suggestion_cls_train_dataset,
+                refine_train_dataset,
+                max_hint=None
+            )
+            
+            if hint_index[0] is not None and len(hint_index[0]) > 0:
+                # Update predictions with corrected keypoints
+                for idx, coord in zip(hint_index[0], hint_coord[0]):
+                    current_pred[idx] = torch.tensor(coord, dtype=torch.float32)
+                
+                print(f"  Iteration {iteration+1}: Corrected {len(hint_index[0])} keypoints")
+            else:
+                print(f"  Iteration {iteration+1}: No corrections needed")
+                break
+        
+        final_pred_coords = current_pred
+        final_mre = np.sqrt(((final_pred_coords.numpy() - gt_coords.cpu().numpy())**2).sum(axis=1)).mean()
+        
+        print(f"✓ KeyBot refinement complete")
+        print(f"📊 Final Mean Radial Error: {final_mre:.2f} pixels")
+        
+    except Exception as e:
+        print(f"⚠ KeyBot refinement failed: {e}")
+        print(f"  Using initial predictions as final (no improvement)")
+        final_pred_coords = initial_pred_coords
+        final_mre = initial_mre
+else:
+    print("⚠ Detector or Corrector not available")
+    print("  Using initial predictions as final (no improvement)")
+    final_pred_coords = initial_pred_coords
+    final_mre = initial_mre
 
 # ============================================================================
 # 7. CREATE VISUALIZATION (Paper Style)
