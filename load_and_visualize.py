@@ -17,21 +17,19 @@ import warnings
 # Suppress TensorBoard warnings
 warnings.filterwarnings('ignore', category=UserWarning, module='tensorboard')
 
-# Add codes directory to path
-import sys
-sys.path.insert(0, './codes')
-
-# Change to codes directory (required for relative paths in the code)
+# Store original directory and change to codes directory
 original_dir = os.getcwd()
 codes_dir = os.path.join(original_dir, 'codes')
+
+# Add codes directory to path AND change to it
+import sys
+sys.path.insert(0, codes_dir)
 os.chdir(codes_dir)
 
+# Now imports will work from codes directory
 from AnomalySuggestion_get_model import get_keypoint_model, get_test_data_loader
 from suggest_codes.get_suggest_model import SuggestionConvModel
 from suggest_codes.get_pseudo_generation_model_image_heatmap import PseudoLabelModel
-
-# Change back to original directory
-os.chdir(original_dir)
 
 # ============================================================================
 # 1. LOAD MODELS
