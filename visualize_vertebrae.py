@@ -48,13 +48,16 @@ def group_keypoints_to_vertebrae(keypoints):
     """
     Group 68 keypoints into 17 vertebrae (4 corners each)
     
-    Keypoint ordering for each vertebra:
-    - Top-left (TL)
-    - Top-right (TR)
-    - Bottom-right (BR)
-    - Bottom-left (BL)
+    AASCE dataset keypoint ordering for each vertebra (in AP X-ray view):
+    - Index 0: Left-top corner
+    - Index 1: Right-top corner  
+    - Index 2: Left-bottom corner
+    - Index 3: Right-bottom corner
     
-    Returns: List of 17 vertebrae, each with 4 corners
+    We need to reorder to form proper clockwise polygons:
+    - Top-left, Top-right, Bottom-right, Bottom-left
+    
+    Returns: List of 17 vertebrae, each with 4 corners forming rectangles
     """
     keypoints_np = keypoints.cpu().numpy() if torch.is_tensor(keypoints) else keypoints
     
@@ -62,7 +65,14 @@ def group_keypoints_to_vertebrae(keypoints):
     for i in range(17):
         # Each vertebra has 4 consecutive keypoints
         start_idx = i * 4
-        corners = keypoints_np[start_idx:start_idx+4]  # (4, 2) - [row, col]
+        # Get the 4 corners: [left-top, right-top, left-bottom, right-bottom]
+        lt = keypoints_np[start_idx + 0]  # left-top
+        rt = keypoints_np[start_idx + 1]  # right-top
+        lb = keypoints_np[start_idx + 2]  # left-bottom
+        rb = keypoints_np[start_idx + 3]  # right-bottom
+        
+        # Reorder to: top-left, top-right, bottom-right, bottom-left (clockwise)
+        corners = np.array([lt, rt, rb, lb])  # (4, 2) - [row, col]
         vertebrae.append(corners)
     
     return vertebrae
