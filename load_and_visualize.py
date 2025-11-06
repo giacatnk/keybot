@@ -2,6 +2,8 @@
 """
 Quick script to load KeyBot models and visualize predictions
 Usage: python load_and_visualize.py
+
+Note: TensorBoard import warnings can be safely ignored.
 """
 
 import torch
@@ -9,14 +11,27 @@ import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 import json
+import os
+import warnings
+
+# Suppress TensorBoard warnings
+warnings.filterwarnings('ignore', category=UserWarning, module='tensorboard')
 
 # Add codes directory to path
 import sys
 sys.path.insert(0, './codes')
 
+# Change to codes directory (required for relative paths in the code)
+original_dir = os.getcwd()
+codes_dir = os.path.join(original_dir, 'codes')
+os.chdir(codes_dir)
+
 from AnomalySuggestion_get_model import get_keypoint_model, get_test_data_loader
 from suggest_codes.get_suggest_model import SuggestionConvModel
 from suggest_codes.get_pseudo_generation_model_image_heatmap import PseudoLabelModel
+
+# Change back to original directory
+os.chdir(original_dir)
 
 # ============================================================================
 # 1. LOAD MODELS
@@ -31,19 +46,29 @@ refiner.eval()
 
 # Load Detector
 detector = SuggestionConvModel()
-detector.load_state_dict(torch.load(
-    './save_suggestion/AASCE_suggestModel.pth',
-    map_location='cuda' if torch.cuda.is_available() else 'cpu'
-))
-detector.eval()
+detector_path = os.path.join(original_dir, 'save_suggestion', 'AASCE_suggestModel.pth')
+if os.path.exists(detector_path):
+    detector.load_state_dict(torch.load(
+        detector_path,
+        map_location='cuda' if torch.cuda.is_available() else 'cpu'
+    ))
+    detector.eval()
+    print("✓ Detector loaded")
+else:
+    print(f"⚠ Detector model not found at {detector_path}")
 
 # Load Corrector
 corrector = PseudoLabelModel(n_keypoint=68, num_bones=17)
-corrector.load_state_dict(torch.load(
-    './save_refine/AASCE_refineModel.pth',
-    map_location='cuda' if torch.cuda.is_available() else 'cpu'
-))
-corrector.eval()
+corrector_path = os.path.join(original_dir, 'save_refine', 'AASCE_refineModel.pth')
+if os.path.exists(corrector_path):
+    corrector.load_state_dict(torch.load(
+        corrector_path,
+        map_location='cuda' if torch.cuda.is_available() else 'cpu'
+    ))
+    corrector.eval()
+    print("✓ Corrector loaded")
+else:
+    print(f"⚠ Corrector model not found at {corrector_path}")
 
 print("✓ Models loaded successfully")
 
@@ -185,8 +210,9 @@ ax.axis('off')
 plt.colorbar(im, ax=ax, fraction=0.046)
 
 plt.tight_layout()
-plt.savefig('keybot_visualization.png', dpi=150, bbox_inches='tight')
-print("✓ Saved visualization to 'keybot_visualization.png'")
+output_image_path = os.path.join(original_dir, 'keybot_visualization.png')
+plt.savefig(output_image_path, dpi=150, bbox_inches='tight')
+print(f"✓ Saved visualization to '{output_image_path}'")
 plt.show()
 
 # ============================================================================
@@ -202,10 +228,11 @@ results = {
     'per_keypoint_errors': torch.sqrt(((pred_coords - gt_coords.cpu())**2).sum(-1)).tolist()
 }
 
-with open('keybot_results.json', 'w') as f:
+output_json_path = os.path.join(original_dir, 'keybot_results.json')
+with open(output_json_path, 'w') as f:
     json.dump(results, f, indent=2)
     
-print("✓ Saved results to 'keybot_results.json'")
+print(f"✓ Saved results to '{output_json_path}'")
 
 # ============================================================================
 # 7. OPTIONAL: Run with KeyBot (Detector + Corrector)
@@ -220,6 +247,6 @@ print("="*60)
 print("(See evaluate_AASCE.py for full KeyBot collaborative inference)")
 
 print("\n✅ Done! Check:")
-print("  - keybot_visualization.png")
-print("  - keybot_results.json")
+print(f"  - {output_image_path}")
+print(f"  - {output_json_path}")
 
