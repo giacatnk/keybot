@@ -136,10 +136,14 @@ fig, axes = plt.subplots(2, 3, figsize=(15, 10))
 
 # ---- Row 1: Images ----
 
+# Convert coords to numpy for plotting
+gt_coords_np = gt_coords.cpu().numpy()
+pred_coords_np = pred_coords.numpy()
+
 # 1. Original image with ground truth
 ax = axes[0, 0]
 ax.imshow(display_image_gray, cmap='gray')
-ax.scatter(gt_coords[:, 1], gt_coords[:, 0], c='green', s=20, alpha=0.7, label='Ground Truth')
+ax.scatter(gt_coords_np[:, 1], gt_coords_np[:, 0], c='green', s=20, alpha=0.7, label='Ground Truth')
 ax.set_title('Original + Ground Truth', fontsize=12)
 ax.axis('off')
 ax.legend()
@@ -147,7 +151,7 @@ ax.legend()
 # 2. Original image with predictions
 ax = axes[0, 1]
 ax.imshow(display_image_gray, cmap='gray')
-ax.scatter(pred_coords[:, 1], pred_coords[:, 0], c='red', s=20, alpha=0.7, label='Predictions')
+ax.scatter(pred_coords_np[:, 1], pred_coords_np[:, 0], c='red', s=20, alpha=0.7, label='Predictions')
 ax.set_title('Original + Predictions', fontsize=12)
 ax.axis('off')
 ax.legend()
@@ -155,12 +159,12 @@ ax.legend()
 # 3. Overlay: GT + Predictions
 ax = axes[0, 2]
 ax.imshow(display_image_gray, cmap='gray')
-ax.scatter(gt_coords[:, 1], gt_coords[:, 0], c='green', s=30, alpha=0.6, label='GT', marker='o')
-ax.scatter(pred_coords[:, 1], pred_coords[:, 0], c='red', s=20, alpha=0.6, label='Pred', marker='x')
+ax.scatter(gt_coords_np[:, 1], gt_coords_np[:, 0], c='green', s=30, alpha=0.6, label='GT', marker='o')
+ax.scatter(pred_coords_np[:, 1], pred_coords_np[:, 0], c='red', s=20, alpha=0.6, label='Pred', marker='x')
 # Draw lines connecting GT to Pred
-for i in range(len(gt_coords)):
-    ax.plot([gt_coords[i, 1], pred_coords[i, 1]], 
-            [gt_coords[i, 0], pred_coords[i, 0]], 
+for i in range(len(gt_coords_np)):
+    ax.plot([gt_coords_np[i, 1], pred_coords_np[i, 1]], 
+            [gt_coords_np[i, 0], pred_coords_np[i, 0]], 
             'yellow', linewidth=0.5, alpha=0.3)
 ax.set_title(f'Comparison (MRE: {mre:.2f}px)', fontsize=12)
 ax.axis('off')
@@ -187,22 +191,24 @@ ax.axis('off')
 # 6. Error map (per-keypoint error)
 ax = axes[1, 2]
 errors = torch.sqrt(((pred_coords - gt_coords.cpu())**2).sum(-1))  # (68,)
+errors_np = errors.numpy()  # Convert to numpy
 # Create error visualization
 error_image = np.zeros((512, 256))
-for i, (coord, error) in enumerate(zip(pred_coords, errors)):
-    row, col = int(coord[0]), int(coord[1])
+for i in range(len(pred_coords_np)):
+    row, col = int(pred_coords_np[i, 0]), int(pred_coords_np[i, 1])
+    error_val = errors_np[i]
     if 0 <= row < 512 and 0 <= col < 256:
         # Draw circle with size proportional to error
         y, x = np.ogrid[-10:10, -10:10]
-        mask = x**2 + y**2 <= (error * 2)**2
+        mask = x**2 + y**2 <= (error_val * 2)**2
         r_min, r_max = max(0, row-10), min(512, row+10)
         c_min, c_max = max(0, col-10), min(256, col+10)
         error_image[r_min:r_max, c_min:c_max] = np.maximum(
             error_image[r_min:r_max, c_min:c_max],
-            mask[:r_max-r_min, :c_max-c_min] * error.item()
+            mask[:r_max-r_min, :c_max-c_min] * error_val
         )
 ax.imshow(display_image_gray, cmap='gray', alpha=0.5)
-im = ax.imshow(error_image, cmap='Reds', alpha=0.6, vmin=0, vmax=errors.max())
+im = ax.imshow(error_image, cmap='Reds', alpha=0.6, vmin=0, vmax=errors_np.max())
 ax.set_title('Error Map (Red = High Error)', fontsize=12)
 ax.axis('off')
 plt.colorbar(im, ax=ax, fraction=0.046)
