@@ -325,10 +325,11 @@ ax.set_title(f'(b) Initial prediction\nMean radial error: {initial_mre:.1f}',
              fontsize=14, fontweight='bold')
 ax.axis('off')
 
-# Column 3: After KeyBot Correction
+# Column 3: After KeyBot Correction (NO error indicators - errors are fixed!)
 ax = axes[2]
 ax.imshow(display_image_gray, cmap='gray')
 draw_vertebrae(ax, final_vertebrae, colors=VERTEBRAE_COLORS, alpha=0.6)
+# NOTE: No draw_error_indicators() here - KeyBot has corrected the errors!
 ax.set_title(f'(c) KeyBot\nMean radial error: {final_mre:.1f}', 
              fontsize=14, fontweight='bold', color='blue')
 ax.axis('off')
