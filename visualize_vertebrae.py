@@ -244,6 +244,11 @@ if has_detector and has_corrector:
         get_pseudo_label = get_func_pseudo_label()
         
         # Run iterative refinement (3 iterations as in paper)
+        # Store predictions for each iteration
+        iteration_preds = [initial_pred_coords.clone()]
+        iteration_mres = [initial_mre]
+        iteration_vertebrae_errors = [vertebra_errors_initial]
+        
         current_pred = initial_pred_coords.clone()
         
         for iteration in range(3):
@@ -271,13 +276,28 @@ if has_detector and has_corrector:
                 for idx, coord in zip(hint_index[0], hint_coord[0]):
                     current_pred[idx] = torch.tensor(coord, dtype=torch.float32)
                 
-                print(f"  Iteration {iteration+1}: Corrected {len(hint_index[0])} keypoints")
+                # Store this iteration's results
+                iteration_preds.append(current_pred.clone())
+                iter_mre = np.sqrt(((current_pred.numpy() - gt_coords.cpu().numpy())**2).sum(axis=1)).mean()
+                iteration_mres.append(iter_mre)
+                
+                # Compute per-vertebra errors for this iteration
+                iter_vertebrae = group_keypoints_to_vertebrae(current_pred)
+                iter_vert_errors = []
+                for i in range(17):
+                    gt_vert = gt_vertebrae[i]
+                    pred_vert = iter_vertebrae[i]
+                    error = np.sqrt(((gt_vert - pred_vert)**2).sum(axis=1)).mean()
+                    iter_vert_errors.append(error)
+                iteration_vertebrae_errors.append(np.array(iter_vert_errors))
+                
+                print(f"  Iteration {iteration+1}: Corrected {len(hint_index[0])} keypoints -> MRE: {iter_mre:.2f}px")
             else:
                 print(f"  Iteration {iteration+1}: No corrections needed")
                 break
         
         final_pred_coords = current_pred
-        final_mre = np.sqrt(((final_pred_coords.numpy() - gt_coords.cpu().numpy())**2).sum(axis=1)).mean()
+        final_mre = iteration_mres[-1]
         
         print(f"✓ KeyBot refinement complete")
         print(f"📊 Final Mean Radial Error: {final_mre:.2f} pixels")
@@ -285,11 +305,17 @@ if has_detector and has_corrector:
     except Exception as e:
         print(f"⚠ KeyBot refinement failed: {e}")
         print(f"  Using initial predictions as final (no improvement)")
+        iteration_preds = [initial_pred_coords]
+        iteration_mres = [initial_mre]
+        iteration_vertebrae_errors = [vertebra_errors_initial]
         final_pred_coords = initial_pred_coords
         final_mre = initial_mre
 else:
     print("⚠ Detector or Corrector not available")
     print("  Using initial predictions as final (no improvement)")
+    iteration_preds = [initial_pred_coords]
+    iteration_mres = [initial_mre]
+    iteration_vertebrae_errors = [vertebra_errors_initial]
     final_pred_coords = initial_pred_coords
     final_mre = initial_mre
 
@@ -297,7 +323,7 @@ else:
 # 7. CREATE VISUALIZATION (Paper Style)
 # ============================================================================
 
-print("\nCreating paper-style visualization...")
+print("\nCreating iterative refinement visualization...")
 
 # Denormalize image for display
 display_image = image.permute(1, 2, 0).cpu().numpy()  # (512, 256, 3)
@@ -305,40 +331,49 @@ display_image = (display_image + 1) / 2  # [-1, 1] -> [0, 1]
 display_image = np.clip(display_image, 0, 1)
 display_image_gray = display_image.mean(axis=2)
 
-# Create figure with 4 columns
-fig, axes = plt.subplots(1, 4, figsize=(20, 6))
+# Determine number of columns: Image + Iterations + Ground Truth
+num_iterations = len(iteration_preds)
+num_cols = 2 + num_iterations  # Image + N iterations + Ground Truth
+fig, axes = plt.subplots(1, num_cols, figsize=(5 * num_cols, 6))
 
-final_vertebrae = group_keypoints_to_vertebrae(final_pred_coords)
-
-# Column 1: Original Image
+# Column 0: Original Image
 ax = axes[0]
 ax.imshow(display_image_gray, cmap='gray')
 ax.set_title('(a) Image', fontsize=14, fontweight='bold')
 ax.axis('off')
 
-# Column 2: Initial Prediction
-ax = axes[1]
-ax.imshow(display_image_gray, cmap='gray')
-draw_vertebrae(ax, initial_vertebrae, colors=VERTEBRAE_COLORS, alpha=0.5)
-draw_error_indicators(ax, initial_vertebrae, vertebra_errors_initial, threshold=20)
-ax.set_title(f'(b) Initial prediction\nMean radial error: {initial_mre:.1f}', 
-             fontsize=14, fontweight='bold')
-ax.axis('off')
+# Columns 1 to N: Show each iteration
+labels = ['(b) Initial', '(c) Iter 1', '(d) Iter 2', '(e) Iter 3']
+for i, (pred_coords, mre, vert_errors) in enumerate(zip(iteration_preds, iteration_mres, iteration_vertebrae_errors)):
+    ax = axes[i + 1]
+    ax.imshow(display_image_gray, cmap='gray')
+    
+    vertebrae = group_keypoints_to_vertebrae(pred_coords)
+    draw_vertebrae(ax, vertebrae, colors=VERTEBRAE_COLORS, alpha=0.6)
+    
+    # Draw error indicators for initial prediction only
+    if i == 0:
+        draw_error_indicators(ax, vertebrae, vert_errors, threshold=20)
+        title_color = 'black'
+    else:
+        # For subsequent iterations, show which vertebrae were just corrected
+        title_color = 'blue'
+    
+    if i < len(labels):
+        label = labels[i]
+    else:
+        label = f'({chr(98+i)}) Iter {i}'
+    
+    ax.set_title(f'{label}\nMRE: {mre:.1f}px', 
+                 fontsize=14, fontweight='bold', color=title_color)
+    ax.axis('off')
 
-# Column 3: After KeyBot Correction (NO error indicators - errors are fixed!)
-ax = axes[2]
-ax.imshow(display_image_gray, cmap='gray')
-draw_vertebrae(ax, final_vertebrae, colors=VERTEBRAE_COLORS, alpha=0.6)
-# NOTE: No draw_error_indicators() here - KeyBot has corrected the errors!
-ax.set_title(f'(c) KeyBot\nMean radial error: {final_mre:.1f}', 
-             fontsize=14, fontweight='bold', color='blue')
-ax.axis('off')
-
-# Column 4: Ground Truth
-ax = axes[3]
+# Last column: Ground Truth
+ax = axes[-1]
 ax.imshow(display_image_gray, cmap='gray')
 draw_vertebrae(ax, gt_vertebrae, colors=VERTEBRAE_COLORS, alpha=0.6)
-ax.set_title('(d) Groundtruth', fontsize=14, fontweight='bold')
+label = f'({chr(97 + num_cols - 1)}) Ground Truth'
+ax.set_title(label, fontsize=14, fontweight='bold')
 ax.axis('off')
 
 plt.tight_layout()
@@ -355,9 +390,13 @@ results = {
     'initial_mean_radial_error': float(initial_mre),
     'final_mean_radial_error': float(final_mre),
     'improvement_pixels': float(initial_mre - final_mre),
+    'num_iterations': len(iteration_preds) - 1,  # Exclude initial
     'num_vertebrae': 17,
     'vertebrae_with_errors': int(detected_errors.sum()),
     'per_vertebra_errors_initial': vertebra_errors_initial.tolist(),
+    'iteration_mres': [float(mre) for mre in iteration_mres],
+    'iteration_improvements': [float(iteration_mres[i] - iteration_mres[i+1]) if i+1 < len(iteration_mres) else 0.0 
+                               for i in range(len(iteration_mres)-1)],
 }
 
 output_json_path = os.path.join(original_dir, 'keybot_vertebrae_results.json')
@@ -369,8 +408,14 @@ print(f"✓ Saved results to '{output_json_path}'")
 print("\n✅ Done! Check:")
 print(f"  - {output_image_path}")
 print(f"  - {output_json_path}")
-print(f"\n📊 Summary:")
-print(f"  Initial MRE: {initial_mre:.2f} pixels")
-print(f"  Final MRE: {final_mre:.2f} pixels")
-print(f"  Improvement: {initial_mre - final_mre:.2f} pixels")
+print(f"\n📊 Iterative Refinement Summary:")
+print(f"  {'Iteration':<15} {'MRE (px)':<12} {'Improvement':<15}")
+print(f"  {'-'*42}")
+print(f"  {'Initial':<15} {iteration_mres[0]:.2f}{'':<8} {'(baseline)':<15}")
+for i in range(1, len(iteration_mres)):
+    improvement = iteration_mres[i-1] - iteration_mres[i]
+    print(f"  {'Iteration ' + str(i):<15} {iteration_mres[i]:.2f}{'':<8} {improvement:+.2f}px")
+print(f"  {'-'*42}")
+print(f"  {'Total Improvement:':<28} {iteration_mres[0] - iteration_mres[-1]:+.2f}px")
+print(f"  {'Improvement Rate:':<28} {((iteration_mres[0] - iteration_mres[-1]) / iteration_mres[0] * 100):.1f}%")
 
