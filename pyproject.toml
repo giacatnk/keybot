@@ -8,6 +8,7 @@ package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12,<3.14"
+numpy = "<2.0"  # Pin numpy < 2.0 for scipy/sklearn compatibility
 opencv-python = "^4.12.0.88"
 pandas = "^2.3.3"
 pillow = "^11.3.0"
